@@ -1,0 +1,2 @@
+
+39873900ff2fbe31753420e30989184d197abde4	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/jake","integrity":null,"time":1709639255673,"size":"262","metadata":{"time":1709639255673,"url":"http://registry.npm.taobao.org/jake","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:35 GMT","location":"https://registry.npmmirror.com/jake"},"options":{"compress":true},"status":301}}

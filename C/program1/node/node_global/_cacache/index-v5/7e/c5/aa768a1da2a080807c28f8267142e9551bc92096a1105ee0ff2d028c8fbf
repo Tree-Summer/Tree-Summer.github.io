@@ -1,0 +1,2 @@
+
+b6b5e6d0f443e7cf9087f515c1aa48879e258b00	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/util-deprecate","integrity":null,"time":1709639257603,"size":"262","metadata":{"time":1709639257602,"url":"http://registry.npm.taobao.org/util-deprecate","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:37 GMT","location":"https://registry.npmmirror.com/util-deprecate"},"options":{"compress":true},"status":301}}

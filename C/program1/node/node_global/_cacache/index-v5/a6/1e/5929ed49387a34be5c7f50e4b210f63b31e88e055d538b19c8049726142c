@@ -1,0 +1,2 @@
+
+e7e19984194d9b2e8ceb7200039a9ec7aedacaae	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/basic-auth","integrity":null,"time":1709639256150,"size":"262","metadata":{"time":1709639256150,"url":"http://registry.npm.taobao.org/basic-auth","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:35 GMT","location":"https://registry.npmmirror.com/basic-auth"},"options":{"compress":true},"status":301}}

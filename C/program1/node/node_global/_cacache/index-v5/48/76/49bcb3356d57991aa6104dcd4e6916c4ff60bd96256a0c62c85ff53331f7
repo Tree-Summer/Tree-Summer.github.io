@@ -1,0 +1,2 @@
+
+4783ce4c6e16651dd70dac916014feadf715ce1c	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/esm","integrity":null,"time":1709640497317,"size":"262","metadata":{"time":1709640497316,"url":"http://registry.npm.taobao.org/esm","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 12:08:16 GMT","location":"https://registry.npmmirror.com/esm"},"options":{"compress":true},"status":301}}

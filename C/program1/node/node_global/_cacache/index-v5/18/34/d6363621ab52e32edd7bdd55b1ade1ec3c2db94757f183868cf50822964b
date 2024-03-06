@@ -1,0 +1,2 @@
+
+cdc75bb7a350b208a7c359a3e1928f44cc3fc7fa	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/color-name","integrity":null,"time":1709639256709,"size":"262","metadata":{"time":1709639256709,"url":"http://registry.npm.taobao.org/color-name","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:36 GMT","location":"https://registry.npmmirror.com/color-name"},"options":{"compress":true},"status":301}}

@@ -1,0 +1,2 @@
+
+6c8803140ce81e7b61940c2771a9e1fb6ac99809	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/archy","integrity":null,"time":1709639254895,"size":"262","metadata":{"time":1709639254895,"url":"http://registry.npm.taobao.org/archy","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:34 GMT","location":"https://registry.npmmirror.com/archy"},"options":{"compress":true},"status":301}}

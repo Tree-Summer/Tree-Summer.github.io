@@ -1,0 +1,2 @@
+
+0ce374ca3deeb770113e63dc33edc15edf018c57	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/object-assign","integrity":null,"time":1709640612466,"size":"262","metadata":{"time":1709640612465,"url":"http://registry.npm.taobao.org/object-assign","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 12:10:11 GMT","location":"https://registry.npmmirror.com/object-assign"},"options":{"compress":true},"status":301}}

@@ -1,0 +1,2 @@
+
+b2cce9d1ae771e10d30a16e392380cd673afeda6	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/braces","integrity":null,"time":1709639255262,"size":"262","metadata":{"time":1709639255262,"url":"http://registry.npm.taobao.org/braces","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:34 GMT","location":"https://registry.npmmirror.com/braces"},"options":{"compress":true},"status":301}}

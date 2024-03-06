@@ -1,0 +1,2 @@
+
+37433b694b95e806d86295a8f93a56b58967d900	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/binary-extensions","integrity":null,"time":1709639255523,"size":"262","metadata":{"time":1709639255523,"url":"http://registry.npm.taobao.org/binary-extensions","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:34 GMT","location":"https://registry.npmmirror.com/binary-extensions"},"options":{"compress":true},"status":301}}

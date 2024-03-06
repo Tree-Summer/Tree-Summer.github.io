@@ -1,0 +1,2 @@
+
+ced98f7380c6827a71b2e6219ab8a42b0386e9ea	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/micro-memoize","integrity":null,"time":1709639255285,"size":"262","metadata":{"time":1709639255285,"url":"http://registry.npm.taobao.org/micro-memoize","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:34 GMT","location":"https://registry.npmmirror.com/micro-memoize"},"options":{"compress":true},"status":301}}

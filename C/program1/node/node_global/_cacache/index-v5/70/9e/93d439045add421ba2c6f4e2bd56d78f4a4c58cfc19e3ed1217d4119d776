@@ -1,0 +1,2 @@
+
+b24623a8becb4642220a78c0a444d4161727bafe	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/hexo-generator-category","integrity":null,"time":1709639253519,"size":"262","metadata":{"time":1709639253519,"url":"http://registry.npm.taobao.org/hexo-generator-category","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:32 GMT","location":"https://registry.npmmirror.com/hexo-generator-category"},"options":{"compress":true},"status":301}}

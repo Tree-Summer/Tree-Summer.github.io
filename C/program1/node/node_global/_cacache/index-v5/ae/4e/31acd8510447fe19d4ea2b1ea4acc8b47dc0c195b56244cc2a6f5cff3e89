@@ -1,0 +1,2 @@
+
+dcf20aafb8d9809f4597c2149d3e31091154e6cb	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/requires-port","integrity":null,"time":1709639257500,"size":"262","metadata":{"time":1709639257500,"url":"http://registry.npm.taobao.org/requires-port","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:36 GMT","location":"https://registry.npmmirror.com/requires-port"},"options":{"compress":true},"status":301}}

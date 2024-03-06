@@ -1,0 +1,2 @@
+
+a88301cd9949c909e7ef65d22d078faff3d3b2b7	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/universalify","integrity":null,"time":1709639256903,"size":"262","metadata":{"time":1709639256903,"url":"http://registry.npm.taobao.org/universalify","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:36 GMT","location":"https://registry.npmmirror.com/universalify"},"options":{"compress":true},"status":301}}

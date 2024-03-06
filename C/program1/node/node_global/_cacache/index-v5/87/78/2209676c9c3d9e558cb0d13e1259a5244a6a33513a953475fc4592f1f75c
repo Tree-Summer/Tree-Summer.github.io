@@ -1,0 +1,2 @@
+
+56b5e6b61fa644e488d050fc16d8a3e77551c91b	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/w3c-xmlserializer","integrity":null,"time":1709639255911,"size":"262","metadata":{"time":1709639255911,"url":"http://registry.npm.taobao.org/w3c-xmlserializer","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:35 GMT","location":"https://registry.npmmirror.com/w3c-xmlserializer"},"options":{"compress":true},"status":301}}

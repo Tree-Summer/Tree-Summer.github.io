@@ -1,0 +1,2 @@
+
+84ab0064d24f564790563dbd4adb91b6dfc83938	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/unpipe","integrity":null,"time":1709639256282,"size":"262","metadata":{"time":1709639256282,"url":"http://registry.npm.taobao.org/unpipe","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:35 GMT","location":"https://registry.npmmirror.com/unpipe"},"options":{"compress":true},"status":301}}

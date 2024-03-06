@@ -1,0 +1,2 @@
+
+47e91e30c300ee9983ef002ca378db1cd5f0245e	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/mathjax-full","integrity":null,"time":1709640497197,"size":"262","metadata":{"time":1709640497196,"url":"http://registry.npm.taobao.org/mathjax-full","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 12:08:16 GMT","location":"https://registry.npmmirror.com/mathjax-full"},"options":{"compress":true},"status":301}}

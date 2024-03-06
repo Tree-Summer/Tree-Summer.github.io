@@ -1,0 +1,2 @@
+
+9a4513dc0517a1aba7e2f208fc772b3cd1275dce	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/punycode","integrity":null,"time":1709639256903,"size":"262","metadata":{"time":1709639256903,"url":"http://registry.npm.taobao.org/punycode","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:36 GMT","location":"https://registry.npmmirror.com/punycode"},"options":{"compress":true},"status":301}}

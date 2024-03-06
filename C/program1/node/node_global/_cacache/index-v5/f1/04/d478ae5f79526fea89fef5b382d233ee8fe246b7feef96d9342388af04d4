@@ -1,0 +1,2 @@
+
+8e3430b98dcaa517ac8f6849625870b979fac76c	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/speech-rule-engine","integrity":null,"time":1709640497347,"size":"262","metadata":{"time":1709640497347,"url":"http://registry.npm.taobao.org/speech-rule-engine","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 12:08:16 GMT","location":"https://registry.npmmirror.com/speech-rule-engine"},"options":{"compress":true},"status":301}}

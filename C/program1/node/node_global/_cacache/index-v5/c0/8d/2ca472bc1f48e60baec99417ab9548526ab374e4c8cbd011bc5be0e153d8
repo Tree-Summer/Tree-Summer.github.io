@@ -1,0 +1,2 @@
+
+d87aaaf0a1ce5a4a5003aea9d9ca4810c2f12d26	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/range-parser","integrity":null,"time":1709639257259,"size":"262","metadata":{"time":1709639257259,"url":"http://registry.npm.taobao.org/range-parser","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:36 GMT","location":"https://registry.npmmirror.com/range-parser"},"options":{"compress":true},"status":301}}

@@ -1,0 +1,2 @@
+
+87e9b24f13db575e844848a2be9fb574b60d007f	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/concat-map","integrity":null,"time":1709639257029,"size":"262","metadata":{"time":1709639257028,"url":"http://registry.npm.taobao.org/concat-map","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:36 GMT","location":"https://registry.npmmirror.com/concat-map"},"options":{"compress":true},"status":301}}

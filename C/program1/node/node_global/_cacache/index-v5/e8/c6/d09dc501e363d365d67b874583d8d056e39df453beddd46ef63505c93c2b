@@ -1,0 +1,2 @@
+
+19dfea6a027118d7f2396a2aeba84b2ab12ceeaf	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/estraverse","integrity":null,"time":1709639256898,"size":"262","metadata":{"time":1709639256898,"url":"http://registry.npm.taobao.org/estraverse","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:36 GMT","location":"https://registry.npmmirror.com/estraverse"},"options":{"compress":true},"status":301}}

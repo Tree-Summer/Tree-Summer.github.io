@@ -1,0 +1,2 @@
+
+184e7de3e3d4dca8669b6ba67476fce03b9cbbe8	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/ee-first","integrity":null,"time":1709639256332,"size":"262","metadata":{"time":1709639256332,"url":"http://registry.npm.taobao.org/ee-first","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:35 GMT","location":"https://registry.npmmirror.com/ee-first"},"options":{"compress":true},"status":301}}

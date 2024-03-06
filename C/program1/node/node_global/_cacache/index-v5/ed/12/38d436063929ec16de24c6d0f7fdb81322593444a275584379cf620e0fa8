@@ -1,0 +1,2 @@
+
+ceb56f33af8d7a1f19a85603914cc15691854d92	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/destroy","integrity":null,"time":1709639257259,"size":"262","metadata":{"time":1709639257259,"url":"http://registry.npm.taobao.org/destroy","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:36 GMT","location":"https://registry.npmmirror.com/destroy"},"options":{"compress":true},"status":301}}

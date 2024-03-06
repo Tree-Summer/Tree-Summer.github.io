@@ -1,0 +1,2 @@
+
+fd79b7a0b0cd1f380924ae2b5656dfe534a30e28	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/abab","integrity":null,"time":1709639255884,"size":"262","metadata":{"time":1709639255884,"url":"http://registry.npm.taobao.org/abab","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:35 GMT","location":"https://registry.npmmirror.com/abab"},"options":{"compress":true},"status":301}}

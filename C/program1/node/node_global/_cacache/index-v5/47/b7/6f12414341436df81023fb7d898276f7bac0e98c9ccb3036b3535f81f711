@@ -1,0 +1,2 @@
+
+ef610792f95d489a4be3e3a87c9f220c0728b6d5	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/rfdc","integrity":null,"time":1709639255287,"size":"262","metadata":{"time":1709639255287,"url":"http://registry.npm.taobao.org/rfdc","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:34 GMT","location":"https://registry.npmmirror.com/rfdc"},"options":{"compress":true},"status":301}}

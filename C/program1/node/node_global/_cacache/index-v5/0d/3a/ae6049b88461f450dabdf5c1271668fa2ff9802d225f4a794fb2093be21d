@@ -1,0 +1,2 @@
+
+acaa79aa0a2155a1bb3d470eff606d9663768b66	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/wicked-good-xpath","integrity":null,"time":1709640497786,"size":"262","metadata":{"time":1709640497786,"url":"http://registry.npm.taobao.org/wicked-good-xpath","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 12:08:17 GMT","location":"https://registry.npmmirror.com/wicked-good-xpath"},"options":{"compress":true},"status":301}}

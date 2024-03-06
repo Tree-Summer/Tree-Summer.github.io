@@ -1,0 +1,2 @@
+
+d3f4d64085522b3e199b3629e32212e5fb674ab0	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/mj-context-menu","integrity":null,"time":1709640497346,"size":"262","metadata":{"time":1709640497345,"url":"http://registry.npm.taobao.org/mj-context-menu","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 12:08:16 GMT","location":"https://registry.npmmirror.com/mj-context-menu"},"options":{"compress":true},"status":301}}

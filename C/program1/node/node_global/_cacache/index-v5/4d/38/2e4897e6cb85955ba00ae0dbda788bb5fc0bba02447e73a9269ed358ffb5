@@ -1,0 +1,2 @@
+
+b552708a6bdfa3eecc706570283e563d7bfeabda	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/chalk","integrity":null,"time":1709639255723,"size":"262","metadata":{"time":1709639255723,"url":"http://registry.npm.taobao.org/chalk","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:35 GMT","location":"https://registry.npmmirror.com/chalk"},"options":{"compress":true},"status":301}}

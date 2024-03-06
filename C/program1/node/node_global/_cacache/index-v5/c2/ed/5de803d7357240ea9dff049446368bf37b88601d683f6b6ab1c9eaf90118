@@ -1,0 +1,2 @@
+
+56709d7df82ca8bbbb089206dd82123e668ee6b7	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/xmldom-sre","integrity":null,"time":1709640497781,"size":"262","metadata":{"time":1709640497781,"url":"http://registry.npm.taobao.org/xmldom-sre","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 12:08:17 GMT","location":"https://registry.npmmirror.com/xmldom-sre"},"options":{"compress":true},"status":301}}

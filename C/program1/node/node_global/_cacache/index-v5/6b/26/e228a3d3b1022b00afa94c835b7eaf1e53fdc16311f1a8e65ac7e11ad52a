@@ -1,0 +1,2 @@
+
+7a843a99011c2259837217d91890801c7ae65d2c	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/js-yaml-js-types","integrity":null,"time":1709639254914,"size":"262","metadata":{"time":1709639254914,"url":"http://registry.npm.taobao.org/js-yaml-js-types","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:34 GMT","location":"https://registry.npmmirror.com/js-yaml-js-types"},"options":{"compress":true},"status":301}}

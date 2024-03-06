@@ -1,0 +1,2 @@
+
+8e130425611e2f4d74cd1cd1679e8098d71c3231	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/hexo-i18n","integrity":null,"time":1709639254914,"size":"262","metadata":{"time":1709639254914,"url":"http://registry.npm.taobao.org/hexo-i18n","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:34 GMT","location":"https://registry.npmmirror.com/hexo-i18n"},"options":{"compress":true},"status":301}}

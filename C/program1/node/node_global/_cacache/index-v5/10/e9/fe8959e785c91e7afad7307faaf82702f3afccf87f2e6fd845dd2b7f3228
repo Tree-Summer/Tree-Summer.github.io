@@ -1,0 +1,2 @@
+
+c184e88023da67dcb1bac4125959db5af146aeb0	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/morgan","integrity":null,"time":1709639254922,"size":"262","metadata":{"time":1709639254922,"url":"http://registry.npm.taobao.org/morgan","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:34 GMT","location":"https://registry.npmmirror.com/morgan"},"options":{"compress":true},"status":301}}

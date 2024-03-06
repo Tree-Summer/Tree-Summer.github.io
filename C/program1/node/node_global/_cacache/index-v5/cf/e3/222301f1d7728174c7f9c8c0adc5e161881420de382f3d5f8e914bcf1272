@@ -1,0 +1,2 @@
+
+8fff5b7438b0be32f71729eab2a6245c76a40288	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/upper-case","integrity":null,"time":1709640613050,"size":"262","metadata":{"time":1709640613050,"url":"http://registry.npm.taobao.org/upper-case","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 12:10:12 GMT","location":"https://registry.npmmirror.com/upper-case"},"options":{"compress":true},"status":301}}

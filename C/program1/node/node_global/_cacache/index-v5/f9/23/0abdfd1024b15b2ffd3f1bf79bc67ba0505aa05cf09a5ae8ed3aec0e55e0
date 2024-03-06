@@ -1,0 +1,2 @@
+
+5cc7a42f4938cae87378bde54803f2bb2a95bd23	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/mhchemparser","integrity":null,"time":1709640497357,"size":"262","metadata":{"time":1709640497357,"url":"http://registry.npm.taobao.org/mhchemparser","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 12:08:16 GMT","location":"https://registry.npmmirror.com/mhchemparser"},"options":{"compress":true},"status":301}}

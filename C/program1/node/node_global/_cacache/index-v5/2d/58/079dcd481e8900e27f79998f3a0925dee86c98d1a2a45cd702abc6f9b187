@@ -1,0 +1,2 @@
+
+d45a4da875373b81c324bcc79c166de275723674	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/agent-base","integrity":null,"time":1709639256902,"size":"262","metadata":{"time":1709639256902,"url":"http://registry.npm.taobao.org/agent-base","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:36 GMT","location":"https://registry.npmmirror.com/agent-base"},"options":{"compress":true},"status":301}}

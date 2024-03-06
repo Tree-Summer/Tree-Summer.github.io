@@ -1,0 +1,2 @@
+
+72e44cd59d2e89c5971a7d1f876b576b2a799a9f	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/moize","integrity":null,"time":1709639254919,"size":"262","metadata":{"time":1709639254919,"url":"http://registry.npm.taobao.org/moize","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:34 GMT","location":"https://registry.npmmirror.com/moize"},"options":{"compress":true},"status":301}}

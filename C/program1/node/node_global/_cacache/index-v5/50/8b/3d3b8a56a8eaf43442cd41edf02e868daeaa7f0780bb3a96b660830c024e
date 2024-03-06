@@ -1,0 +1,2 @@
+
+aa2e0cdaedb2c35c0a903e2d1c0ff27a500b764a	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/is-core-module","integrity":null,"time":1709639255278,"size":"262","metadata":{"time":1709639255278,"url":"http://registry.npm.taobao.org/is-core-module","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:34 GMT","location":"https://registry.npmmirror.com/is-core-module"},"options":{"compress":true},"status":301}}

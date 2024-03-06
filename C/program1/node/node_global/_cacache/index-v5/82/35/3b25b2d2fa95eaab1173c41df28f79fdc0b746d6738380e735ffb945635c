@@ -1,0 +1,2 @@
+
+3ee2b9c25cab98bd4aa2bbe2b5f992b5481b3b8e	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/escodegen","integrity":null,"time":1709639255893,"size":"262","metadata":{"time":1709639255893,"url":"http://registry.npm.taobao.org/escodegen","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:35 GMT","location":"https://registry.npmmirror.com/escodegen"},"options":{"compress":true},"status":301}}

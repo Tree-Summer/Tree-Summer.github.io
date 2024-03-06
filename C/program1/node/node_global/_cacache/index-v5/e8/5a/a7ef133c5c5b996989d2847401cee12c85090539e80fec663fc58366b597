@@ -1,0 +1,2 @@
+
+fe6a8504bce0a507676565eb33c707641da11344	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/whatwg-mimetype","integrity":null,"time":1709639255914,"size":"262","metadata":{"time":1709639255914,"url":"http://registry.npm.taobao.org/whatwg-mimetype","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:35 GMT","location":"https://registry.npmmirror.com/whatwg-mimetype"},"options":{"compress":true},"status":301}}

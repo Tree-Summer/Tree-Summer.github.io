@@ -1,0 +1,2 @@
+
+73dfdc0a79cdde68dd0a4fa048f420bc5ce9133e	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/nwsapi","integrity":null,"time":1709639255913,"size":"262","metadata":{"time":1709639255913,"url":"http://registry.npm.taobao.org/nwsapi","reqHeaders":{"accept":"application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*"},"resHeaders":{"content-type":"text/html","date":"Tue, 05 Mar 2024 11:47:35 GMT","location":"https://registry.npmmirror.com/nwsapi"},"options":{"compress":true},"status":301}}
