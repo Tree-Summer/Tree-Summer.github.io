@@ -35,6 +35,56 @@ href="https://blog.csdn.net/weixin_39871788/article/details/123250595">参考博
       </tags>
   </entry>
   <entry>
+    <title>git</title>
+    <url>/2024/01/24/git/</url>
+    <content><![CDATA[<h1 id="我要成为git高手雾">我要成为git高手（雾）</h1>
+<h3
+id="初始化绑定邮箱和账号"><strong>初始化:绑定邮箱和账号</strong></h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;ishland&quot;</span><br><span class="line">git config --global user.email </span><br></pre></td></tr></table></figure>
+<h3 id="创建本地仓库"><strong>创建本地仓库</strong></h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin git@github.com:Tree-Summer/Mei_Sai.git</span><br></pre></td></tr></table></figure>
+<h3
+id="创建本地远程分支推送"><strong>创建本地，远程分支，推送</strong></h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git branch//查看本地分支</span><br><span class="line">git branch -r//查看远程分支</span><br><span class="line">git branch -a//查看所有分支</span><br><span class="line">git branch [branch name]//创建本地新分支</span><br><span class="line">git checkout [branch name]//切换到新分支</span><br><span class="line">switched to branch ‘develop2’//也是切换</span><br><span class="line">git checkout -b [branch name]//创建分支同时也切换分支</span><br></pre></td></tr></table></figure>
+<h3 id="拉取"><strong>拉取</strong><br></h3>
+<p>git pull:获取最新代码到本地，自动合并到当前分支 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote -v//查询当前远程分支</span><br><span class="line">git pull origin master//拉取远端origin/master分支合并到本地当前分支</span><br><span class="line">git pull origin dev//拉取origin/dev分支</span><br></pre></td></tr></table></figure> git
+fetch+merge:获取最新代码手动合并 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote -v</span><br><span class="line">git fetch orign master:master1//在本地建立master1分支，下载远端origin/master分支到master1分支</span><br><span class="line">git diff master1 //查看本地master1分支与当前分支版本差异</span><br><span class="line">git merge master1//合并本地分支master1到当前分支</span><br><span class="line">git branch -D master1//删除本地分支master1</span><br></pre></td></tr></table></figure> 不额外建立本地分支
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote -v</span><br><span class="line">git fetch origin master</span><br><span class="line">git log -p master..origin/master//查看本地master与远端origin/master的版本差异</span><br><span class="line">git merge origin/master//合并远端分支origin/master到当前分支</span><br></pre></td></tr></table></figure> ### <strong>上传</strong> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m</span><br><span class="line">git push origin [branch name]:[branch name]//推送本地新分支到远程仓库</span><br><span class="line">git push origin develop2</span><br></pre></td></tr></table></figure></p>
+<h3 id="手动合并"><strong>手动合并</strong></h3>
+<h3 id="连接问题">连接问题</h3>
+<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com //是否连接上</span><br></pre></td></tr></table></figure></p>
+<h3 id="references">references</h3>
+<p>(https://blog.csdn.net/Thinkingcao/article/details/106059446)</p>
+<h3 id="删除">删除</h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git ls-files //查看缓存区文件</span><br><span class="line">git reset . //已经add .后，用该命令重置</span><br><span class="line">git push origin --force //强制推送更改内容</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>method</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo_method</title>
+    <url>/2024/01/18/hexo-method/</url>
+    <content><![CDATA[<h2 id="命令行">命令行</h2>
+<ul>
+<li><em>hexo clean</em>
+清除一些东东（更改后必用，我也不知道清除啥）</li>
+<li><em>hexo g</em> 生成一些东东（更改后必用）</li>
+<li><em>hexo d</em> 部署网页</li>
+<li><em>hexo s</em> 本地查看</li>
+</ul>
+<h2 id="基础修改">基础修改</h2>
+<p><strong>作者，图片，链接什么的在博客主题的config文件里更改，主题在config文件里更改，这俩在一个文件夹下。</strong></p>
+<h2 id="侧边栏">侧边栏</h2>
+<p>未完待续</p>
+<h2 id="首页">首页</h2>
+<p>未完待续</p>
+]]></content>
+      <tags>
+        <tag>method</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LSTM</title>
     <url>/2024/02/02/LSTM/</url>
     <content><![CDATA[<h2 id="lstm">LSTM</h2>
@@ -71,56 +121,6 @@ c_0(num_layers</em>num_directions,batch,hidden_size)</p>
       </tags>
   </entry>
   <entry>
-    <title>hexo_method</title>
-    <url>/2024/01/18/hexo-method/</url>
-    <content><![CDATA[<h2 id="命令行">命令行</h2>
-<ul>
-<li><em>hexo clean</em>
-清除一些东东（更改后必用，我也不知道清除啥）</li>
-<li><em>hexo g</em> 生成一些东东（更改后必用）</li>
-<li><em>hexo d</em> 部署网页</li>
-<li><em>hexo s</em> 本地查看</li>
-</ul>
-<h2 id="基础修改">基础修改</h2>
-<p><strong>作者，图片，链接什么的在博客主题的config文件里更改，主题在config文件里更改，这俩在一个文件夹下。</strong></p>
-<h2 id="侧边栏">侧边栏</h2>
-<p>未完待续</p>
-<h2 id="首页">首页</h2>
-<p>未完待续</p>
-]]></content>
-      <tags>
-        <tag>method</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git</title>
-    <url>/2024/01/24/git/</url>
-    <content><![CDATA[<h1 id="我要成为git高手雾">我要成为git高手（雾）</h1>
-<h3
-id="初始化绑定邮箱和账号"><strong>初始化:绑定邮箱和账号</strong></h3>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;ishland&quot;</span><br><span class="line">git config --global user.email </span><br></pre></td></tr></table></figure>
-<h3 id="创建本地仓库"><strong>创建本地仓库</strong></h3>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin git@github.com:Tree-Summer/Mei_Sai.git</span><br></pre></td></tr></table></figure>
-<h3
-id="创建本地远程分支推送"><strong>创建本地，远程分支，推送</strong></h3>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git branch//查看本地分支</span><br><span class="line">git branch -r//查看远程分支</span><br><span class="line">git branch -a//查看所有分支</span><br><span class="line">git branch [branch name]//创建本地新分支</span><br><span class="line">git checkout [branch name]//切换到新分支</span><br><span class="line">switched to branch ‘develop2’//也是切换</span><br><span class="line">git checkout -b [branch name]//创建分支同时也切换分支</span><br></pre></td></tr></table></figure>
-<h3 id="拉取"><strong>拉取</strong><br></h3>
-<p>git pull:获取最新代码到本地，自动合并到当前分支 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote -v//查询当前远程分支</span><br><span class="line">git pull origin master//拉取远端origin/master分支合并到本地当前分支</span><br><span class="line">git pull origin dev//拉取origin/dev分支</span><br></pre></td></tr></table></figure> git
-fetch+merge:获取最新代码手动合并 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote -v</span><br><span class="line">git fetch orign master:master1//在本地建立master1分支，下载远端origin/master分支到master1分支</span><br><span class="line">git diff master1 //查看本地master1分支与当前分支版本差异</span><br><span class="line">git merge master1//合并本地分支master1到当前分支</span><br><span class="line">git branch -D master1//删除本地分支master1</span><br></pre></td></tr></table></figure> 不额外建立本地分支
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote -v</span><br><span class="line">git fetch origin master</span><br><span class="line">git log -p master..origin/master//查看本地master与远端origin/master的版本差异</span><br><span class="line">git merge origin/master//合并远端分支origin/master到当前分支</span><br></pre></td></tr></table></figure> ### <strong>上传</strong> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m</span><br><span class="line">git push origin [branch name]:[branch name]//推送本地新分支到远程仓库</span><br><span class="line">git push origin develop2</span><br></pre></td></tr></table></figure></p>
-<h3 id="手动合并"><strong>手动合并</strong></h3>
-<h3 id="连接问题">连接问题</h3>
-<p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com //是否连接上</span><br></pre></td></tr></table></figure></p>
-<h3 id="references">references</h3>
-<p>(https://blog.csdn.net/Thinkingcao/article/details/106059446)</p>
-<h3 id="删除">删除</h3>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git ls-files //查看缓存区文件</span><br><span class="line">git reset . //已经add .后，用该命令重置</span><br><span class="line">git push origin --force //强制推送更改内容</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>method</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>linux操作</title>
     <url>/2024/03/04/linux%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<h3 id="dd用于读取转换并输出数据">dd:用于读取，转换并输出数据</h3>
@@ -148,70 +148,6 @@ fetch+merge:获取最新代码手动合并 <figure class="highlight plaintext"><
         <tag>操作系统</tag>
         <tag>大二下</tag>
         <tag>method</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>建模知识点</title>
-    <url>/2024/01/19/%E5%BB%BA%E6%A8%A1%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<h2 id="线性优化">线性优化：</h2>
-<p><img src="https://www.freeimg.cn/i/2024/01/19/65aa8775e6348.png"
-alt="qaq" /> - 重点是写出矩阵，列好约束，所有变量都是一次方 -
-特例:整数优化：任务分配问题，其中有01规划 <img
-src="https://www.freeimg.cn/i/2024/01/19/65aa8775e6348.png"
-alt="qwq" /></p>
-<h2 id="非线性规划">非线性规划</h2>
-<p>与线性的区别：至少一个变量不是一次方<br />
-求解运用matlab函数fmincon *
-“怎样安排/分配”“尽量多/少”“最多（少）”“利润最大”“最合理” * 投资规划 *
-角度调整：含有三角函数 * 生产安排</p>
-<h2 id="多目标规划"><a
-href="https://blog.csdn.net/weixin_45745854/article/details/107433168">多目标规划</a></h2>
-<p>插一嘴：我现在觉得凸优化是神作了，鲁棒优化那一章讲全了，为什么我没有带回来那本书呜呜<br></p>
-<p>线性，非线性都是固定目标,多目标规划的目标之间是相互冲突的</p>
-<p>目前求解多目标优化问题方法主要有基于数学的规划方法和基于遗传算法的两类方法
-* <a href="https://zhuanlan.zhihu.com/p/616882532">传统规划方法</a>
-三个概念：正负偏差变量，绝对约束和目标约束，优先因子 *
-<strong>目标约束</strong>的不等式允许有偏差，通过正负偏差变量实现，如
-8x<sub>1</sub> +10x<sub>2</sub> +d<sub>i</sub><sup>-</sup>
--d<sub>i</sub><sup>+</sup> =56 *
-主观上先确定优先因子<strong>P<sub>k</sub></strong>
-建立模型很重要，求解使用matlab的fgoalattain函数</p>
-<ul>
-<li>NSGA-II
-<ul>
-<li>提供了快速非支配的排序算法，降低了计算非支配序的复杂度</li>
-<li>引入了精英策略，扩大了采样空间。将父代种群与其产生的子代种群组合在一起，共同通过竞争来产生下一代种群，这有利于是父代中的优良个体得以保持，保证那些优良的个体在进化过程中不被丢弃，从而提高优化结果的准确度。并且通过对种群所有个体分层存放，使得最佳个体不会丢失，能够迅速提高种群水平。</li>
-<li>引入拥挤度和拥挤度比较算子，这不但克服了NSGA算法中需要人为指定共享参数的缺陷，而且将拥挤度作为种群中个体之间的比较准则，使得准Pareto域中的种群个体能均匀扩展到整个Pareto域，从而保证了种群的多样性。</li>
-</ul></li>
-</ul>
-<h2 id="灰色预测模型"><a
-href="https://blog.csdn.net/qq_25601345/article/details/107745041">灰色预测模型</a></h2>
-<p>少量的，不完全的信息建立模型并预测<br> 需要检验是否符合标准<br>
-常微分方程求解那里有机会需要搞懂 <img
-src="https://www.freeimg.cn/i/2024/01/22/65ae715f0c70b.png"
-alt="图片找不到了qwq" /></p>
-<h2 id="topsis层次分析法"><a
-href="https://zhuanlan.zhihu.com/p/266689519">Topsis层次分析法</a></h2>
-<p>评价类，充分利用原始数据，无需数据检验</p>
-<h2 id="beta分布破防记录">beta分布破防记录</h2>
-<p>一直画不出对的图，因为输入错了，错将频数当y了，事实上频数应该是很多个x啊啊啊，频数对应的值才是y啊喂，附上宝贵的代码
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">data1 = betarnd(4,3,100,1);%生成符合beta分布的数值</span><br><span class="line">data1=sort(data1);%排序方便下面看数值长啥样</span><br><span class="line">plot(data1)</span><br><span class="line">hold on;</span><br><span class="line">[p,ci] = betafit(data1,0.01);%拟合</span><br><span class="line">x=0:0.01:1;</span><br><span class="line">y=betapdf(x,p(1,1),p(1,2));%求概率密度</span><br><span class="line">plot(x,y);</span><br><span class="line">xlabel(&#x27;x&#x27;);</span><br><span class="line">ylabel(&#x27;y&#x27;);</span><br></pre></td></tr></table></figure></p>
-<h2 id="概率论相关知识点">概率论相关知识点</h2>
-<p>贝叶斯的 <a
-href="https://zhuanlan.zhihu.com/p/401258319">看着还不错的一个系列</a><br>
-先验分布：已知原因结果的概率<br> 后验分布：已知结果原因的概率<br>
-后验预测分布：已知结果预测新数据分布<br></p>
-<p><a
-href="https://ww2.mathworks.cn/help/stats/fitdist.html">对数据进行概率分布对象拟合</a><br>
-<a
-href="https://ww2.mathworks.cn/help/stats/histfit.html">正态分布拟合直方图画图及修改</a><br></p>
-<h2 id="灰色关联度分析">灰色关联度分析</h2>
-<p>在一个灰色系统中，我们想要了解其中某个我们所关注的项目受其他因素影响的相对强弱
-- 确立母序列 - 归一化 - 初值化：把一个序列的数据统一除以最开始的值 -
-均值化：把序列的数据除以均值 - 计算灰色关联系数</p>
-]]></content>
-      <tags>
-        <tag>algorithm</tag>
       </tags>
   </entry>
   <entry>
@@ -371,41 +307,67 @@ href="https://ww2.mathworks.cn/help/curvefit/list-of-library-models-for-curve-an
       </tags>
   </entry>
   <entry>
-    <title>数理逻辑</title>
-    <url>/2024/02/29/%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/</url>
-    <content><![CDATA[<h3 id="section">2024/2/29</h3>
+    <title>建模知识点</title>
+    <url>/2024/01/19/%E5%BB%BA%E6%A8%A1%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<h2 id="线性优化">线性优化：</h2>
+<p><img src="https://www.freeimg.cn/i/2024/01/19/65aa8775e6348.png"
+alt="qaq" /> - 重点是写出矩阵，列好约束，所有变量都是一次方 -
+特例:整数优化：任务分配问题，其中有01规划 <img
+src="https://www.freeimg.cn/i/2024/01/19/65aa8775e6348.png"
+alt="qwq" /></p>
+<h2 id="非线性规划">非线性规划</h2>
+<p>与线性的区别：至少一个变量不是一次方<br />
+求解运用matlab函数fmincon *
+“怎样安排/分配”“尽量多/少”“最多（少）”“利润最大”“最合理” * 投资规划 *
+角度调整：含有三角函数 * 生产安排</p>
+<h2 id="多目标规划"><a
+href="https://blog.csdn.net/weixin_45745854/article/details/107433168">多目标规划</a></h2>
+<p>插一嘴：我现在觉得凸优化是神作了，鲁棒优化那一章讲全了，为什么我没有带回来那本书呜呜<br></p>
+<p>线性，非线性都是固定目标,多目标规划的目标之间是相互冲突的</p>
+<p>目前求解多目标优化问题方法主要有基于数学的规划方法和基于遗传算法的两类方法
+* <a href="https://zhuanlan.zhihu.com/p/616882532">传统规划方法</a>
+三个概念：正负偏差变量，绝对约束和目标约束，优先因子 *
+<strong>目标约束</strong>的不等式允许有偏差，通过正负偏差变量实现，如
+8x<sub>1</sub> +10x<sub>2</sub> +d<sub>i</sub><sup>-</sup>
+-d<sub>i</sub><sup>+</sup> =56 *
+主观上先确定优先因子<strong>P<sub>k</sub></strong>
+建立模型很重要，求解使用matlab的fgoalattain函数</p>
 <ul>
-<li>检验论证的两个维度：论证的前提，论证的过程</li>
-<li>论证的有效性（valid） <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 小明要么在玩原神，要么就在玩星穹铁道</span><br><span class="line">2. 小明不在玩原神</span><br><span class="line">3. 小明在玩星穹铁道</span><br></pre></td></tr></table></figure>
-以上推理“滴水不漏”——演绎（deduction） <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 南雍楼的咖啡味道正常的时候，从来没让人拉过肚子</span><br><span class="line">2. 我今天在南雍楼买的这一杯咖啡味道正常</span><br><span class="line">3. 我今天在南雍楼买的这一杯咖啡不会让我拉肚子</span><br></pre></td></tr></table></figure>
-以上推理很有可能，但存在“漏洞”——归纳（induction）</li>
-</ul>
-<p>有效性的一种非正式定义：我们称一个推演步骤是有效的当且仅当不存在任何一种可能，令该推演的前提为真且结论为假。同样地，在这种情况下我们称这些前提蕴涵（entails）其结论。</p>
+<li>NSGA-II
 <ul>
-<li><p>一致性</p></li>
-<li><p>有效，非有效，真 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. true → false一定是非有效推演</span><br><span class="line">2. 非有效推演不一定是true → false</span><br></pre></td></tr></table></figure></p></li>
-<li><p>可靠性（soundness）<br> 在有效性基础下要求前提为真</p></li>
-<li><p>iff=if and only if <br> <span class="math display"><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="25.612ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 11320.7 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(572,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"></path></g></g><g data-mml-node="mo" transform="translate(1349.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mi" transform="translate(2405.6,0)"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(3173.3,0)"><path data-c="3A" d="M78 370Q78 394 95 412T138 430Q162 430 180 414T199 371Q199 346 182 328T139 310T96 327T78 370ZM78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path></g><g data-mml-node="mi" transform="translate(3729.1,0)"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path></g><g data-mml-node="mi" transform="translate(4090.1,0)"><path data-c="210E" d="M137 683Q138 683 209 688T282 694Q294 694 294 685Q294 674 258 534Q220 386 220 383Q220 381 227 388Q288 442 357 442Q411 442 444 415T478 336Q478 285 440 178T402 50Q403 36 407 31T422 26Q450 26 474 56T513 138Q516 149 519 151T535 153Q555 153 555 145Q555 144 551 130Q535 71 500 33Q466 -10 419 -10H414Q367 -10 346 17T325 74Q325 90 361 192T398 345Q398 404 354 404H349Q266 404 205 306L198 293L164 158Q132 28 127 16Q114 -11 83 -11Q69 -11 59 -2T48 16Q48 30 121 320L195 616Q195 629 188 632T149 637H128Q122 643 122 645T124 664Q129 683 137 683Z"></path></g><g data-mml-node="mi" transform="translate(4666.1,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path></g><g data-mml-node="mi" transform="translate(5132.1,0)"><path data-c="1D451" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g><g data-mml-node="mi" transform="translate(5652.1,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path></g><g data-mml-node="mi" transform="translate(6118.1,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(6718.1,0)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(7063.1,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mi" transform="translate(7592.1,0)"><path data-c="1D459" d="M117 59Q117 26 142 26Q179 26 205 131Q211 151 215 152Q217 153 225 153H229Q238 153 241 153T246 151T248 144Q247 138 245 128T234 90T214 43T183 6T137 -11Q101 -11 70 11T38 85Q38 97 39 102L104 360Q167 615 167 623Q167 626 166 628T162 632T157 634T149 635T141 636T132 637T122 637Q112 637 109 637T101 638T95 641T94 647Q94 649 96 661Q101 680 107 682T179 688Q194 689 213 690T243 693T254 694Q266 694 266 686Q266 675 193 386T118 83Q118 81 118 75T117 65V59Z"></path></g><g data-mml-node="mi" transform="translate(7890.1,0)"><path data-c="1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path></g><g data-mml-node="mi" transform="translate(8375.1,0)"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></g><g data-mml-node="mi" transform="translate(8925.1,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(9774.9,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mi" transform="translate(10830.7,0)"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container></span> <span class="math display"><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="25.11ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 11098.7 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(572,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"></path></g></g><g data-mml-node="mo" transform="translate(1349.8,0)"><path data-c="2208" d="M84 250Q84 372 166 450T360 539Q361 539 377 539T419 540T469 540H568Q583 532 583 520Q583 511 570 501L466 500Q355 499 329 494Q280 482 242 458T183 409T147 354T129 306T124 272V270H568Q583 262 583 250T568 230H124V228Q124 207 134 177T167 112T231 48T328 7Q355 1 466 0H570Q583 -10 583 -20Q583 -32 568 -40H471Q464 -40 446 -40T417 -41Q262 -41 172 45Q84 127 84 250Z"></path></g><g data-mml-node="mi" transform="translate(2294.6,0)"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(3062.3,0)"><path data-c="3A" d="M78 370Q78 394 95 412T138 430Q162 430 180 414T199 371Q199 346 182 328T139 310T96 327T78 370ZM78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path></g><g data-mml-node="mi" transform="translate(3618.1,0)"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path></g><g data-mml-node="mi" transform="translate(3979.1,0)"><path data-c="210E" d="M137 683Q138 683 209 688T282 694Q294 694 294 685Q294 674 258 534Q220 386 220 383Q220 381 227 388Q288 442 357 442Q411 442 444 415T478 336Q478 285 440 178T402 50Q403 36 407 31T422 26Q450 26 474 56T513 138Q516 149 519 151T535 153Q555 153 555 145Q555 144 551 130Q535 71 500 33Q466 -10 419 -10H414Q367 -10 346 17T325 74Q325 90 361 192T398 345Q398 404 354 404H349Q266 404 205 306L198 293L164 158Q132 28 127 16Q114 -11 83 -11Q69 -11 59 -2T48 16Q48 30 121 320L195 616Q195 629 188 632T149 637H128Q122 643 122 645T124 664Q129 683 137 683Z"></path></g><g data-mml-node="mi" transform="translate(4555.1,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path></g><g data-mml-node="mi" transform="translate(5021.1,0)"><path data-c="1D451" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g><g data-mml-node="mi" transform="translate(5541.1,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path></g><g data-mml-node="mi" transform="translate(6007.1,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(6607.1,0)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(6952.1,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mi" transform="translate(7481.1,0)"><path data-c="1D459" d="M117 59Q117 26 142 26Q179 26 205 131Q211 151 215 152Q217 153 225 153H229Q238 153 241 153T246 151T248 144Q247 138 245 128T234 90T214 43T183 6T137 -11Q101 -11 70 11T38 85Q38 97 39 102L104 360Q167 615 167 623Q167 626 166 628T162 632T157 634T149 635T141 636T132 637T122 637Q112 637 109 637T101 638T95 641T94 647Q94 649 96 661Q101 680 107 682T179 688Q194 689 213 690T243 693T254 694Q266 694 266 686Q266 675 193 386T118 83Q118 81 118 75T117 65V59Z"></path></g><g data-mml-node="mi" transform="translate(7779.1,0)"><path data-c="1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path></g><g data-mml-node="mi" transform="translate(8264.1,0)"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></g><g data-mml-node="mi" transform="translate(8814.1,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(9663.9,0)"><path data-c="2208" d="M84 250Q84 372 166 450T360 539Q361 539 377 539T419 540T469 540H568Q583 532 583 520Q583 511 570 501L466 500Q355 499 329 494Q280 482 242 458T183 409T147 354T129 306T124 272V270H568Q583 262 583 250T568 230H124V228Q124 207 134 177T167 112T231 48T328 7Q355 1 466 0H570Q583 -10 583 -20Q583 -32 568 -40H471Q464 -40 446 -40T417 -41Q262 -41 172 45Q84 127 84 250Z"></path></g><g data-mml-node="mi" transform="translate(10608.7,0)"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container></span></p></li>
+<li>提供了快速非支配的排序算法，降低了计算非支配序的复杂度</li>
+<li>引入了精英策略，扩大了采样空间。将父代种群与其产生的子代种群组合在一起，共同通过竞争来产生下一代种群，这有利于是父代中的优良个体得以保持，保证那些优良的个体在进化过程中不被丢弃，从而提高优化结果的准确度。并且通过对种群所有个体分层存放，使得最佳个体不会丢失，能够迅速提高种群水平。</li>
+<li>引入拥挤度和拥挤度比较算子，这不但克服了NSGA算法中需要人为指定共享参数的缺陷，而且将拥挤度作为种群中个体之间的比较准则，使得准Pareto域中的种群个体能均匀扩展到整个Pareto域，从而保证了种群的多样性。</li>
+</ul></li>
 </ul>
+<h2 id="灰色预测模型"><a
+href="https://blog.csdn.net/qq_25601345/article/details/107745041">灰色预测模型</a></h2>
+<p>少量的，不完全的信息建立模型并预测<br> 需要检验是否符合标准<br>
+常微分方程求解那里有机会需要搞懂 <img
+src="https://www.freeimg.cn/i/2024/01/22/65ae715f0c70b.png"
+alt="图片找不到了qwq" /></p>
+<h2 id="topsis层次分析法"><a
+href="https://zhuanlan.zhihu.com/p/266689519">Topsis层次分析法</a></h2>
+<p>评价类，充分利用原始数据，无需数据检验</p>
+<h2 id="beta分布破防记录">beta分布破防记录</h2>
+<p>一直画不出对的图，因为输入错了，错将频数当y了，事实上频数应该是很多个x啊啊啊，频数对应的值才是y啊喂，附上宝贵的代码
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">data1 = betarnd(4,3,100,1);%生成符合beta分布的数值</span><br><span class="line">data1=sort(data1);%排序方便下面看数值长啥样</span><br><span class="line">plot(data1)</span><br><span class="line">hold on;</span><br><span class="line">[p,ci] = betafit(data1,0.01);%拟合</span><br><span class="line">x=0:0.01:1;</span><br><span class="line">y=betapdf(x,p(1,1),p(1,2));%求概率密度</span><br><span class="line">plot(x,y);</span><br><span class="line">xlabel(&#x27;x&#x27;);</span><br><span class="line">ylabel(&#x27;y&#x27;);</span><br></pre></td></tr></table></figure></p>
+<h2 id="概率论相关知识点">概率论相关知识点</h2>
+<p>贝叶斯的 <a
+href="https://zhuanlan.zhihu.com/p/401258319">看着还不错的一个系列</a><br>
+先验分布：已知原因结果的概率<br> 后验分布：已知结果原因的概率<br>
+后验预测分布：已知结果预测新数据分布<br></p>
+<p><a
+href="https://ww2.mathworks.cn/help/stats/fitdist.html">对数据进行概率分布对象拟合</a><br>
+<a
+href="https://ww2.mathworks.cn/help/stats/histfit.html">正态分布拟合直方图画图及修改</a><br></p>
+<h2 id="灰色关联度分析">灰色关联度分析</h2>
+<p>在一个灰色系统中，我们想要了解其中某个我们所关注的项目受其他因素影响的相对强弱
+- 确立母序列 - 归一化 - 初值化：把一个序列的数据统一除以最开始的值 -
+均值化：把序列的数据除以均值 - 计算灰色关联系数</p>
 ]]></content>
       <tags>
-        <tag>大二下</tag>
-        <tag>课程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>机器学习导论</title>
-    <url>/2024/03/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AF%BC%E8%AE%BA/</url>
-    <content><![CDATA[<h3 id="section">2024/3/5</h3>
-<p>模型评估与选择 - <a
-href="https://blog.csdn.net/qq_41133375/article/details/105804319/?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0--blog-75127138.235%5Ev43%5Epc_blog_bottom_relevance_base3&amp;spm=1001.2101.3001.4242.1&amp;utm_relevant_index=3">查准率与查全率</a>
-<br> - <a
-href="https://www.zhihu.com/question/56817713">查准率和查全率为什么说是互相矛盾的？</a>
-<br> - 查准率：预测T中实际T占比 <br> - 查全率：实际T中预测T占比 <br> -
-ROC曲线 - 绘制 <br> - AUC：ROC面积/1-l<sub>rank</sub> <br></p>
-]]></content>
-      <tags>
-        <tag>大二下</tag>
+        <tag>algorithm</tag>
       </tags>
   </entry>
   <entry>
@@ -442,10 +404,131 @@ href="https://www.zhihu.com/tardis/zm/art/270299029?source_id=1005">参考</a>
 元组：关系的每一行 -
 关键字：能唯一标识关系中的一个元组，不含多余的属性值 - 主关键字 -
 外关键字 4. 计算机世界：是DB的最终实现结构<br></p>
+<h3 id="关系模型">2024/3/11 关系模型</h3>
+<ul>
+<li>关系数据结构
+<ul>
+<li>表结构
+<ul>
+<li>表框架由n个命名的属性（attribute）组成，n被称为表的元数</li>
+<li>表框架每行数据被称为“元组”
+，一个表框架可存放m个元组，m被称为表的基数（Cardinality）</li>
+</ul></li>
+<li>键：
+<ul>
+<li><p>如果表A中的属性集F是表B的键，则称该属性集F为表A的‘外键’（或称‘外关键字’）||<a
+href="https://blog.csdn.net/songhuangong123/article/details/127194673"><strong>外键</strong></a></p></li>
+<li><p>不能只根据一张表中已有的元组来判断其有哪些‘候选键’，必须根据表中属性的语义含义及其相互联系才能确定表中的‘键’的组成</p></li>
+</ul></li>
+<li>关系</li>
+</ul></li>
+<li>关系操纵
+<ul>
+<li>查询，插入，删除，修改</li>
+<li>空值的处理
+<ul>
+<li>关系的主键中不允许出现空值</li>
+<li>需要定义有关空值的运算</li>
+</ul></li>
+<li>关系操纵与关系代数中的五种基本运算之间的对应关系</li>
+</ul></li>
+</ul>
+<table border="2">
+<tr>
+<th align="center">
+关系上的五种基本操作
+</th>
+<th align="center">
+关系代数中的五种基本运算
+</th>
+</tr>
+<tr>
+<td align="left" bgcolor="white">
+元组选择
+</td>
+<td align="right" bgcolor="white">
+选择运算
+</td>
+</tr>
+<tr>
+<td align="left" bgcolor="white">
+属性指定
+</td>
+<td align="right" bgcolor="white">
+投影运算
+</td>
+</tr>
+<tr>
+<td align="left" bgcolor="white">
+关系的合并
+</td>
+<td align="right" bgcolor="white">
+笛卡尔乘积
+</td>
+</tr>
+<tr>
+<td align="left" bgcolor="white">
+元组的插入
+</td>
+<td align="right" bgcolor="white">
+并运算
+</td>
+</tr>
+<tr>
+<td align="left" bgcolor="white">
+元组的删除
+</td>
+<td align="right" bgcolor="white">
+差运算
+</td>
+</tr>
+</table>
+<p>一些示例详见PPT108往前</p>
+<ul>
+<li>关系中的数据约束</li>
+</ul>
 ]]></content>
       <tags>
         <tag>大二下</tag>
         <tag>课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数理逻辑</title>
+    <url>/2024/02/29/%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91/</url>
+    <content><![CDATA[<h3 id="section">2024/2/29</h3>
+<ul>
+<li>检验论证的两个维度：论证的前提，论证的过程</li>
+<li>论证的有效性（valid） <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 小明要么在玩原神，要么就在玩星穹铁道</span><br><span class="line">2. 小明不在玩原神</span><br><span class="line">3. 小明在玩星穹铁道</span><br></pre></td></tr></table></figure>
+以上推理“滴水不漏”——演绎（deduction） <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 南雍楼的咖啡味道正常的时候，从来没让人拉过肚子</span><br><span class="line">2. 我今天在南雍楼买的这一杯咖啡味道正常</span><br><span class="line">3. 我今天在南雍楼买的这一杯咖啡不会让我拉肚子</span><br></pre></td></tr></table></figure>
+以上推理很有可能，但存在“漏洞”——归纳（induction）</li>
+</ul>
+<p>有效性的一种非正式定义：我们称一个推演步骤是有效的当且仅当不存在任何一种可能，令该推演的前提为真且结论为假。同样地，在这种情况下我们称这些前提蕴涵（entails）其结论。</p>
+<ul>
+<li><p>一致性</p></li>
+<li><p>有效，非有效，真 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. true → false一定是非有效推演</span><br><span class="line">2. 非有效推演不一定是true → false</span><br></pre></td></tr></table></figure></p></li>
+<li><p>可靠性（soundness）<br> 在有效性基础下要求前提为真</p></li>
+<li><p>iff=if and only if <br> <span class="math display"><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="25.612ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 11320.7 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(572,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"></path></g></g><g data-mml-node="mo" transform="translate(1349.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mi" transform="translate(2405.6,0)"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(3173.3,0)"><path data-c="3A" d="M78 370Q78 394 95 412T138 430Q162 430 180 414T199 371Q199 346 182 328T139 310T96 327T78 370ZM78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path></g><g data-mml-node="mi" transform="translate(3729.1,0)"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path></g><g data-mml-node="mi" transform="translate(4090.1,0)"><path data-c="210E" d="M137 683Q138 683 209 688T282 694Q294 694 294 685Q294 674 258 534Q220 386 220 383Q220 381 227 388Q288 442 357 442Q411 442 444 415T478 336Q478 285 440 178T402 50Q403 36 407 31T422 26Q450 26 474 56T513 138Q516 149 519 151T535 153Q555 153 555 145Q555 144 551 130Q535 71 500 33Q466 -10 419 -10H414Q367 -10 346 17T325 74Q325 90 361 192T398 345Q398 404 354 404H349Q266 404 205 306L198 293L164 158Q132 28 127 16Q114 -11 83 -11Q69 -11 59 -2T48 16Q48 30 121 320L195 616Q195 629 188 632T149 637H128Q122 643 122 645T124 664Q129 683 137 683Z"></path></g><g data-mml-node="mi" transform="translate(4666.1,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path></g><g data-mml-node="mi" transform="translate(5132.1,0)"><path data-c="1D451" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g><g data-mml-node="mi" transform="translate(5652.1,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path></g><g data-mml-node="mi" transform="translate(6118.1,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(6718.1,0)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(7063.1,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mi" transform="translate(7592.1,0)"><path data-c="1D459" d="M117 59Q117 26 142 26Q179 26 205 131Q211 151 215 152Q217 153 225 153H229Q238 153 241 153T246 151T248 144Q247 138 245 128T234 90T214 43T183 6T137 -11Q101 -11 70 11T38 85Q38 97 39 102L104 360Q167 615 167 623Q167 626 166 628T162 632T157 634T149 635T141 636T132 637T122 637Q112 637 109 637T101 638T95 641T94 647Q94 649 96 661Q101 680 107 682T179 688Q194 689 213 690T243 693T254 694Q266 694 266 686Q266 675 193 386T118 83Q118 81 118 75T117 65V59Z"></path></g><g data-mml-node="mi" transform="translate(7890.1,0)"><path data-c="1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path></g><g data-mml-node="mi" transform="translate(8375.1,0)"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></g><g data-mml-node="mi" transform="translate(8925.1,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(9774.9,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mi" transform="translate(10830.7,0)"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container></span> <span class="math display"><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="25.11ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 11098.7 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(572,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"></path></g></g><g data-mml-node="mo" transform="translate(1349.8,0)"><path data-c="2208" d="M84 250Q84 372 166 450T360 539Q361 539 377 539T419 540T469 540H568Q583 532 583 520Q583 511 570 501L466 500Q355 499 329 494Q280 482 242 458T183 409T147 354T129 306T124 272V270H568Q583 262 583 250T568 230H124V228Q124 207 134 177T167 112T231 48T328 7Q355 1 466 0H570Q583 -10 583 -20Q583 -32 568 -40H471Q464 -40 446 -40T417 -41Q262 -41 172 45Q84 127 84 250Z"></path></g><g data-mml-node="mi" transform="translate(2294.6,0)"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(3062.3,0)"><path data-c="3A" d="M78 370Q78 394 95 412T138 430Q162 430 180 414T199 371Q199 346 182 328T139 310T96 327T78 370ZM78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path></g><g data-mml-node="mi" transform="translate(3618.1,0)"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path></g><g data-mml-node="mi" transform="translate(3979.1,0)"><path data-c="210E" d="M137 683Q138 683 209 688T282 694Q294 694 294 685Q294 674 258 534Q220 386 220 383Q220 381 227 388Q288 442 357 442Q411 442 444 415T478 336Q478 285 440 178T402 50Q403 36 407 31T422 26Q450 26 474 56T513 138Q516 149 519 151T535 153Q555 153 555 145Q555 144 551 130Q535 71 500 33Q466 -10 419 -10H414Q367 -10 346 17T325 74Q325 90 361 192T398 345Q398 404 354 404H349Q266 404 205 306L198 293L164 158Q132 28 127 16Q114 -11 83 -11Q69 -11 59 -2T48 16Q48 30 121 320L195 616Q195 629 188 632T149 637H128Q122 643 122 645T124 664Q129 683 137 683Z"></path></g><g data-mml-node="mi" transform="translate(4555.1,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path></g><g data-mml-node="mi" transform="translate(5021.1,0)"><path data-c="1D451" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g><g data-mml-node="mi" transform="translate(5541.1,0)"><path data-c="1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path></g><g data-mml-node="mi" transform="translate(6007.1,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(6607.1,0)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(6952.1,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mi" transform="translate(7481.1,0)"><path data-c="1D459" d="M117 59Q117 26 142 26Q179 26 205 131Q211 151 215 152Q217 153 225 153H229Q238 153 241 153T246 151T248 144Q247 138 245 128T234 90T214 43T183 6T137 -11Q101 -11 70 11T38 85Q38 97 39 102L104 360Q167 615 167 623Q167 626 166 628T162 632T157 634T149 635T141 636T132 637T122 637Q112 637 109 637T101 638T95 641T94 647Q94 649 96 661Q101 680 107 682T179 688Q194 689 213 690T243 693T254 694Q266 694 266 686Q266 675 193 386T118 83Q118 81 118 75T117 65V59Z"></path></g><g data-mml-node="mi" transform="translate(7779.1,0)"><path data-c="1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path></g><g data-mml-node="mi" transform="translate(8264.1,0)"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></g><g data-mml-node="mi" transform="translate(8814.1,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(9663.9,0)"><path data-c="2208" d="M84 250Q84 372 166 450T360 539Q361 539 377 539T419 540T469 540H568Q583 532 583 520Q583 511 570 501L466 500Q355 499 329 494Q280 482 242 458T183 409T147 354T129 306T124 272V270H568Q583 262 583 250T568 230H124V228Q124 207 134 177T167 112T231 48T328 7Q355 1 466 0H570Q583 -10 583 -20Q583 -32 568 -40H471Q464 -40 446 -40T417 -41Q262 -41 172 45Q84 127 84 250Z"></path></g><g data-mml-node="mi" transform="translate(10608.7,0)"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container></span></p></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>大二下</tag>
+        <tag>课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习导论</title>
+    <url>/2024/03/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AF%BC%E8%AE%BA/</url>
+    <content><![CDATA[<h3 id="section">2024/3/5</h3>
+<p>模型评估与选择 - <a
+href="https://blog.csdn.net/qq_41133375/article/details/105804319/?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0--blog-75127138.235%5Ev43%5Epc_blog_bottom_relevance_base3&amp;spm=1001.2101.3001.4242.1&amp;utm_relevant_index=3">查准率与查全率</a>
+<br> - <a
+href="https://www.zhihu.com/question/56817713">查准率和查全率为什么说是互相矛盾的？</a>
+<br> - 查准率：预测T中实际T占比 <br> - 查全率：实际T中预测T占比 <br> -
+ROC曲线 - 绘制 <br> - AUC：ROC面积/1-l<sub>rank</sub> <br></p>
+]]></content>
+      <tags>
+        <tag>大二下</tag>
       </tags>
   </entry>
   <entry>
