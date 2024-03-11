@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>QEMU</title>
+    <url>/2024/03/03/QEMU/</url>
+    <content><![CDATA[<h3 id="命令">命令</h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.\qemu-img create -f raw try2.img 40G </span><br><span class="line">.\qemu-img create -f raw myimage.img 60G</span><br></pre></td></tr></table></figure>
+<p>创建一个60G的raw格式磁盘</p>
+<p><br></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.\qemu-system-x86_64 -m 4G -hda try2.img -cdrom ubuntu-22.04.4.iso -boot order=d</span><br></pre></td></tr></table></figure>
+<p>安装ubuntu <br> <br> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.\qemu-system-x86_64 -m 4G -hda try2.img -bios bios.bin</span><br></pre></td></tr></table></figure>
+启动安装的磁盘（没试过不知道效果）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-machine/-M 设备类型</span><br><span class="line">-m 内存大小</span><br><span class="line">-smp 核心数</span><br><span class="line">-drive 驱动器映像文件</span><br><span class="line">- netdev 网络设备配置</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><a
+href="https://blog.csdn.net/weixin_39871788/article/details/123250595">参考博客1</a></p>
+<h3 id="linux-mbr相关内容">linux MBR相关内容</h3>
+<ul>
+<li>查看磁盘 fdisk -l
+<ul>
+<li>如果失效的话记得su root获得权限
+<ul>
+<li>再失效记得用sudo passwd root创建root</li>
+</ul></li>
+</ul></li>
+<li>备份mbr到mbr.bin <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dd if=/dev/sda of=mbr.bin bs=446 count=1</span><br></pre></td></tr></table></figure></li>
+<li>查看 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">xxd mbr.bin</span><br></pre></td></tr></table></figure></li>
+<li>反编译 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">objdump -D -b binary -mi386 -Maddr16,data16 mbr.bin</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="windows查看磁盘信息指令">windows查看磁盘信息指令</h3>
+<p>打开cmd，输入diskpart再enter <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">list disk：查看磁盘，分区格式</span><br><span class="line">list volume：看到当前系统中的全部分区、盘符。</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <tags>
+        <tag>操作系统</tag>
+        <tag>大二下</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LSTM</title>
     <url>/2024/02/02/LSTM/</url>
     <content><![CDATA[<h2 id="lstm">LSTM</h2>
@@ -37,38 +71,25 @@ c_0(num_layers</em>num_directions,batch,hidden_size)</p>
       </tags>
   </entry>
   <entry>
-    <title>QEMU</title>
-    <url>/2024/03/03/QEMU/</url>
-    <content><![CDATA[<h3 id="命令">命令</h3>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.\qemu-img create -f raw try2.img 40G </span><br><span class="line">.\qemu-img create -f raw myimage.img 60G</span><br></pre></td></tr></table></figure>
-<p>创建一个60G的raw格式磁盘</p>
-<p><br></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.\qemu-system-x86_64 -m 4G -hda try2.img -cdrom ubuntu-22.04.4.iso -boot order=d</span><br></pre></td></tr></table></figure>
-<p>安装ubuntu</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.\qemu-system-x86_64 -m 4G -hda try2.img -bios bios.bin</span><br></pre></td></tr></table></figure>
-<p>启动安装的磁盘（没试过不知道效果）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-machine/-M 设备类型</span><br><span class="line">-m 内存大小</span><br><span class="line">-smp 核心数</span><br><span class="line">-drive 驱动器映像文件</span><br><span class="line">- netdev 网络设备配置</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><a
-href="https://blog.csdn.net/weixin_39871788/article/details/123250595">参考博客1</a></p>
-<h3 id="linux-mbr相关内容">linux MBR相关内容</h3>
+    <title>hexo_method</title>
+    <url>/2024/01/18/hexo-method/</url>
+    <content><![CDATA[<h2 id="命令行">命令行</h2>
 <ul>
-<li>查看磁盘 fdisk -l
-<ul>
-<li>如果失效的话记得su root获得权限
-<ul>
-<li>再失效记得用sudo passwd root创建root</li>
-</ul></li>
-</ul></li>
-<li>备份mbr到mbr.bin <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dd if=/dev/sda of=mbr.bin bs=446 count=1</span><br></pre></td></tr></table></figure></li>
-<li>查看 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">xxd mbr.bin</span><br></pre></td></tr></table></figure></li>
-<li>反编译 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">objdump -D -b binary -mi386 -Maddr16,data16 mbr.bin</span><br></pre></td></tr></table></figure></li>
+<li><em>hexo clean</em>
+清除一些东东（更改后必用，我也不知道清除啥）</li>
+<li><em>hexo g</em> 生成一些东东（更改后必用）</li>
+<li><em>hexo d</em> 部署网页</li>
+<li><em>hexo s</em> 本地查看</li>
 </ul>
-<h3 id="windows查看磁盘信息指令">windows查看磁盘信息指令</h3>
-<p>打开cmd，输入diskpart再enter <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">list disk：查看磁盘，分区格式</span><br><span class="line">list volume：看到当前系统中的全部分区、盘符。</span><br></pre></td></tr></table></figure></p>
+<h2 id="基础修改">基础修改</h2>
+<p><strong>作者，图片，链接什么的在博客主题的config文件里更改，主题在config文件里更改，这俩在一个文件夹下。</strong></p>
+<h2 id="侧边栏">侧边栏</h2>
+<p>未完待续</p>
+<h2 id="首页">首页</h2>
+<p>未完待续</p>
 ]]></content>
       <tags>
-        <tag>操作系统</tag>
-        <tag>大二下</tag>
+        <tag>method</tag>
       </tags>
   </entry>
   <entry>
@@ -94,28 +115,6 @@ fetch+merge:获取最新代码手动合并 <figure class="highlight plaintext"><
 <p>(https://blog.csdn.net/Thinkingcao/article/details/106059446)</p>
 <h3 id="删除">删除</h3>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git ls-files //查看缓存区文件</span><br><span class="line">git reset . //已经add .后，用该命令重置</span><br><span class="line">git push origin --force //强制推送更改内容</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>method</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo_method</title>
-    <url>/2024/01/18/hexo-method/</url>
-    <content><![CDATA[<h2 id="命令行">命令行</h2>
-<ul>
-<li><em>hexo clean</em>
-清除一些东东（更改后必用，我也不知道清除啥）</li>
-<li><em>hexo g</em> 生成一些东东（更改后必用）</li>
-<li><em>hexo d</em> 部署网页</li>
-<li><em>hexo s</em> 本地查看</li>
-</ul>
-<h2 id="基础修改">基础修改</h2>
-<p><strong>作者，图片，链接什么的在博客主题的config文件里更改，主题在config文件里更改，这俩在一个文件夹下。</strong></p>
-<h2 id="侧边栏">侧边栏</h2>
-<p>未完待续</p>
-<h2 id="首页">首页</h2>
-<p>未完待续</p>
 ]]></content>
       <tags>
         <tag>method</tag>
@@ -148,92 +147,6 @@ fetch+merge:获取最新代码手动合并 <figure class="highlight plaintext"><
       <tags>
         <tag>操作系统</tag>
         <tag>大二下</tag>
-        <tag>method</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>matlab</title>
-    <url>/2024/01/19/matlab/</url>
-    <content><![CDATA[<h2 id="语法">语法</h2>
-<ul>
-<li>t="qaq"定义字符串变量，加法直接在后面加,但是在数组里占一格</li>
-<li>t=‘DNA’是字符，存三个字符，s=t(3)
-//s的值为A，char类型不能加，添加用[t,'www']</li>
-<li>如果一个操作数是标量，另一个操作数不是标量，matlab会将该标量隐式扩展为与另一个操作数具有相同的大小</li>
-</ul>
-<h2 id="函数">函数</h2>
-<ul>
-<li><p>[D,V]=eig(A) 求特征向量</p></li>
-<li><p>B=A' 求转置</p></li>
-<li><p>E=inv(A) 求逆矩阵</p></li>
-<li><p>C=A*B 矩阵乘法</p></li>
-<li><p>E=A.*B 矩阵点乘，对应元素相乘</p></li>
-<li><p>x=A(A)*b</p></li>
-<li><p><strong>linprog函数</strong>：求解线性规划问题<br>
-[x,fval,exitflag]=linprog(f,A,b,Aeq,beq,lb,ub)<br> Linprog输入：<br>
-f是目标函数的系数矩阵<br> A是线性规划不等式约束的变量系数矩阵<br>
-b是不等式约束的资源数<br>
-Aeq和beq是相应等式约束的变量系数矩阵和资源数<br>
-lb和ub为保变量的上下区间<br> linprog返回值：
-x为求得的各变量的值，fval为最优化的值，exitflag是函数的退出标志</p></li>
-<li><p><a
-href="https://blog.csdn.net/f_h_h/article/details/100537394">intlinprog:整数约束变量</a>：<br>
-intcon ：整数所在位置<br></p></li>
-<li><p>输出：disp（a）</p></li>
-<li><p>输入：a=input("请输入a的值")</p></li>
-<li><p>plot（b）画图</p></li>
-<li><p>grid on 添加网格线</p></li>
-<li><p><strong><a
-href="https://blog.csdn.net/qq_25018077/article/details/88998126">function</a></strong>：<br>
-function [y1,...,yn]=myfun(x1,...,xm)
-<br>前面是输出，后面是输入</p></li>
-<li><p><strong>fmincon</strong>：<br>
-[x,val]=fmincon(fun,x0,A,b,Aeq,beq,lb,ub,nonlcon)
-fun:单独脚本文件里定义的目标函数<br> x0:决策变量的初始值<br>
-nonclcon:非线性约束，包括不等式和等式 <img
-src="https://www.freeimg.cn/i/2024/01/21/65ad229922aa0.png"
-alt="加载不出来了qwq" /> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function f=fun1(x);</span><br><span class="line">f=sum(x.^2)+8;  %编写目标函数</span><br><span class="line">end</span><br><span class="line">%记得写在函数文件里</span><br></pre></td></tr></table></figure> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function [g,h]=fun2(x);</span><br><span class="line">g=[-x(1).^2+x(2)-x(3).^2;x(1)+x(2).^2+x(3)^2-20];</span><br><span class="line">h=[-x(1)-x(2).^2+2;x(2)+2*x(3).^2-3];</span><br><span class="line">end%约束函数，g是不等式约束，h是等式约束</span><br></pre></td></tr></table></figure>
-最后求解用[x,y]=fmincon('fun1',rand(3,1),[],[],[],[],zeros(3,1),[],'fun2')即可</p></li>
-<li><p>读入excel文件处理 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[tx,str]=xlsread(&#x27;Problem_C_Data_Wordle.xlsx&#x27;);</span><br><span class="line">time=tx(:,1);</span><br><span class="line">Altitude=tx(:,3);</span><br></pre></td></tr></table></figure></p></li>
-<li><p>sort函数原数组是不改动的，需要将sort后的返回值记录下来</p></li>
-<li><p><a
-href="https://blog.csdn.net/dsydsylove/article/details/116225942">fit,fittype曲线拟合</a></p></li>
-<li><p>beta分布 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">data1 = betarnd(4,3,100,1);%生成符合beta分布的数值</span><br><span class="line">data1=sort(data1);%排序方便下面看数值长啥样</span><br><span class="line">plot(data1)</span><br><span class="line">hold on;</span><br><span class="line">[p,ci] = betafit(data1,0.01);%拟合</span><br><span class="line">x=0:0.01:1;</span><br><span class="line">y=betapdf(x,p(1,1),p(1,2));%求概率密度</span><br><span class="line">plot(x,y);</span><br><span class="line">xlabel(&#x27;x&#x27;);</span><br><span class="line">ylabel(&#x27;y&#x27;);</span><br></pre></td></tr></table></figure></p></li>
-<li><p>用已有的拟合模板（见下面官方文档链接）拟合曲线
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[fit_result,gof]=fit(x,y,&#x27;poly7&#x27;);%x是自变量，y是因变量，poly7是可替换的</span><br><span class="line">disp(fit_result);</span><br><span class="line">plot(fit_result,x,y);</span><br></pre></td></tr></table></figure></p></li>
-</ul>
-<p>## 文件 * 编程文件：写了运行命令行弹出结果 *
-实时文件：左边代码右边结果，点击文本后可以插入图片，使用markdown语法 *
-函数文件：无法直接使用，在脚本文件中调用</p>
-<h2 id="符号">符号</h2>
-<ul>
-<li>%后面是注释</li>
-<li>写完一行代码末尾加分号会执行运算但是不在命令行窗口输出（不写就输出了是吧qaq）</li>
-<li>命令行：
-<ul>
-<li>clc（清空命令行）</li>
-<li>clear（清空工作区）</li>
-<li>按向上方向键调用历史命令</li>
-</ul></li>
-<li>快捷键：
-<ul>
-<li>ctrl+N新建脚本</li>
-<li>ctrl+Z撤销，ctrl+Y撤销过头时回溯</li>
-<li>ctrl+F 查找或替换变量名</li>
-<li>F5保存并运行</li>
-<li>F10单步执行</li>
-<li>F9运行代码选中片段</li>
-<li>ctrl+r片段注释，ctrl+t注销</li>
-<li>ctrl+e实时脚本文字，代码转换</li>
-<li>ctrl+j:自动整理注释</li>
-<li>ctrl+i：智能缩进代码</li>
-</ul></li>
-</ul>
-<h2 id="官方文档">官方文档</h2>
-<p><a
-href="https://ww2.mathworks.cn/help/curvefit/list-of-library-models-for-curve-and-surface-fitting.html#btbcxna-1">一些模型的中英对照</a></p>
-]]></content>
-      <tags>
         <tag>method</tag>
       </tags>
   </entry>
@@ -349,12 +262,112 @@ memory)。内存的每个字节都由一个唯一的数字来标识，称为它�
 virtual address space) 。
 <ul>
 <li>16进制简写为hex</li>
+<li>可以使用c语言程序强行输出地址查看</li>
 </ul></li>
 </ul>
+<h3 id="计算机启动mbr反汇编">2024/3/7 计算机启动||MBR反汇编</h3>
+<ul>
+<li>BIOS会指定启动的设备方便读取磁盘中的操作系统内核文件。由于不同的操作系统的文件系统格式不同，因此我们必须要以一个启动引导程序来处理内核文件加载问题。这个启动引导程序被称为boot
+loader。boot loader可以装在第一个扇区（sector）中，即MBR</li>
+<li>linux将boot loader的程序执行与设置加载分为两个阶段
+<ul>
+<li>执行boot
+loader：这个主程序必须要安装在启动区，亦即mbr或者启动扇区。但因为mbr太小所以仅安装最小主程序，没有安装loader相关配置文件。</li>
+<li>主程序加载配置文件：通过boot
+loader加载所有配置文件与相关的环境参数文件。</li>
+</ul></li>
+</ul>
+<p><a href="https://blog.csdn.net/lijiewen2017/article/details/124574991">MBR引导程序源码理解</a></p>
 ]]></content>
       <tags>
         <tag>大二下</tag>
         <tag>课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>matlab</title>
+    <url>/2024/01/19/matlab/</url>
+    <content><![CDATA[<h2 id="语法">语法</h2>
+<ul>
+<li>t="qaq"定义字符串变量，加法直接在后面加,但是在数组里占一格</li>
+<li>t=‘DNA’是字符，存三个字符，s=t(3)
+//s的值为A，char类型不能加，添加用[t,'www']</li>
+<li>如果一个操作数是标量，另一个操作数不是标量，matlab会将该标量隐式扩展为与另一个操作数具有相同的大小</li>
+</ul>
+<h2 id="函数">函数</h2>
+<ul>
+<li><p>[D,V]=eig(A) 求特征向量</p></li>
+<li><p>B=A' 求转置</p></li>
+<li><p>E=inv(A) 求逆矩阵</p></li>
+<li><p>C=A*B 矩阵乘法</p></li>
+<li><p>E=A.*B 矩阵点乘，对应元素相乘</p></li>
+<li><p>x=A(A)*b</p></li>
+<li><p><strong>linprog函数</strong>：求解线性规划问题<br>
+[x,fval,exitflag]=linprog(f,A,b,Aeq,beq,lb,ub)<br> Linprog输入：<br>
+f是目标函数的系数矩阵<br> A是线性规划不等式约束的变量系数矩阵<br>
+b是不等式约束的资源数<br>
+Aeq和beq是相应等式约束的变量系数矩阵和资源数<br>
+lb和ub为保变量的上下区间<br> linprog返回值：
+x为求得的各变量的值，fval为最优化的值，exitflag是函数的退出标志</p></li>
+<li><p><a
+href="https://blog.csdn.net/f_h_h/article/details/100537394">intlinprog:整数约束变量</a>：<br>
+intcon ：整数所在位置<br></p></li>
+<li><p>输出：disp（a）</p></li>
+<li><p>输入：a=input("请输入a的值")</p></li>
+<li><p>plot（b）画图</p></li>
+<li><p>grid on 添加网格线</p></li>
+<li><p><strong><a
+href="https://blog.csdn.net/qq_25018077/article/details/88998126">function</a></strong>：<br>
+function [y1,...,yn]=myfun(x1,...,xm)
+<br>前面是输出，后面是输入</p></li>
+<li><p><strong>fmincon</strong>：<br>
+[x,val]=fmincon(fun,x0,A,b,Aeq,beq,lb,ub,nonlcon)
+fun:单独脚本文件里定义的目标函数<br> x0:决策变量的初始值<br>
+nonclcon:非线性约束，包括不等式和等式 <img
+src="https://www.freeimg.cn/i/2024/01/21/65ad229922aa0.png"
+alt="加载不出来了qwq" /> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function f=fun1(x);</span><br><span class="line">f=sum(x.^2)+8;  %编写目标函数</span><br><span class="line">end</span><br><span class="line">%记得写在函数文件里</span><br></pre></td></tr></table></figure> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function [g,h]=fun2(x);</span><br><span class="line">g=[-x(1).^2+x(2)-x(3).^2;x(1)+x(2).^2+x(3)^2-20];</span><br><span class="line">h=[-x(1)-x(2).^2+2;x(2)+2*x(3).^2-3];</span><br><span class="line">end%约束函数，g是不等式约束，h是等式约束</span><br></pre></td></tr></table></figure>
+最后求解用[x,y]=fmincon('fun1',rand(3,1),[],[],[],[],zeros(3,1),[],'fun2')即可</p></li>
+<li><p>读入excel文件处理 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[tx,str]=xlsread(&#x27;Problem_C_Data_Wordle.xlsx&#x27;);</span><br><span class="line">time=tx(:,1);</span><br><span class="line">Altitude=tx(:,3);</span><br></pre></td></tr></table></figure></p></li>
+<li><p>sort函数原数组是不改动的，需要将sort后的返回值记录下来</p></li>
+<li><p><a
+href="https://blog.csdn.net/dsydsylove/article/details/116225942">fit,fittype曲线拟合</a></p></li>
+<li><p>beta分布 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">data1 = betarnd(4,3,100,1);%生成符合beta分布的数值</span><br><span class="line">data1=sort(data1);%排序方便下面看数值长啥样</span><br><span class="line">plot(data1)</span><br><span class="line">hold on;</span><br><span class="line">[p,ci] = betafit(data1,0.01);%拟合</span><br><span class="line">x=0:0.01:1;</span><br><span class="line">y=betapdf(x,p(1,1),p(1,2));%求概率密度</span><br><span class="line">plot(x,y);</span><br><span class="line">xlabel(&#x27;x&#x27;);</span><br><span class="line">ylabel(&#x27;y&#x27;);</span><br></pre></td></tr></table></figure></p></li>
+<li><p>用已有的拟合模板（见下面官方文档链接）拟合曲线
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[fit_result,gof]=fit(x,y,&#x27;poly7&#x27;);%x是自变量，y是因变量，poly7是可替换的</span><br><span class="line">disp(fit_result);</span><br><span class="line">plot(fit_result,x,y);</span><br></pre></td></tr></table></figure></p></li>
+</ul>
+<p>## 文件 * 编程文件：写了运行命令行弹出结果 *
+实时文件：左边代码右边结果，点击文本后可以插入图片，使用markdown语法 *
+函数文件：无法直接使用，在脚本文件中调用</p>
+<h2 id="符号">符号</h2>
+<ul>
+<li>%后面是注释</li>
+<li>写完一行代码末尾加分号会执行运算但是不在命令行窗口输出（不写就输出了是吧qaq）</li>
+<li>命令行：
+<ul>
+<li>clc（清空命令行）</li>
+<li>clear（清空工作区）</li>
+<li>按向上方向键调用历史命令</li>
+</ul></li>
+<li>快捷键：
+<ul>
+<li>ctrl+N新建脚本</li>
+<li>ctrl+Z撤销，ctrl+Y撤销过头时回溯</li>
+<li>ctrl+F 查找或替换变量名</li>
+<li>F5保存并运行</li>
+<li>F10单步执行</li>
+<li>F9运行代码选中片段</li>
+<li>ctrl+r片段注释，ctrl+t注销</li>
+<li>ctrl+e实时脚本文字，代码转换</li>
+<li>ctrl+j:自动整理注释</li>
+<li>ctrl+i：智能缩进代码</li>
+</ul></li>
+</ul>
+<h2 id="官方文档">官方文档</h2>
+<p><a
+href="https://ww2.mathworks.cn/help/curvefit/list-of-library-models-for-curve-and-surface-fitting.html#btbcxna-1">一些模型的中英对照</a></p>
+]]></content>
+      <tags>
+        <tag>method</tag>
       </tags>
   </entry>
   <entry>
@@ -378,6 +391,21 @@ virtual address space) 。
       <tags>
         <tag>大二下</tag>
         <tag>课程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习导论</title>
+    <url>/2024/03/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AF%BC%E8%AE%BA/</url>
+    <content><![CDATA[<h3 id="section">2024/3/5</h3>
+<p>模型评估与选择 - <a
+href="https://blog.csdn.net/qq_41133375/article/details/105804319/?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0--blog-75127138.235%5Ev43%5Epc_blog_bottom_relevance_base3&amp;spm=1001.2101.3001.4242.1&amp;utm_relevant_index=3">查准率与查全率</a>
+<br> - <a
+href="https://www.zhihu.com/question/56817713">查准率和查全率为什么说是互相矛盾的？</a>
+<br> - 查准率：预测T中实际T占比 <br> - 查全率：实际T中预测T占比 <br> -
+ROC曲线 - 绘制 <br> - AUC：ROC面积/1-l<sub>rank</sub> <br></p>
+]]></content>
+      <tags>
+        <tag>大二下</tag>
       </tags>
   </entry>
   <entry>
@@ -418,21 +446,6 @@ href="https://www.zhihu.com/tardis/zm/art/270299029?source_id=1005">参考</a>
       <tags>
         <tag>大二下</tag>
         <tag>课程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>机器学习导论</title>
-    <url>/2024/03/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AF%BC%E8%AE%BA/</url>
-    <content><![CDATA[<h3 id="section">2024/3/5</h3>
-<p>模型评估与选择 - <a
-href="https://blog.csdn.net/qq_41133375/article/details/105804319/?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0--blog-75127138.235%5Ev43%5Epc_blog_bottom_relevance_base3&amp;spm=1001.2101.3001.4242.1&amp;utm_relevant_index=3">查准率与查全率</a>
-<br> - <a
-href="https://www.zhihu.com/question/56817713">查准率和查全率为什么说是互相矛盾的？</a>
-<br> - 查准率：预测T中实际T占比 <br> - 查全率：实际T中预测T占比 <br> -
-ROC曲线 - 绘制 <br> - AUC：ROC面积/1-l<sub>rank</sub> <br></p>
-]]></content>
-      <tags>
-        <tag>大二下</tag>
       </tags>
   </entry>
   <entry>
@@ -478,6 +491,96 @@ ROC曲线 - 绘制 <br> - AUC：ROC面积/1-l<sub>rank</sub> <br></p>
 <li><em>为求尽善尽美，为求我不再感到那么孤独，我只期望行刑那天围观观众，都向我发出憎恨的吼声</em>
 <br> <em>—— 《局外人》</em></li>
 </ul>
+<h3 id="section-5">24.3.11</h3>
+<h4 id="春泥棒"><strong>《春泥棒》</strong></h4>
+<p>高架橋を抜けたら雲の隙間に青が覗いた<br>
+穿过高架桥，从云隙间窥见一抹蔚蓝<br> ko kakyo wo nuketa rakumo no suki
+ma ni ao ga nozo i ta
+<br>こかきょをぬけたらくものすきまにあおがのぞいた</p>
+<p><br>最近どうも暑いからただ風が吹くのを待ってた
+<br>近来实在是燥热难耐，只是静候着一缕清风 <br>sai kin dou mo atsu i
+kara tada kaze ga fuku nowo ma tte ta</p>
+<p><br>木陰に座る <br>坐在树荫下 <br>kogae ni suwaru</p>
+<p><br>何か頬に付く <br>有什么东西粘上了脸颊 <br>nani ka ho ni tsuku</p>
+<p><br>見上げれば頭上に咲いて散る <br>向上望去，头顶一片花开花落 <br>mi
+agere ba tsu jyo ni sai te chiru</p>
+<p><br>はらり、僕らもう息も忘れて <br>飞花飘零，我们连呼吸也忘却
+<br>harari boku ramou iki mo wasure</p>
+<p><br>瞬きさえ億劫 <br>甚至不愿眨眼 <br>mada daki sae oku u</p>
+<p><br>さぁ、今日さえ明日過去に変わる
+<br>看吧，就连今天到了明日也将变成过去 <br>saa kyo sae ashi ta kako ni
+kawaru</p>
+<p><br>ただ風を待つ <br>只是静候春风 <br>tada kaze womatsu</p>
+<p><br>だから僕らもう声も忘れて <br>所以我们连声音也忘却 <br>dakara boku
+tamou koe mo wasurete</p>
+<p><br>さよならさえ億劫 <br>甚至不愿说出再见 <br>sayo nara sae o kku
+u</p>
+<p><br>ただ花が降るだけ晴れり <br>只是落花纷纷 <br>tada hana gafuru dake
+hareri</p>
+<p><br>今、春吹雪 <br>此刻，阳光明媚，樱飞漫天 <br>ima haru fu yuki</p>
+<p><br>次の日も待ち合わせ <br>第二天也是碰头的日子 <br>tsuki no himo
+machi awase</p>
+<p><br>花見の客も少なくなった <br>来赏花的游客也变少了 <br>hanami no
+kyaku mo su na ku natta</p>
+<p><br>春の匂いはもう止む <br>春日的气息已然画上句点 <br>haru noni o i
+ha mou yamu</p>
+<p><br>今年も夏が来るのか <br>今年也要迎来夏天了吗？ <br>kotoshi mo
+natsu ga kuru noka</p>
+<p><br>高架橋を抜けたら道の先に君が覗いた
+<br>穿过高架桥，在道路的前方瞥见了你的身影 <br>ko kakyo wo nuke ta
+ramichi no saki ni kimi ga naso ita</p>
+<p><br>残りはどれだけかな <br>究竟还剩下多少次呢？ <br>nokori ha dore
+dake kana</p>
+<p><br>どれだけ春に会えるだろう <br>究竟还能遇见多少次春天呢？ <br>dore
+dake haru ni ae ru darou</p>
+<p><br>川沿いの丘、木陰に座る <br>沿着河川的小丘上，坐在树荫下 <br>kawa
+zo i no oka ko ga eni suwaru</p>
+<p><br>また昨日と変わらず今日も咲く花に <br>还是一如昨日，望着盛放的樱花
+<br>mada ki no to kawarazu kyo mo saku hanani</p>
+<p><br>僕らもう息も忘れて <br>我们连呼吸也忘却 <br>bokura mo u iki mo
+wasurete</p>
+<p><br>瞬きさえ億劫 <br>甚至不愿眨眼 <br>mada daki sae oku u</p>
+<p><br>花散らせ今吹くこの嵐は <br>此刻吹落花海的这阵大风 <br>hana
+chirase ima fuku kono arashi ha</p>
+<p><br>まさに春泥棒 <br>正是窃走春日的盗贼 <br>masani haru doro bo o</p>
+<p><br>風に今日ももう時が 流れて <br>今天的时间就这样于风中流逝 <br>kaze
+ni kyo mo mou toki ga nagarete</p>
+<p><br>立つことさえ億劫 <br>连站着也觉得麻烦 <br>da tsu koto sae
+okuu</p>
+<p><br>花の隙間に空、散れり <br>花间的天空 <br>hana nosu ki mani sora
+chireri</p>
+<p><br>まだ、春吹雪 <br>春吹雪，仍是落花纷纷，樱飞漫天 <br>mada haru fu
+yuki</p>
+<p><br>今日も会いに行く <br>今天也要去见你 <br>kyo omo ai ni iku</p>
+<p><br>木陰に座る <br>坐在树荫下 <br>koga eni suwaru</p>
+<p><br>溜息を吐く <br>轻声叹气 <br>dame iku wo tsuku</p>
+<p><br>花ももう終わる <br>花季也要结束了 <br>hana mo mou owaru</p>
+<p><br>明日も会いに行く <br>明天也要去见你 <br>asumo ai ni iku</p>
+<p><br>春がもう終わる <br>春天也要结束了 <br>haru ga mou owaru</p>
+<p><br>名残るように時間が散っていく
+<br>又好像有些恋恋不舍，时间就这样悄然而逝 <br>na oko ru youni jikan ga
+chi tte iku</p>
+<p><br>愛を歌えば言葉足らず 言语远不足以用来歌唱我的爱意 <br>ai wo uta e
+ba kotoba tarazu</p>
+<p><br>踏む韻さえ億劫 <br>连押韵也只觉得麻烦 <br>fu mu ni sae okuu</p>
+<p><br>花開いた今を言葉如きが語れるものか
+<br>此刻樱花满开的盛景岂能用三言两语述说？ <br>hana hirai ta ima wo koto
+ba koto ki ga katareru mono ka</p>
+<p><br>はらり、僕らもう息も忘れて <br>飞花飘零，我们连呼吸也忘却
+<br>harari boku ramou koe mowasure te</p>
+<p><br>瞬きさえ億劫 <br>甚至不愿眨眼 <br>mada da ki sae okuu</p>
+<p><br>花見は僕らだけ <br>仅有你和我两人的赏花 <br>hana mi ha bokura
+dake</p>
+<p><br>散るなまだ、春吹雪 <br>春意尚在，樱飞漫天 <br>chiru namada haru
+fu yuki</p>
+<p><br>あともう少しだけ <br>还剩下一点点 <br>ato mou su koshi dake</p>
+<p><br>もう数えられるだけ <br>还能继续数下去 <br>mou kazoe rareru
+dake</p>
+<p><br>あと花二つだけ <br>还余下春花两瓣 <br>ato hana futatsu dake</p>
+<p><br>もう花一つだけ <br>还剩一簇春花孤绽 <br>mou hana hitotsu dake</p>
+<p><br>ただ葉が残るだけ、はらり <br>最后只留绿叶独展 <br>tada haga
+nokoru dake harari</p>
+<p><br>今、春仕舞い <br>此刻，飞花飘零，春日了完 <br>ima haru chimai</p>
 ]]></content>
       <tags>
         <tag>随记</tag>

@@ -509,7 +509,7 @@ ROC曲线 - 绘制 <br> - AUC：ROC面积/1-l<sub>rank</sub> <br></p>
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-03-04 21:30:06" itemprop="dateModified" datetime="2024-03-04T21:30:06+08:00">2024-03-04</time>
+      <time title="修改时间：2024-03-07 14:26:01" itemprop="dateModified" datetime="2024-03-07T14:26:01+08:00">2024-03-07</time>
     </span>
 
   
@@ -527,9 +527,8 @@ ROC曲线 - 绘制 <br> - AUC：ROC面积/1-l<sub>rank</sub> <br></p>
 <p>创建一个60G的raw格式磁盘</p>
 <p><br></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\qemu-system-x86_64 -m 4G -hda try2.img -cdrom ubuntu-22.04.4.iso -boot order=d</span><br></pre></td></tr></table></figure>
-<p>安装ubuntu</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\qemu-system-x86_64 -m 4G -hda try2.img -bios bios.bin</span><br></pre></td></tr></table></figure>
-<p>启动安装的磁盘（没试过不知道效果）</p>
+<p>安装ubuntu <br> <br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\qemu-system-x86_64 -m 4G -hda try2.img -bios bios.bin</span><br></pre></td></tr></table></figure>
+启动安装的磁盘（没试过不知道效果）</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-machine/-M 设备类型</span><br><span class="line">-m 内存大小</span><br><span class="line">-smp 核心数</span><br><span class="line">-drive 驱动器映像文件</span><br><span class="line">- netdev 网络设备配置</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><a
 target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39871788/article/details/123250595">参考博客1</a></p>
@@ -699,7 +698,7 @@ target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39871788/artic
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-03-06 16:52:53" itemprop="dateModified" datetime="2024-03-06T16:52:53+08:00">2024-03-06</time>
+      <time title="修改时间：2024-03-08 10:20:03" itemprop="dateModified" datetime="2024-03-08T10:20:03+08:00">2024-03-08</time>
     </span>
 
   
@@ -757,8 +756,22 @@ memory)。内存的每个字节都由一个唯一的数字来标识，称为它�
 virtual address space) 。
 <ul>
 <li>16进制简写为hex</li>
+<li>可以使用c语言程序强行输出地址查看</li>
 </ul></li>
 </ul>
+<h3 id="计算机启动mbr反汇编">2024/3/7 计算机启动||MBR反汇编</h3>
+<ul>
+<li>BIOS会指定启动的设备方便读取磁盘中的操作系统内核文件。由于不同的操作系统的文件系统格式不同，因此我们必须要以一个启动引导程序来处理内核文件加载问题。这个启动引导程序被称为boot
+loader。boot loader可以装在第一个扇区（sector）中，即MBR</li>
+<li>linux将boot loader的程序执行与设置加载分为两个阶段
+<ul>
+<li>执行boot
+loader：这个主程序必须要安装在启动区，亦即mbr或者启动扇区。但因为mbr太小所以仅安装最小主程序，没有安装loader相关配置文件。</li>
+<li>主程序加载配置文件：通过boot
+loader加载所有配置文件与相关的环境参数文件。</li>
+</ul></li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lijiewen2017/article/details/124574991">MBR引导程序源码理解</a></p>
 
       
     </div>
