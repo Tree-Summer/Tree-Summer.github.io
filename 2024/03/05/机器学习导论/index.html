@@ -21,15 +21,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="2024&#x2F;3&#x2F;5模型评估与选择  查准率与查全率  查准率和查全率为什么说是互相矛盾的？  查准率：预测T中实际T占比  查全率：实际T中预测T占比    ROC曲线 绘制  AUC：ROC面积&#x2F;1-l~rank~">
+    <meta name="description" content="2024&#x2F;3&#x2F;5 模型评估与选择 - 查准率与查全率  - 查准率和查全率为什么说是互相矛盾的？  - 查准率：预测T中实际T占比  - 查全率：实际T中预测T占比  - ROC曲线 - 绘制  - AUC：ROC面积&#x2F;1-lrank  24&#x2F;4&#x2F;2 笑死这人一个月没学了  决策树模型概览  #### 划分度量 信息增益 信息熵:度量样本集合&quot;纯度&quot;的指标 假定当前样本集合D中第">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习导论">
 <meta property="og:url" content="http://example.com/2024/03/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AF%BC%E8%AE%BA/index.html">
 <meta property="og:site_name" content="灰原">
-<meta property="og:description" content="2024&#x2F;3&#x2F;5模型评估与选择  查准率与查全率  查准率和查全率为什么说是互相矛盾的？  查准率：预测T中实际T占比  查全率：实际T中预测T占比    ROC曲线 绘制  AUC：ROC面积&#x2F;1-l~rank~">
+<meta property="og:description" content="2024&#x2F;3&#x2F;5 模型评估与选择 - 查准率与查全率  - 查准率和查全率为什么说是互相矛盾的？  - 查准率：预测T中实际T占比  - 查全率：实际T中预测T占比  - ROC曲线 - 绘制  - AUC：ROC面积&#x2F;1-lrank  24&#x2F;4&#x2F;2 笑死这人一个月没学了  决策树模型概览  #### 划分度量 信息增益 信息熵:度量样本集合&quot;纯度&quot;的指标 假定当前样本集合D中第">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-05T01:42:58.000Z">
-<meta property="article:modified_time" content="2024-03-06T07:17:20.203Z">
+<meta property="article:modified_time" content="2024-04-02T02:59:12.780Z">
 <meta property="article:author" content="floyd">
 <meta property="article:tag" content="大二下">
 <meta name="twitter:card" content="summary">
@@ -142,7 +142,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-3-5"><span class="nav-number">1.</span> <span class="nav-text">2024&#x2F;3&#x2F;5</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#section"><span class="nav-number">1.</span> <span class="nav-text">2024&#x2F;3&#x2F;5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%91%E6%AD%BB%E8%BF%99%E4%BA%BA%E4%B8%80%E4%B8%AA%E6%9C%88%E6%B2%A1%E5%AD%A6%E4%BA%86"><span class="nav-number">2.</span> <span class="nav-text">24&#x2F;4&#x2F;2 笑死这人一个月没学了</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%89%AA%E6%9E%9D"><span class="nav-number">2.1.</span> <span class="nav-text">剪枝</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -231,7 +231,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-03-06 15:17:20" itemprop="dateModified" datetime="2024-03-06T15:17:20+08:00">2024-03-06</time>
+      <time title="修改时间：2024-04-02 10:59:12" itemprop="dateModified" datetime="2024-04-02T10:59:12+08:00">2024-04-02</time>
     </span>
 
   
@@ -243,20 +243,55 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="2024-3-5"><a href="#2024-3-5" class="headerlink" title="2024/3/5"></a>2024/3/5</h3><p>模型评估与选择</p>
+    <div class="post-body" itemprop="articleBody"><h3 id="section">2024/3/5</h3>
+<p>模型评估与选择 - <a
+target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41133375/article/details/105804319/?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0--blog-75127138.235%5Ev43%5Epc_blog_bottom_relevance_base3&amp;spm=1001.2101.3001.4242.1&amp;utm_relevant_index=3">查准率与查全率</a>
+<br> - <a
+target="_blank" rel="noopener" href="https://www.zhihu.com/question/56817713">查准率和查全率为什么说是互相矛盾的？</a>
+<br> - 查准率：预测T中实际T占比 <br> - 查全率：实际T中预测T占比 <br> -
+ROC曲线 - 绘制 <br> - AUC：ROC面积/1-l<sub>rank</sub> <br></p>
+<h3 id="笑死这人一个月没学了">24/4/2 笑死这人一个月没学了</h3>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41133375/article/details/105804319/?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0--blog-75127138.235^v43^pc_blog_bottom_relevance_base3&amp;spm=1001.2101.3001.4242.1&amp;utm_relevant_index=3">查准率与查全率</a> <br></li>
-<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/56817713">查准率和查全率为什么说是互相矛盾的？</a> <br><ul>
-<li>查准率：预测T中实际T占比 <br></li>
-<li>查全率：实际T中预测T占比 <br></li>
+<li>决策树模型概览 <img
+src="https://pic.imgdb.cn/item/660b5d0f9f345e8d0377dc93.png"
+alt="图片" /> #### 划分度量</li>
+<li>信息增益 信息熵:度量样本集合"纯度"的指标<br>
+假定当前样本集合D中第k类样本所占比例为Pk,则D的信息熵定义为 <span
+class="math display">\[Ent(D)=-\sum\limits_{k=1}^{\left| y \right|}p_k
+log_2 p_k\]</span> Ent(D)的值越小,则D的纯度越高<br> 离散属性<span
+class="math inline">\(\alpha\)</span>的取值:<span
+class="math inline">\({\alpha ^{1},\alpha ^{2},…，\alpha ^{v} }\)</span>
+<br> <span class="math inline">\(D^v\)</span>:D中在<span
+class="math inline">\(\alpha\)</span>上取值等于<span
+class="math inline">\(\alpha^v\)</span>的样本集合 <br> 以属性<span
+class="math inline">\(\alpha\)</span>对数据集D进行划分所获得的信息增益为:
+<span class="math display">\[Gain(D,\alpha)=Ent(D)-\sum\limits_{v=1}^{V}
+\frac{\left|D^v \right|}{\left|D \right|}Ent(D^v)\]</span> <span
+class="math display">\[Ent(D):划分前的信息熵\]</span> <span
+class="math display">\[Ent(D^v):划分后的信息熵\]</span> <span
+class="math display">\[\frac{\left|D^v \right|}{\left|D
+\right|}:第v个分支的权重，样本越多越重要\]</span> <img
+src="https://pic.imgdb.cn/item/660b642b9f345e8d0399919b.png" /> <img
+src="https://pic.imgdb.cn/item/660b64529f345e8d039a5f5d.png" /> <img
+src="https://pic.imgdb.cn/item/660b64699f345e8d039af388.png" /> <span
+class="math display">\[增益率
+Gain\_ratio(D,a)=\frac{Gain(D,a)}{IV(a)}\]</span> <span
+class="math display">\[IV(a)=-\sum\limits_{v=1}^{V}\frac{\left|D^v\right|}{\left|D\right|}log_2\frac{\left|D^v\right|}{\left|
+D \right|}\]</span>
+属性a的可能的取值越多，IV(a)的取值越大,IV(a)的取值与瓜是好是坏无关</li>
 </ul>
-</li>
-<li>ROC曲线<ul>
-<li>绘制 <br></li>
-<li>AUC：ROC面积/1-l~rank~ <br></li>
-</ul>
-</li>
-</ul>
+<p>信息增益适用于属性离散的情况，增益率适用于连续属性的情况，但是为了防止倾向于向连续属性(如编号)，需要信息增益大于一定程度再选。</p>
+<p><span class="math display">\[基尼指数
+Gini(D)=\sum\limits_{k=1}^{\left|y\right|} \sum\limits_{k^{&#39;} \neq
+k}p_k p_{k^{&#39;}}=1-\sum\limits_{k=1}^{\left|y\right|}p^2_k\]</span>
+<span
+class="math display">\[Gini\_index(D,a)=\sum\limits_{v=1}^{|D^v|}Gini(D^v)\]</span>
+基尼指数越小，数据集D的纯度越高</p>
+<h4 id="剪枝">剪枝</h4>
+<p>目的:为了降低过拟合的风险<br>
+预剪枝:用剪枝后验证集的正确率和剪枝前的正确率比较,如果小就剪枝<br>
+后剪枝:先生成，然后选择叶子结点，如果剪掉叶子节点正确率增加则剪枝，否则不剪枝。
+<br> 预剪枝 vs. 后剪枝</p>
 
     </div>
 
