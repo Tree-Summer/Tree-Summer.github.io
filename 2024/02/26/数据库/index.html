@@ -29,7 +29,7 @@
 <meta property="og:description" content="2024&#x2F;2&#x2F;26  数据库管理系统是一种管理数据库的系统软件 （ DBMS） SQL语言  DDL：数据定义语言 DML：数据操纵语言 DCL： 数据控制语言   2024&#x2F;3&#x2F;4 数据模型 数据模型的四个世界： 1. 现实世界 2. 概念世界:与具体的DBMS和计算机无关 i）几种模型： - 实体-联系（E-R）模型 基本概念：实体，属性，联系，以及它们之间的连接关">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-02-26T06:11:23.000Z">
-<meta property="article:modified_time" content="2024-04-08T07:16:46.616Z">
+<meta property="article:modified_time" content="2024-04-13T15:37:27.976Z">
 <meta property="article:author" content="floyd">
 <meta property="article:tag" content="大二下">
 <meta property="article:tag" content="课程">
@@ -143,7 +143,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#section"><span class="nav-number">1.</span> <span class="nav-text">2024&#x2F;2&#x2F;26</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">2024&#x2F;3&#x2F;4 数据模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">2024&#x2F;3&#x2F;11 关系模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E4%BB%A3%E6%95%B0%E4%B8%AD%E7%9A%84%E6%89%A9%E5%85%85%E8%BF%90%E7%AE%97"><span class="nav-number">4.</span> <span class="nav-text">24&#x2F;3&#x2F;18 关系代数中的扩充运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sql"><span class="nav-number">5.</span> <span class="nav-text">24&#x2F;4&#x2F;1 SQL</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#section"><span class="nav-number">1.</span> <span class="nav-text">2024&#x2F;2&#x2F;26</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">2024&#x2F;3&#x2F;4 数据模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">2024&#x2F;3&#x2F;11 关系模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E4%BB%A3%E6%95%B0%E4%B8%AD%E7%9A%84%E6%89%A9%E5%85%85%E8%BF%90%E7%AE%97"><span class="nav-number">4.</span> <span class="nav-text">24&#x2F;3&#x2F;18 关系代数中的扩充运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sql"><span class="nav-number">5.</span> <span class="nav-text">24&#x2F;4&#x2F;1 SQL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sql-1"><span class="nav-number">6.</span> <span class="nav-text">24&#x2F;4&#x2F;10 SQL</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -232,7 +232,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-04-08 15:16:46" itemprop="dateModified" datetime="2024-04-08T15:16:46+08:00">2024-04-08</time>
+      <time title="修改时间：2024-04-13 23:37:27" itemprop="dateModified" datetime="2024-04-13T23:37:27+08:00">2024-04-13</time>
     </span>
 
   
@@ -435,6 +435,32 @@ class="math inline">\(\Join\)</span>
 target="_blank" rel="noopener" href="https://sqlzoo.net/wiki/SELECT_basics/zh">网站</a></p>
 <p><a
 target="_blank" rel="noopener" href="https://www.dba.cn/book/sql/SQLJiChuJiaoCheng/SQLSELECTDISTINCTYuJu.html">中文手册</a></p>
+<h3 id="sql-1">24/4/10 SQL</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT sn</span><br><span class="line">FROM S</span><br><span class="line">WHERE sd IN(&#x27;MA&#x27;,&#x27;CS&#x27;,&#x27;PY&#x27;)</span><br></pre></td></tr></table></figure>
+<p>基本示例<br> 一些语法词汇: * In/NOT IN -
+查询修读课程号为C1的所有学生的姓名 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SELECT  S.sn</span><br><span class="line">FROM      S</span><br><span class="line">WHERE   S.sno  IN  (</span><br><span class="line">SELECT  SC.sno</span><br><span class="line">FROM      SC</span><br><span class="line">WHERE   SC.cno = ‘C1’ );</span><br></pre></td></tr></table></figure>
+<font color='lightblue'>IN感觉是对一个column的值进行选择,如果它有值在你给出的集合里则满足条件</font>
+* ANY/ALL -
+查询有学生成绩大于等于C1课程号中的任何一位学生成绩的学生学号</p>
+<p><font color='lightblue'>IN是选择具体值,这个是带范围的</font>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SELECT  sno</span><br><span class="line">FROM      SC</span><br><span class="line">WHERE   g  &gt;= ANY  (</span><br><span class="line">SELECT  g</span><br><span class="line">FROM      SC</span><br><span class="line">WHERE   cno = ‘C1’ );</span><br></pre></td></tr></table></figure> * EXISTS/NOT EXISTS -
+EXISTS运算符用于判断查询子句是否有记录,如果有一条或者多条记录则返回True,否则返回False。</p>
+<p><font color='lightblue'>给我的感觉像是将两个表连结在一起，运用另一个表的属性做判断以选出原表的数据</font>
+* CONTAINS - 查询至少修读学号为S4的学生所修读的所有课程的学生的学号
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">SELECT  sno</span><br><span class="line">FROM      SC</span><br><span class="line">WHERE</span><br><span class="line">( SELECT  SCx.cno</span><br><span class="line">  FROM      SC  SCx</span><br><span class="line">  WHERE   SC.sno = SCx.sno )</span><br><span class="line">	CONTAINS  </span><br><span class="line">( SELECT SCy.cno</span><br><span class="line">  FROM     SC  SCy</span><br><span class="line">  WHERE  SCy.sno = ‘S4’);</span><br></pre></td></tr></table></figure>
+contain在这里应该是集合的包含关系,但是暂且不清楚是否要求有一样的属性。(在网上搜到的样例感觉像是对某一个属性运算？？？)标准里没有这个，晕
+* LIKE - LIKE 操作符用于在 WHERE 子句中搜索列中的指定模式。</p>
+<p><font color='lightblue'>应该……已经很熟悉用法了吧</font> * UNION并 *
+INTERSECT交 * EXCEPT差 * COUNT:count of rows * SUM:sum of argument *
+AVG:average of argument * MAX:maximum value * MIN:minimum value * GROUP
+BY colname{,colname,…} -
+根据属性colname的取值的不同,将满足WHERE条件的元组划分为不同的集合</p>
+<p><font color='light blue'>没有太理解这个有什么用<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41059320/article/details/89281125">好东西</a></font>
+* &lt;&gt;不包括,用于属性除去某一个值 * distinct
+用于返回唯一的不同值(去重复用) * DELETE 删除
+删除计算机系（CS）全体学生的选课记录 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">DELETE</span><br><span class="line">FROM    SC</span><br><span class="line">WHERE   sno   IN   ( SELECT  sno</span><br><span class="line">					  FROM  S</span><br><span class="line">					  WHERE   sd = ‘CS’ ) ;</span><br></pre></td></tr></table></figure> * INSERT 插入
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">INSERT  INTO  SC ( sno,  cno )</span><br><span class="line">SELECT  sno,  cno</span><br><span class="line">FROM      S,  C</span><br><span class="line">WHERE   sd = ‘CS’ and cn = ‘Database’</span><br></pre></td></tr></table></figure> * UPDATE 更新 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">UPDATE   S</span><br><span class="line">SET  sd = ‘CS’</span><br><span class="line">WHERE   sno = ‘S16’</span><br></pre></td></tr></table></figure></p>
 
     </div>
 
