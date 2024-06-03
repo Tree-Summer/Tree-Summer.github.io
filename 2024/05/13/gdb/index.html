@@ -21,28 +21,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="命令行  hexo clean 清除一些东东（更改后必用，我也不知道清除啥） hexo g 生成一些东东（更改后必用） hexo d 部署网页 hexo s 本地查看  基础修改 作者，图片，链接什么的在博客主题的config文件里更改，主题在config文件里更改，这俩在一个文件夹下。 侧边栏 未完待续 首页 未完待续">
+    <meta name="description" content="gdb调试使用例 有详细图解 bochs调试mbr使用例1 bochs调试mbr指令">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo_method">
-<meta property="og:url" content="http://example.com/2024/01/18/hexo-method/index.html">
+<meta property="og:title" content="gdb">
+<meta property="og:url" content="http://example.com/2024/05/13/gdb/index.html">
 <meta property="og:site_name" content="灰原">
-<meta property="og:description" content="命令行  hexo clean 清除一些东东（更改后必用，我也不知道清除啥） hexo g 生成一些东东（更改后必用） hexo d 部署网页 hexo s 本地查看  基础修改 作者，图片，链接什么的在博客主题的config文件里更改，主题在config文件里更改，这俩在一个文件夹下。 侧边栏 未完待续 首页 未完待续">
+<meta property="og:description" content="gdb调试使用例 有详细图解 bochs调试mbr使用例1 bochs调试mbr指令">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-01-18T15:54:13.000Z">
-<meta property="article:modified_time" content="2024-01-18T16:03:43.611Z">
+<meta property="article:published_time" content="2024-05-13T06:22:28.000Z">
+<meta property="article:modified_time" content="2024-05-13T07:34:24.742Z">
 <meta property="article:author" content="floyd">
-<meta property="article:tag" content="method">
+<meta property="article:tag" content="-method">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/2024/01/18/hexo-method/">
+<link rel="canonical" href="http://example.com/2024/05/13/gdb/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2024/01/18/hexo-method/","path":"2024/01/18/hexo-method/","title":"hexo_method"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2024/05/13/gdb/","path":"2024/05/13/gdb/","title":"gdb"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>hexo_method | 灰原</title>
+<title>gdb | 灰原</title>
   
 
 
@@ -129,7 +129,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -142,7 +142,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C"><span class="nav-number">1.</span> <span class="nav-text">命令行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E4%BF%AE%E6%94%B9"><span class="nav-number">2.</span> <span class="nav-text">基础修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%A7%E8%BE%B9%E6%A0%8F"><span class="nav-number">3.</span> <span class="nav-text">侧边栏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A6%96%E9%A1%B5"><span class="nav-number">4.</span> <span class="nav-text">首页</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -195,7 +194,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/18/hexo-method/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/13/gdb/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://www.freeimg.cn/i/2024/01/18/65a937967aba2.jpg">
@@ -208,12 +207,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="hexo_method | 灰原">
+      <meta itemprop="name" content="gdb | 灰原">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          hexo_method
+          gdb
         </h1>
 
         <div class="post-meta-container">
@@ -223,15 +222,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2024-01-18 23:54:13" itemprop="dateCreated datePublished" datetime="2024-01-18T23:54:13+08:00">2024-01-18</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-01-19 00:03:43" itemprop="dateModified" datetime="2024-01-19T00:03:43+08:00">2024-01-19</time>
+      <time title="创建时间：2024-05-13 14:22:28 / 修改时间：15:34:24" itemprop="dateCreated datePublished" datetime="2024-05-13T14:22:28+08:00">2024-05-13</time>
     </span>
 
   
@@ -243,20 +236,13 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="命令行">命令行</h2>
-<ul>
-<li><em>hexo clean</em>
-清除一些东东（更改后必用，我也不知道清除啥）</li>
-<li><em>hexo g</em> 生成一些东东（更改后必用）</li>
-<li><em>hexo d</em> 部署网页</li>
-<li><em>hexo s</em> 本地查看</li>
-</ul>
-<h2 id="基础修改">基础修改</h2>
-<p><strong>作者，图片，链接什么的在博客主题的config文件里更改，主题在config文件里更改，这俩在一个文件夹下。</strong></p>
-<h2 id="侧边栏">侧边栏</h2>
-<p>未完待续</p>
-<h2 id="首页">首页</h2>
-<p>未完待续</p>
+    <div class="post-body" itemprop="articleBody"><p><a
+target="_blank" rel="noopener" href="https://www.cnblogs.com/michaelcjl/p/14887123.html">gdb调试使用例</a>
+有详细图解</p>
+<p><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/qq2399431200/article/details/104663231">bochs调试mbr使用例1</a>
+<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/guozuofeng/article/details/102646618">bochs调试mbr指令</a></p>
 
     </div>
 
@@ -266,21 +252,18 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/method/" rel="tag"># method</a>
+              <a href="/tags/method/" rel="tag"># -method</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/01/18/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="prev" title="读书笔记">
-                  <i class="fa fa-angle-left"></i> 读书笔记
+                <a href="/2024/03/14/nasm/" rel="prev" title="nasm">
+                  <i class="fa fa-angle-left"></i> nasm
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/01/19/matlab/" rel="next" title="matlab">
-                  matlab <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
