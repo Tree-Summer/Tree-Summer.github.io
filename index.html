@@ -271,7 +271,7 @@ mjx-container[display="true"] + br {
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -332,7 +332,7 @@ mjx-container[display="true"] + br {
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2024-07-12 14:26:59 / 修改时间：16:39:57" itemprop="dateCreated datePublished" datetime="2024-07-12T14:26:59+08:00">2024-07-12</time>
+      <time title="创建时间：2024-07-12 14:26:59 / 修改时间：17:02:32" itemprop="dateCreated datePublished" datetime="2024-07-12T14:26:59+08:00">2024-07-12</time>
     </span>
 
   
@@ -351,8 +351,26 @@ stream:流式处理，个人理解就是产生多少内容就输出多少东西<
 astream：允许异步处理，但是这里面的细节我还没有熟悉<br>
 invoke：对模型的一次调用（触发）<br> chain=prompt|llm|output_parser
 后面的parser是规定输出格式的,叫输出解析器<br></p>
-<p><a target="_blank" rel="noopener" href="https://www.langchain.com.cn/modules">中文文档</a> *
-提示模块 *</p>
+<p><a target="_blank" rel="noopener" href="https://www.langchain.com.cn/modules">中文文档</a><br> *
+提示模块：负责将用户输入格式化为可以传递给语言模型的格式 * 示例选择器 *
+聊天模型chatmodel：较新的语言模型形式，接收消息并输出消息 *
+LLM：较旧的语言模型形式，接收字符串输入并输出字符串 *
+输出解析器：负责将LLM的输出解析为更结构化的格式 *
+文档加载器：负责从各种来源加载文档 *
+文本拆分器：将文档拆分为可用于检索的块 *
+嵌入模型：将一段文本转换为数值表示 *
+向量存储：有效存储和检索嵌入的数据库 *
+检索器：负责接收查询并返回相关文档（个人认为是这项任务的重头戏） *
+索引：使向量存储与基础数据源保持同步的过程</p>
+<h3 id="聊天">聊天</h3>
+<ul>
+<li>聊天模型缓存：langchain为聊天模型提供了一个可选的缓存层
+<ul>
+<li>好处1：对于相同的结果可以减少对LLM提供程序的API调用次数节省费用</li>
+<li>好处2：减少对LLM提供程序的API调用次数来加快应用程序速度</li>
+</ul></li>
+<li>函数回调：工具调用</li>
+</ul>
 
       
     </div>
