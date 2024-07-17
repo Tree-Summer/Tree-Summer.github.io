@@ -21,18 +21,18 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="概念梳理chunk：想象肖安的词块，这里的chunk是类似于语言的基石一样的东东stream:流式处理，个人理解就是产生多少内容就输出多少东西astream：允许异步处理，但是这里面的细节我还没有熟悉invoke：对模型的一次调用（触发）chain&#x3D;prompt|llm|output_parser 后面的parser是规定输出格式的,叫输出解析器 中文文档  提示模块：负责将用户输入格式化为可以传">
+    <meta name="description" content="概念梳理 chunk：想象肖安的词块，这里的chunk是类似于语言的基石一样的东东 stream:流式处理，个人理解就是产生多少内容就输出多少东西 astream：允许异步处理，但是这里面的细节我还没有熟悉 invoke：对模型的一次调用（触发） chain&#x3D;prompt|llm|output_parser 后面的parser是规定输出格式的,叫输出解析器 中文文档  提示模块：负">
 <meta property="og:type" content="article">
 <meta property="og:title" content="langchain">
 <meta property="og:url" content="http://example.com/2024/07/12/langchain/index.html">
 <meta property="og:site_name" content="灰原">
-<meta property="og:description" content="概念梳理chunk：想象肖安的词块，这里的chunk是类似于语言的基石一样的东东stream:流式处理，个人理解就是产生多少内容就输出多少东西astream：允许异步处理，但是这里面的细节我还没有熟悉invoke：对模型的一次调用（触发）chain&#x3D;prompt|llm|output_parser 后面的parser是规定输出格式的,叫输出解析器 中文文档  提示模块：负责将用户输入格式化为可以传">
+<meta property="og:description" content="概念梳理 chunk：想象肖安的词块，这里的chunk是类似于语言的基石一样的东东 stream:流式处理，个人理解就是产生多少内容就输出多少东西 astream：允许异步处理，但是这里面的细节我还没有熟悉 invoke：对模型的一次调用（触发） chain&#x3D;prompt|llm|output_parser 后面的parser是规定输出格式的,叫输出解析器 中文文档  提示模块：负">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-07-12T06:26:59.000Z">
-<meta property="article:modified_time" content="2024-07-12T09:07:00.562Z">
+<meta property="article:modified_time" content="2024-07-15T02:43:11.869Z">
 <meta property="article:author" content="floyd">
-<meta property="article:tag" content="method">
 <meta property="article:tag" content="暑期实习">
+<meta property="article:tag" content="method">
 <meta name="twitter:card" content="summary">
 
 
@@ -143,7 +143,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5%E6%A2%B3%E7%90%86"><span class="nav-number">1.</span> <span class="nav-text">概念梳理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%81%8A%E5%A4%A9"><span class="nav-number">2.</span> <span class="nav-text">聊天</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5%E6%A2%B3%E7%90%86"><span class="nav-number">1.</span> <span class="nav-text">概念梳理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%81%8A%E5%A4%A9"><span class="nav-number">2.</span> <span class="nav-text">聊天</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#lcel"><span class="nav-number">2.1.</span> <span class="nav-text">LCEL</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -224,9 +224,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2024-07-12 14:26:59 / 修改时间：17:07:00" itemprop="dateCreated datePublished" datetime="2024-07-12T14:26:59+08:00">2024-07-12</time>
+      <time title="创建时间：2024-07-12 14:26:59" itemprop="dateCreated datePublished" datetime="2024-07-12T14:26:59+08:00">2024-07-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-07-15 10:43:11" itemprop="dateModified" datetime="2024-07-15T10:43:11+08:00">2024-07-15</time>
     </span>
 
   
@@ -238,7 +244,12 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="概念梳理"><a href="#概念梳理" class="headerlink" title="概念梳理"></a>概念梳理</h3><p>chunk：想象肖安的词块，这里的chunk是类似于语言的基石一样的东东<br><br>stream:流式处理，个人理解就是产生多少内容就输出多少东西<br><br>astream：允许异步处理，但是这里面的细节我还没有熟悉<br><br>invoke：对模型的一次调用（触发）<br><br>chain=prompt|llm|output_parser 后面的parser是规定输出格式的,叫输出解析器<br></p>
+    <div class="post-body" itemprop="articleBody"><h3 id="概念梳理">概念梳理</h3>
+<p>chunk：想象肖安的词块，这里的chunk是类似于语言的基石一样的东东<br>
+stream:流式处理，个人理解就是产生多少内容就输出多少东西<br>
+astream：允许异步处理，但是这里面的细节我还没有熟悉<br>
+invoke：对模型的一次调用（触发）<br> chain=prompt|llm|output_parser
+后面的parser是规定输出格式的,叫输出解析器<br></p>
 <p><a target="_blank" rel="noopener" href="https://www.langchain.com.cn/modules">中文文档</a><br></p>
 <ul>
 <li>提示模块：负责将用户输入格式化为可以传递给语言模型的格式</li>
@@ -253,14 +264,31 @@
 <li>检索器：负责接收查询并返回相关文档（个人认为是这项任务的重头戏）</li>
 <li>索引：使向量存储与基础数据源保持同步的过程</li>
 </ul>
-<h3 id="聊天"><a href="#聊天" class="headerlink" title="聊天"></a>聊天</h3><ul>
-<li>聊天模型缓存：langchain为聊天模型提供了一个可选的缓存层<ul>
+<h3 id="聊天">聊天</h3>
+<ul>
+<li>聊天模型缓存：langchain为聊天模型提供了一个可选的缓存层
+<ul>
 <li>好处1：对于相同的结果可以减少对LLM提供程序的API调用次数节省费用</li>
 <li>好处2：减少对LLM提供程序的API调用次数来加快应用程序速度</li>
+</ul></li>
+<li>函数回调：工具调用
+<ul>
+<li>对于工具的一些疑问：是当作函数触发吗？参数怎么办呢？</li>
+</ul></li>
 </ul>
-</li>
-<li>函数回调：工具调用</li>
+<p>一个能调用函数的示例（终于好了太感动了呜呜呜(′д｀ )…彡…彡）
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">from langchain_core.tools import tool</span><br><span class="line"></span><br><span class="line">@tool</span><br><span class="line">def add(a: int, b: int) -&gt; int:</span><br><span class="line">    &quot;&quot;&quot;将a和b相加。&quot;&quot;&quot;</span><br><span class="line">    return a + b</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">@tool</span><br><span class="line">def multiply(a: int, b: int) -&gt; int:</span><br><span class="line">    &quot;&quot;&quot;将a和b相乘。&quot;&quot;&quot;</span><br><span class="line">    return a * b</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">tools = [add, multiply]</span><br><span class="line"></span><br><span class="line">from langchain_openai import ChatOpenAI</span><br><span class="line">llm=ChatOpenAI(</span><br><span class="line">    temperature=0.95,</span><br><span class="line">    model=&quot;glm-4&quot;,</span><br><span class="line">    verbose=True,</span><br><span class="line">    openai_api_key=os.environ[&quot;ZHIPUAI_API_KEY&quot;],</span><br><span class="line">    openai_api_base=&quot;https://open.bigmodel.cn/api/paas/v4/&quot;</span><br><span class="line">)</span><br><span class="line">from langchain.agents import create_structured_chat_agent</span><br><span class="line">from langchain import hub</span><br><span class="line">prompt=hub.pull(&quot;hwchase17/structured-chat-agent&quot;)</span><br><span class="line">agent=create_structured_chat_agent(llm,tools,prompt)</span><br><span class="line">from langchain.agents import AgentExecutor</span><br><span class="line">agent_exec=AgentExecutor(agent=agent,tools=tools,handle_parsing_errors=True,verbose=True)</span><br><span class="line">agent_exec.invoke(&#123;</span><br><span class="line">    &quot;input&quot;:&quot;what&#x27;s the result of 13+24?&quot;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h4 id="lcel">LCEL</h4>
+<p>Langchain表达式语言：一种声明式的方式，可以轻松地将链条组合在一起。<br></p>
+<ul>
+<li>|符号：类似于unix管道操作符，它将不同的组件链接在一起，将一个组件的输出作为下一个组件的输入
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chain=prompt | model | output_parser</span><br></pre></td></tr></table></figure></li>
+<li>prompt是一个BasePromptTemplate，接受输入并生成PromptValue</li>
+<li>PromptValue传递给Value，model接收并生成字符串</li>
+<li>字符串被解析器将输入转换为字符串</li>
 </ul>
+<p>如果想要添加上下文信息，可以这么写： <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">from langchain_community.vectorstores import DocArrayInMemorySearch</span><br><span class="line">from langchain_core.output_parsers import StrOutputParser</span><br><span class="line">from langchain_core.prompts import ChatPromptTemplate</span><br><span class="line">from langchain_core.runnables import RunnableParallel, RunnablePassthrough</span><br><span class="line">from langchain_openai.chat_models import ChatOpenAI</span><br><span class="line">from langchain_openai.embeddings import OpenAIEmbeddings</span><br><span class="line"></span><br><span class="line">vectorstore = DocArrayInMemorySearch.from_texts(</span><br><span class="line">    [&quot;harrison worked at kensho&quot;, &quot;bears like to eat honey&quot;],</span><br><span class="line">    embedding=OpenAIEmbeddings(),</span><br><span class="line">)</span><br><span class="line">retriever = vectorstore.as_retriever()</span><br><span class="line"></span><br><span class="line">template = &quot;&quot;&quot;Answer the question based only on the following context:</span><br><span class="line">&#123;context&#125;</span><br><span class="line"></span><br><span class="line">Question: &#123;question&#125;</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">prompt = ChatPromptTemplate.from_template(template)</span><br><span class="line">model = ChatOpenAI()</span><br><span class="line">output_parser = StrOutputParser()</span><br><span class="line"></span><br><span class="line">setup_and_retrieval = RunnableParallel(</span><br><span class="line">    &#123;&quot;context&quot;: retriever, &quot;question&quot;: RunnablePassthrough()&#125;</span><br><span class="line">)</span><br><span class="line">chain = setup_and_retrieval | prompt | model | output_parser</span><br><span class="line"></span><br><span class="line">chain.invoke(&quot;where did harrison work?&quot;)</span><br></pre></td></tr></table></figure>
+链条中多了setup_and_retrieval</p>
 
     </div>
 
@@ -270,8 +298,8 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/method/" rel="tag"># method</a>
               <a href="/tags/%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0/" rel="tag"># 暑期实习</a>
+              <a href="/tags/method/" rel="tag"># method</a>
           </div>
 
         
