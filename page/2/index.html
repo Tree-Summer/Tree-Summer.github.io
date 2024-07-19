@@ -239,452 +239,452 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="2024-2-26"><a href="#2024-2-26" class="headerlink" title="2024/2/26"></a>2024/2/26</h3><ul>
-<li>数据库管理系统是一种管理数据库的系统软件<br>（ DBMS）</li>
-<li>SQL语言<ul>
+          <h3 id="section">2024/2/26</h3>
+<ul>
+<li>数据库管理系统是一种管理数据库的系统软件 （ DBMS）</li>
+<li>SQL语言
+<ul>
 <li>DDL：数据定义语言</li>
 <li>DML：数据操纵语言</li>
-<li>DCL： 数据控制语言 </li>
+<li>DCL： 数据控制语言</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="2024-3-4-数据模型"><a href="#2024-3-4-数据模型" class="headerlink" title="2024/3/4 数据模型"></a>2024/3/4 数据模型</h3><p>数据模型的四个世界：<br></p>
-<ol>
-<li>现实世界<br></li>
-<li>概念世界:与具体的DBMS和计算机无关<br><br> i）几种模型：<ul>
-<li>实体-联系（<strong>E-R</strong>）模型<br>  基本概念：实体，属性，联系，以及它们之间的连接关系<br>  <br>实体：矩形,联系：菱形，属性：椭圆,<strong>带下划线的属性为各实体集的关键字属性</strong><br>  <br>为了刻划实体间的函数对应关系，必须在线段边上用1:1（一对一），1:n（一对多），n:m（多对多）等注明<br>  <br><a target="_blank" rel="noopener" href="https://www.zhihu.com/tardis/zm/art/270299029?source_id=1005">参考</a></li>
-<li>扩充的实体-联系（<strong>EE-R</strong>）模型<ul>
-<li>IS-A联系（单向箭头）<br><br> 如果实体B是实体A的子集，则实体A是实体B的超集，实体B是实体A的子集<br><br>子集B可以通过IS-A联系继承超集A的所有属性</li>
-<li>弱实体（依附某些实体存在）：向关系打单向箭头</li>
-</ul>
-</li>
-<li>面向对象模型：对象，类，消息</li>
-<li>谓词模型</li>
-</ul>
-</li>
-<li>信息世界：<br> <br>以概念世界为基础，选用特定DBMS构造而成的逻辑数据模型<br><br> 关系中的基本概念：<ul>
-<li>关系模式：一个关系的关系名及其属性名的集合构成该关系的关系模式</li>
-<li>关系数据库模式：该关系数据库中所有关系的关系模式的集合</li>
-<li>元组：关系的每一行</li>
-<li>关键字：能唯一标识关系中的一个元组，不含多余的属性值<ul>
-<li>主关键字</li>
-<li>外关键字</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>计算机世界：是DB的最终实现结构<br></li>
-</ol>
-<h3 id="2024-3-11-关系模型"><a href="#2024-3-11-关系模型" class="headerlink" title="2024/3/11 关系模型"></a>2024/3/11 关系模型</h3><ul>
-<li><p>关系数据结构</p>
+<h3 id="数据模型">2024/3/4 数据模型</h3>
+<p>数据模型的四个世界：<br> 1. 现实世界<br> 2.
+概念世界:与具体的DBMS和计算机无关<br> i）几种模型： -
+实体-联系（<strong>E-R</strong>）模型
+基本概念：实体，属性，联系，以及它们之间的连接关系
+<br>实体：矩形,联系：菱形，属性：椭圆,<strong>带下划线的属性为各实体集的关键字属性</strong>
+<br>为了刻划实体间的函数对应关系，必须在线段边上用1:1（一对一），1:n（一对多），n:m（多对多）等注明
+<br><a
+target="_blank" rel="noopener" href="https://www.zhihu.com/tardis/zm/art/270299029?source_id=1005">参考</a>
+- 扩充的实体-联系（<strong>EE-R</strong>）模型 - IS-A联系（单向箭头）
+<br> 如果实体B是实体A的子集，则实体A是实体B的超集，实体B是实体A的子集
+<br>子集B可以通过IS-A联系继承超集A的所有属性 -
+弱实体（依附某些实体存在）：向关系打单向箭头 -
+面向对象模型：对象，类，消息 - 谓词模型 3. 信息世界：
+<br>以概念世界为基础，选用特定DBMS构造而成的逻辑数据模型<br>
+关系中的基本概念： -
+关系模式：一个关系的关系名及其属性名的集合构成该关系的关系模式 -
+关系数据库模式：该关系数据库中所有关系的关系模式的集合 -
+元组：关系的每一行 -
+关键字：能唯一标识关系中的一个元组，不含多余的属性值 - 主关键字 -
+外关键字 4. 计算机世界：是DB的最终实现结构<br></p>
+<h3 id="关系模型">2024/3/11 关系模型</h3>
 <ul>
-<li>表结构<ul>
+<li>关系数据结构
+<ul>
+<li>表结构
+<ul>
 <li>表框架由n个命名的属性（attribute）组成，n被称为表的元数</li>
-<li>表框架每行数据被称为“元组” ，一个表框架可存放m个元组，m被称为表的基数（Cardinality）</li>
-</ul>
-</li>
-<li><p>键：</p>
+<li>表框架每行数据被称为“元组”
+，一个表框架可存放m个元组，m被称为表的基数（Cardinality）</li>
+</ul></li>
+<li>键：
 <ul>
-<li><p>如果表A中的属性集F是表B的键，则称该属性集F为表A的‘外键’（或称‘外关键字’）||<a target="_blank" rel="noopener" href="https://blog.csdn.net/songhuangong123/article/details/127194673"><strong>外键</strong></a></p>
-</li>
-<li><p>不能只根据一张表中已有的元组来判断其有哪些‘候选键’，必须根据表中属性的语义含义及其相互联系才能确定表中的‘键’的组成</p>
-</li>
-</ul>
-</li>
+<li><p>如果表A中的属性集F是表B的键，则称该属性集F为表A的‘外键’（或称‘外关键字’）||<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/songhuangong123/article/details/127194673"><strong>外键</strong></a></p></li>
+<li><p>不能只根据一张表中已有的元组来判断其有哪些‘候选键’，必须根据表中属性的语义含义及其相互联系才能确定表中的‘键’的组成</p></li>
+</ul></li>
 <li>关系</li>
-</ul>
-</li>
-<li>关系操纵<ul>
+</ul></li>
+<li>关系操纵
+<ul>
 <li>查询，插入，删除，修改</li>
-<li>空值的处理<ul>
+<li>空值的处理
+<ul>
 <li>关系的主键中不允许出现空值</li>
 <li>需要定义有关空值的运算</li>
-</ul>
-</li>
+</ul></li>
 <li>关系操纵与关系代数中的五种基本运算之间的对应关系</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<table  >
-    <tr>
-        <th align="center">关系上的五种基本操作</th>
-        <th align="center">关系代数中的五种基本运算</th>
-    </tr>
-    <tr>
-        <td align=left bgcolor=white>元组选择</td>
-        <td align=right bgcolor=white>选择运算</td>
-    </tr>
-    <tr>
-        <td align=left bgcolor=white>属性指定</td>
-        <td align=right bgcolor=white>投影运算</td>
-    </tr>
-    <tr>
-        <td align =left bgcolor=white>关系的合并</td>
-        <td align=right bgcolor=white>笛卡尔乘积</td>
-    </tr>
-    <tr>
-        <td align =left bgcolor=white>元组的插入</td>
-        <td align=right bgcolor=white>并运算</td>
-    </tr>
-    <tr>
-        <td align =left bgcolor=white>元组的删除</td>
-        <td align=right bgcolor=white>差运算</td>
-    </tr>
-</table> 
-
-<p><strong>关系代数的符号</strong><br></p>
-<script type="math/tex; mode=display">\pi:投影，用于从R中选择出若干属性列组成新的关系（默认去重）\\ \sigma(\delta,PPT上是这个):选择，用于在关系中选择满足给定条件的各个元组</script><p><strong>顺序</strong>：先组成关系集合，再选择，再投影<br>示例详见PPT108往前，database_03_1</p>
-<h3 id="24-3-18-关系代数中的扩充运算"><a href="#24-3-18-关系代数中的扩充运算" class="headerlink" title="24/3/18 关系代数中的扩充运算"></a>24/3/18 关系代数中的扩充运算</h3><p>关系代数的扩充运算：</p>
+<table>
+<tr>
+<th align="center">
+关系上的五种基本操作
+</th>
+<th align="center">
+关系代数中的五种基本运算
+</th>
+</tr>
+<tr>
+<td align="left" bgcolor="white">
+元组选择
+</td>
+<td align="right" bgcolor="white">
+选择运算
+</td>
+</tr>
+<tr>
+<td align="left" bgcolor="white">
+属性指定
+</td>
+<td align="right" bgcolor="white">
+投影运算
+</td>
+</tr>
+<tr>
+<td align="left" bgcolor="white">
+关系的合并
+</td>
+<td align="right" bgcolor="white">
+笛卡尔乘积
+</td>
+</tr>
+<tr>
+<td align="left" bgcolor="white">
+元组的插入
+</td>
+<td align="right" bgcolor="white">
+并运算
+</td>
+</tr>
+<tr>
+<td align="left" bgcolor="white">
+元组的删除
+</td>
+<td align="right" bgcolor="white">
+差运算
+</td>
+</tr>
+</table>
+<p><strong>关系代数的符号</strong><br> <span
+class="math display">\[\pi:投影，用于从R中选择出若干属性列组成新的关系（默认去重）\\
+\sigma(\delta,PPT上是这个):选择，用于在关系中选择满足给定条件的各个元组\]</span>
+<strong>顺序</strong>：先组成关系集合，再选择，再投影
+示例详见PPT108往前，database_03_1</p>
+<h3 id="关系代数中的扩充运算">24/3/18 关系代数中的扩充运算</h3>
+<p>关系代数的扩充运算： - <a href="#section1">交运算</a> - <a
+href="#section2">除运算</a> - <a href="#section3">自然连接运算</a></p>
 <ul>
-<li><a href="#section1">交运算</a></li>
-<li><a href="#section2">除运算</a></li>
-<li><a href="#section3">自然连接运算</a></li>
-</ul>
+<li><a id="section1"></a> 交运算
 <ul>
-<li><a id="section1"></a> 交运算<ul>
-<li>条件：同类关系 </li>
+<li>条件：同类关系</li>
 <li>结果：关系模式不变，由所有既属于关系R也属于关系S的元组所组成的集合</li>
-</ul>
-</li>
-<li><a id="section2"></a> 除运算(详见P119)<ul>
+</ul></li>
+<li><a id="section2"></a> 除运算(详见P119)
+<ul>
 <li>运算条件：Head(S)属于Head(R)</li>
-<li>可以假设为:<br><br>Head(R)={A1,A2,……,An,B1,B2,……,Bm}<br><br>Head(S)={B1,B2,……，Bm}</li>
-<li>其中:<ul>
+<li>可以假设为:<br> Head(R)={A1,A2,……,An,B1,B2,……,Bm}<br>
+Head(S)={B1,B2,……，Bm}</li>
+<li>其中:
+<ul>
 <li>S被称为‘除数关系’</li>
 <li>R被称为‘被除数关系’</li>
 <li>结果关系被称为‘商’</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a id="section3"></a> 联接运算$\Join$<ul>
-<li>基本条件:$i\theta j$<br>其中i是关系R中的属性，j是S中的属性 </li>
-<li>$\theta$是比较运算符<ul>
+</ul></li>
+</ul></li>
+<li><a id="section3"></a> 联接运算<span
+class="math inline">\(\Join\)</span>
+<ul>
+<li>基本条件:<span class="math inline">\(i\theta j\)</span>
+其中i是关系R中的属性，j是S中的属性</li>
+<li><span class="math inline">\(\theta\)</span>是比较运算符
+<ul>
 <li>大于，小于，等于联接</li>
+</ul></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="24-4-1-SQL"><a href="#24-4-1-SQL" class="headerlink" title="24/4/1 SQL"></a>24/4/1 SQL</h3><p><table ></p>
-<p><tr>
-        <th align="center"><font color="red">关系模型</font></th>
-        <th align="center">关系</th>
-        <th align="center">关系子模式</th>
-        <th align="center">属性</th>
-        <th align="center">元组</th>
-</tr></p>
-<p><tr>
-        <th align="center"><font color="red">SQL</font></th>
-        <th align="center">基表(base table)</th>
-        <th align="center">视图(view)</th>
-        <th align="center">列(columnn)</th>
-        <th align="center">行(row)</th>        
-</tr><br>&lt;/table&gt;<br>*SQL数据定义功能<br>    -SQL数据类型<br>        -SMALLINT:16位二进制,-INT:32位二进制,BIGINT:64位二进制<br>        -小数<br>        -字符串<br>        -日期<br>    -基表的创建<br>    创建‘课程’基表C<br>    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE C(</span><br><span class="line">	cno CHAR(4) NOT NULL,</span><br><span class="line">	cn CHAR(30),</span><br><span class="line">	pcno CHAR(4)</span><br><span class="line">);</span><br></pre></td></tr></table></figure><br>    -基表的修改<br>    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">表中属性的增加</span><br><span class="line">ALTER TABLE &lt;基表名&gt; ADD &lt;列名&gt;&lt;数据类型&gt;;</span><br><span class="line">表中属性的删除</span><br><span class="line">ALTER TABLE &lt;基表名&gt; DROP &lt;列名&gt;;</span><br><span class="line">删除指定的表及其数据</span><br><span class="line">DROP TABLE &lt;基表名&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="sql">24/4/1 SQL</h3>
+<table>
+<tr>
+<th align="center">
+<font color="red">关系模型</font>
+</th>
+<th align="center">
+关系
+</th>
+<th align="center">
+关系子模式
+</th>
+<th align="center">
+属性
+</th>
+<th align="center">
+元组
+</th>
+</tr>
+<tr>
+<th align="center">
+<font color="red">SQL</font>
+</th>
+<th align="center">
+基表(base table)
+</th>
+<th align="center">
+视图(view)
+</th>
+<th align="center">
+列(columnn)
+</th>
+<th align="center">
+行(row)
+</th>
+</tr>
+</table>
+<p><em>SQL数据定义功能 -SQL数据类型
+-SMALLINT:16位二进制,-INT:32位二进制,BIGINT:64位二进制 -小数 -字符串
+-日期 -基表的创建 创建‘课程’基表C <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE C(</span><br><span class="line">	cno CHAR(4) NOT NULL,</span><br><span class="line">	cn CHAR(30),</span><br><span class="line">	pcno CHAR(4)</span><br><span class="line">);</span><br></pre></td></tr></table></figure> -基表的修改
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">表中属性的增加</span><br><span class="line">ALTER TABLE &lt;基表名&gt; ADD &lt;列名&gt;&lt;数据类型&gt;;</span><br><span class="line">表中属性的删除</span><br><span class="line">ALTER TABLE &lt;基表名&gt; DROP &lt;列名&gt;;</span><br><span class="line">删除指定的表及其数据</span><br><span class="line">DROP TABLE &lt;基表名&gt;</span><br></pre></td></tr></table></figure> </em> SQL的数据操控功能 这一部分建议多实践<br> <a
+target="_blank" rel="noopener" href="https://sqlzoo.net/wiki/SELECT_basics/zh">网站</a></p>
+<p><a
+target="_blank" rel="noopener" href="https://www.dba.cn/book/sql/SQLJiChuJiaoCheng/SQLSELECTDISTINCTYuJu.html">中文手册</a></p>
+<h3 id="sql-1">24/4/10 SQL</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT sn</span><br><span class="line">FROM S</span><br><span class="line">WHERE sd IN(&#x27;MA&#x27;,&#x27;CS&#x27;,&#x27;PY&#x27;)</span><br></pre></td></tr></table></figure>
+<p>基本示例<br> 一些语法词汇: * In/NOT IN -
+查询修读课程号为C1的所有学生的姓名 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SELECT  S.sn</span><br><span class="line">FROM      S</span><br><span class="line">WHERE   S.sno  IN  (</span><br><span class="line">SELECT  SC.sno</span><br><span class="line">FROM      SC</span><br><span class="line">WHERE   SC.cno = ‘C1’ );</span><br></pre></td></tr></table></figure>
+<font color='lightblue'>IN感觉是对一个column的值进行选择,如果它有值在你给出的集合里则满足条件</font>
+* ANY/ALL -
+查询有学生成绩大于等于C1课程号中的任何一位学生成绩的学生学号</p>
+<p><font color='lightblue'>IN是选择具体值,这个是带范围的</font>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SELECT  sno</span><br><span class="line">FROM      SC</span><br><span class="line">WHERE   g  &gt;= ANY  (</span><br><span class="line">SELECT  g</span><br><span class="line">FROM      SC</span><br><span class="line">WHERE   cno = ‘C1’ );</span><br></pre></td></tr></table></figure> * EXISTS/NOT EXISTS -
+EXISTS运算符用于判断查询子句是否有记录,如果有一条或者多条记录则返回True,否则返回False。</p>
+<p><font color='lightblue'>给我的感觉像是将两个表连结在一起，运用另一个表的属性做判断以选出原表的数据</font>
+* CONTAINS - 查询至少修读学号为S4的学生所修读的所有课程的学生的学号
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">SELECT  sno</span><br><span class="line">FROM      SC</span><br><span class="line">WHERE</span><br><span class="line">( SELECT  SCx.cno</span><br><span class="line">  FROM      SC  SCx</span><br><span class="line">  WHERE   SC.sno = SCx.sno )</span><br><span class="line">	CONTAINS  </span><br><span class="line">( SELECT SCy.cno</span><br><span class="line">  FROM     SC  SCy</span><br><span class="line">  WHERE  SCy.sno = ‘S4’);</span><br></pre></td></tr></table></figure>
+contain在这里应该是集合的包含关系,但是暂且不清楚是否要求有一样的属性。(在网上搜到的样例感觉像是对某一个属性运算？？？)标准里没有这个，晕
+* LIKE - LIKE 操作符用于在 WHERE 子句中搜索列中的指定模式。</p>
+<p><font color='lightblue'>应该……已经很熟悉用法了吧</font> * UNION并 *
+INTERSECT交 * EXCEPT差 * COUNT:count of rows * SUM:sum of argument *
+AVG:average of argument * MAX:maximum value * MIN:minimum value * GROUP
+BY colname{,colname,…} -
+根据属性colname的取值的不同,将满足WHERE条件的元组划分为不同的集合</p>
+<p><font color='light blue'>没有太理解这个有什么用<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41059320/article/details/89281125">好东西</a></font>
+* &lt;&gt;不包括,用于属性除去某一个值 * distinct
+用于返回唯一的不同值(去重复用) * DELETE 删除
+删除计算机系（CS）全体学生的选课记录 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">DELETE</span><br><span class="line">FROM    SC</span><br><span class="line">WHERE   sno   IN   ( SELECT  sno</span><br><span class="line">					  FROM  S</span><br><span class="line">					  WHERE   sd = ‘CS’ ) ;</span><br></pre></td></tr></table></figure> * INSERT 插入
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">INSERT  INTO  SC ( sno,  cno )</span><br><span class="line">SELECT  sno,  cno</span><br><span class="line">FROM      S,  C</span><br><span class="line">WHERE   sd = ‘CS’ and cn = ‘Database’</span><br></pre></td></tr></table></figure> * UPDATE 更新 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">UPDATE   S</span><br><span class="line">SET  sd = ‘CS’</span><br><span class="line">WHERE   sno = ‘S16’</span><br></pre></td></tr></table></figure></p>
+<h3 id="数据库安全">24/4/15 数据库安全</h3>
 <ul>
-<li>SQL的数据操控功能<br>  这一部分建议多实践<br><br>  <a target="_blank" rel="noopener" href="https://sqlzoo.net/wiki/SELECT_basics/zh">网站</a></li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://www.dba.cn/book/sql/SQLJiChuJiaoCheng/SQLSELECTDISTINCTYuJu.html">中文手册</a></p>
-<h3 id="24-4-10-SQL"><a href="#24-4-10-SQL" class="headerlink" title="24/4/10 SQL"></a>24/4/10 SQL</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT sn</span><br><span class="line">FROM S</span><br><span class="line">WHERE sd IN(&#x27;MA&#x27;,&#x27;CS&#x27;,&#x27;PY&#x27;)</span><br></pre></td></tr></table></figure>
-<p>基本示例<br><br>一些语法词汇:</p>
+<li><p>数据库安全就是研究有关实体的主/客体划分以及主/客体之间的访问关系的控制</p></li>
+<li><p>主体访问客体需要进行一定的安全控制与检查，目前存在三种控制方式:</p>
 <ul>
-<li>In/NOT IN<ul>
-<li>查询修读课程号为C1的所有学生的姓名<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SELECT  S.sn</span><br><span class="line">FROM      S</span><br><span class="line">WHERE   S.sno  IN  (</span><br><span class="line">SELECT  SC.sno</span><br><span class="line">FROM      SC</span><br><span class="line">WHERE   SC.cno = ‘C1’ );</span><br></pre></td></tr></table></figure>
-<font color='lightblue'>IN感觉是对一个column的值进行选择,如果它有值在你给出的集合里则满足条件</font></li>
-</ul>
-</li>
-<li>ANY/ALL<ul>
-<li>查询有学生成绩大于等于C1课程号中的任何一位学生成绩的学生学号</li>
-</ul>
-</li>
-</ul>
-<p><font color='lightblue'>IN是选择具体值,这个是带范围的</font><br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SELECT  sno</span><br><span class="line">FROM      SC</span><br><span class="line">WHERE   g  &gt;= ANY  (</span><br><span class="line">SELECT  g</span><br><span class="line">FROM      SC</span><br><span class="line">WHERE   cno = ‘C1’ );</span><br></pre></td></tr></table></figure></p>
+<li>身份标识与鉴别
 <ul>
-<li>EXISTS/NOT EXISTS<ul>
-<li>EXISTS运算符用于判断查询子句是否有记录,如果有一条或者多条记录则返回True,否则返回False。</li>
-</ul>
-</li>
-</ul>
-<p><font color='lightblue'>给我的感觉像是将两个表连结在一起，运用另一个表的属性做判断以选出原表的数据</font></p>
-<ul>
-<li>CONTAINS<ul>
-<li>查询至少修读学号为S4的学生所修读的所有课程的学生的学号<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">SELECT  sno</span><br><span class="line">FROM      SC</span><br><span class="line">WHERE</span><br><span class="line">( SELECT  SCx.cno</span><br><span class="line">  FROM      SC  SCx</span><br><span class="line">  WHERE   SC.sno = SCx.sno )</span><br><span class="line">	CONTAINS  </span><br><span class="line">( SELECT SCy.cno</span><br><span class="line">  FROM     SC  SCy</span><br><span class="line">  WHERE  SCy.sno = ‘S4’);</span><br></pre></td></tr></table></figure>
-contain在这里应该是集合的包含关系,但是暂且不清楚是否要求有一样的属性。(在网上搜到的样例感觉像是对某一个属性运算？？？)标准里没有这个，晕</li>
-</ul>
-</li>
-<li>LIKE<ul>
-<li>LIKE 操作符用于在 WHERE 子句中搜索列中的指定模式。</li>
-</ul>
-</li>
-</ul>
-<p><font color='lightblue'>应该……已经很熟悉用法了吧</font></p>
-<ul>
-<li>UNION并</li>
-<li>INTERSECT交</li>
-<li>EXCEPT差</li>
-<li>COUNT:count of rows</li>
-<li>SUM:sum of argument</li>
-<li>AVG:average of argument</li>
-<li>MAX:maximum value</li>
-<li>MIN:minimum value</li>
-<li>GROUP BY colname{,colname,…}<ul>
-<li>根据属性colname的取值的不同,将满足WHERE条件的元组划分为不同的集合</li>
-</ul>
-</li>
-</ul>
-<p><font color='light blue'>没有太理解这个有什么用<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41059320/article/details/89281125">好东西</a></font></p>
-<ul>
-<li>&lt;&gt;不包括,用于属性除去某一个值</li>
-<li>distinct 用于返回唯一的不同值(去重复用)</li>
-<li>DELETE 删除<br>删除计算机系（CS）全体学生的选课记录<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">DELETE</span><br><span class="line">FROM    SC</span><br><span class="line">WHERE   sno   IN   ( SELECT  sno</span><br><span class="line">					  FROM  S</span><br><span class="line">					  WHERE   sd = ‘CS’ ) ;</span><br></pre></td></tr></table></figure></li>
-<li>INSERT 插入<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">INSERT  INTO  SC ( sno,  cno )</span><br><span class="line">SELECT  sno,  cno</span><br><span class="line">FROM      S,  C</span><br><span class="line">WHERE   sd = ‘CS’ and cn = ‘Database’</span><br></pre></td></tr></table></figure></li>
-<li>UPDATE 更新<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">UPDATE   S</span><br><span class="line">SET  sd = ‘CS’</span><br><span class="line">WHERE   sno = ‘S16’</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="24-4-15-数据库安全"><a href="#24-4-15-数据库安全" class="headerlink" title="24/4/15 数据库安全"></a>24/4/15 数据库安全</h3><ul>
-<li>数据库安全就是研究有关实体的主/客体划分以及主/客体之间的访问关系的控制</li>
-<li>主体访问客体需要进行一定的安全控制与检查，目前存在三种控制方式:<ul>
-<li>身份标识与鉴别<ul>
 <li>每个主体必须有一个标志自己身份的标识符(以区别不同的主体)以及一个用以验证其身份的访问口令</li>
-</ul>
-</li>
-<li>自主访问控制（DAC）<ul>
+</ul></li>
+<li>自主访问控制（DAC）
+<ul>
 <li>是一种基于存取矩阵的安全控制模型</li>
 <li>此模型由主体，客体，存/取操作三部分内容构成了一个矩阵</li>
-</ul>
-</li>
-<li>强制访问控制<ul>
+</ul></li>
+<li>强制访问控制
+<ul>
 <li>Bell-Lapadula模型:向上不可读,向下不可写，一种神奇的模型。（top机密可以改变但不会泄露-向下不可写，也不会被看到-向上不可读）</li>
-</ul>
-</li>
-</ul>
-</li>
+</ul></li>
+</ul></li>
 <li><p>数据完整性：防止非法使用插入，删除，修改等影响数据完整性的操作</p>
 <ul>
-<li>控制手段<ul>
+<li>控制手段
+<ul>
 <li>对存储数据错误的检测</li>
-<li>事务回卷功能<ul>
-<li>三类数据完整性</li>
-</ul>
-</li>
+<li>事务回卷功能</li>
+</ul></li>
+<li>三类数据完整性
+<ul>
 <li>实体完整性</li>
 <li>关联完整性</li>
 <li>用户定义完整性约束</li>
-</ul>
-</li>
+</ul></li>
 <li>隐蔽通道</li>
-<li>审计:跟踪记录用户对数据的访问操作<br>与审计有关的保护措施有:<ul>
+<li>审计:跟踪记录用户对数据的访问操作 与审计有关的保护措施有:
+<ul>
 <li>审计事件控制</li>
 <li>入侵检测和应对</li>
 <li>审计记录的保护</li>
 <li>审计记录的分析 / 查阅</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>数据库的安全标准:奇奇怪怪的<br>记录一些问题:每一级是权限不同还是指数据库的安全级别不同?<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/370797411">插个链接，PPT上的大白字太抽象了</a></p>
-</li>
+</ul></li>
+</ul></li>
+<li><p>数据库的安全标准:奇奇怪怪的
+记录一些问题:每一级是权限不同还是指数据库的安全级别不同? <a
+target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/370797411">插个链接，PPT上的大白字太抽象了</a></p></li>
 <li><p>SQL对数据库安全的支持</p>
 <ul>
-<li>支持指:<ul>
+<li>支持指:
+<ul>
 <li>主体客体，主/客体分离</li>
 <li>身份标识与鉴别</li>
 <li>数据完整性</li>
 <li>自主访问控制与授权功能</li>
-</ul>
-</li>
-<li>操作对象:<ul>
+</ul></li>
+<li>操作对象:
+<ul>
 <li>表,视图</li>
 <li>属性</li>
 <li>域，UDT</li>
-<li>存储过程/函数，触发器<ul>
-<li>用户<br>-数据库用户</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>授权语句<br>GRANT  &lt;操作权限列表&gt;  ON  &lt;操作对象&gt;<br>TO  &lt;用户名列表&gt;  [WITH GRANT OPTION]</li>
-</ul>
-</li>
+<li>存储过程/函数，触发器</li>
+</ul></li>
+<li>用户 -数据库用户</li>
+<li>授权语句 GRANT <操作权限列表> ON <操作对象> TO <用户名列表> [WITH
+GRANT OPTION]</li>
+</ul></li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grant SELECT,UPDATE on S to XULIN with grant option</span><br></pre></td></tr></table></figure>
-<pre><code>- 回收语句
-</code></pre><p>REVOKE  &lt;操作权限列表&gt;  ON  &lt;操作对象&gt;<br>FROM  &lt;用户名列表&gt;  [RESTRICT | CASCADE]</p>
-<pre><code>    - CASCADE:连锁回收(父表与子表，类似于线段树的懒标记？)
-    - RESTRICT:在不存在连锁回收问题时才能收回权限，否则拒绝回收
-</code></pre><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">revoke update on S from XULIN cascade</span><br></pre></td></tr></table></figure>
-<h3 id="24-4-30"><a href="#24-4-30" class="headerlink" title="24/4/30"></a>24/4/30</h3><h4 id="mysql存储过程"><a href="#mysql存储过程" class="headerlink" title="mysql存储过程"></a>mysql存储过程</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/WHYbeHERE/article/details/109181329">懒得打了上链接 </a><br>存储过程:</p>
+<pre><code>- 回收语句</code></pre>
+<p>REVOKE <操作权限列表> ON <操作对象> FROM <用户名列表> [RESTRICT |
+CASCADE] - CASCADE:连锁回收(父表与子表，类似于线段树的懒标记？) -
+RESTRICT:在不存在连锁回收问题时才能收回权限，否则拒绝回收
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">revoke update on S from XULIN cascade</span><br></pre></td></tr></table></figure></p>
+<h3 id="section-1">24/4/30</h3>
+<h4 id="mysql存储过程">mysql存储过程</h4>
+<p><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/WHYbeHERE/article/details/109181329">懒得打了上链接</a>
+存储过程: * 含义:一组预先编译好的SQL语句的集合,可理解为批处理语句 * 语法
+* 创建 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">create Procedure 存储过程名(参数列表)</span><br><span class="line">Begin</span><br><span class="line">	存储过程体(一组合法的SQL语句)</span><br><span class="line"></span><br><span class="line">	End</span><br><span class="line">call 存储过程名(实参列表)</span><br></pre></td></tr></table></figure> * 参数列表:参数模式+参数名+参数类型 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">IN:该参数可作为输入</span><br><span class="line">OUT:该参数可作为输出</span><br><span class="line">INOUT:该参数可作为输入,也可以作为输出</span><br></pre></td></tr></table></figure>
+例子:输入课程名字,查询对应的教师信息 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">create PROCEDURE myp2(in c_name VARCHAR(20))</span><br><span class="line">BEGIN</span><br><span class="line">	select t,*</span><br><span class="line">	from teacher t</span><br><span class="line">	right join course c on t.t_id=c.t_id</span><br><span class="line">	where c.c_name=c_name</span><br><span class="line">END $</span><br><span class="line">call myp2(&#x27;这里输入对应的值&#x27;)$</span><br></pre></td></tr></table></figure> #### mysql存储函数
+与存储过程的输入输出不同格式也不一样，放个代码 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">drop function if exists f2</span><br><span class="line">delimiter $</span><br><span class="line">create function f2(p_number char(9))</span><br><span class="line">returns int</span><br><span class="line">deterministic</span><br><span class="line">begin</span><br><span class="line">	declare total int;</span><br><span class="line">    select sum(quantity)</span><br><span class="line">    into total</span><br><span class="line">    from product as p,orderdetail as o</span><br><span class="line">    where p.productNo=p_number and p.productNo=o.productNo</span><br><span class="line">    group by p.productNo;</span><br><span class="line">    return total;</span><br><span class="line">end$  </span><br><span class="line"></span><br><span class="line">select productNo as 商品编号,productname as 商品名称,f2(productNo) as 销售数量</span><br><span class="line">from product</span><br><span class="line">where f2(productNo)&gt;4;</span><br></pre></td></tr></table></figure></p>
+<h4 id="check约束">check约束</h4>
+<p>check约束用于限制列中的值的范围<br> 下面的 SQL 在 "Persons"
+表创建时为 "Id_P" 列创建 CHECK 约束。CHECK 约束规定 "Id_P"
+列必须只包含大于 0 的整数。 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE Persons</span><br><span class="line">(</span><br><span class="line">Id_P int NOT NULL,</span><br><span class="line">LastName varchar(255) NOT NULL,</span><br><span class="line">FirstName varchar(255),</span><br><span class="line">Address varchar(255),</span><br><span class="line">City varchar(255),</span><br><span class="line">CHECK (Id_P&gt;0)</span><br><span class="line">)</span><br></pre></td></tr></table></figure> <a
+target="_blank" rel="noopener" href="https://www.w3school.com.cn/sql/sql_check.asp">多个check约束即更多详细信息</a></p>
+<h4 id="触发器">触发器</h4>
+<p><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/M1234uy/article/details/107457787">上链接</a>
+* 触发器是一种特殊的存储过程，不能被显示调用 *
+触发器可以很方便地引用其他表的列，去逻辑上的检查 *
+触发器是在check之后执行的 * 触发器可以插入，删除，更新多行</p>
+<p>例子:修改student表数据,修改之后查询修改后的数据 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TRIGGER trig_student_After</span><br><span class="line">ON student</span><br><span class="line">FOR  UPDATE </span><br><span class="line">AS </span><br><span class="line">	PRINT &#x27;THE TRIGGER IS AFTER&#x27;</span><br><span class="line">	SELECT * FROM student</span><br></pre></td></tr></table></figure></p>
+<h4 id="高级语言操纵mysql">高级语言操纵mysql</h4>
+<p><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/laozhu_Python/article/details/107560672">熟悉的链接环节</a>
+<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/zhuan_long/article/details/107561420">传参</a></p>
+<h3 id="事务">24/5/5 事务</h3>
+<p>由某个用户所执行的一个不能被打断的对数据库的操作序列被称为‘事务’<br>
+事务活动详见第五章PPT第14张<br> *
+提交当前事务，事务在执行过程中对于数据库的所有修改操作都将永久地反应到数据库中，并且不可被取消</p>
+<p>常见的并发执行错误: * 丢失修改 航班票的例子P31，
+读到了同一个变量,导致有一个的修改被吞掉 * 脏读
+P32,读到了未提交的修改结果,但是对方取消了 * 不可重复读
+P33，一个事务的执行过程中，前后两次读同一个数据对象获得的值不一致</p>
+<p>事务的级别: * READUNCOMMITTED：未提交读 *
+在该方式下，当前事务不需要申请任何类型的封锁，可能会读到未提交的修改结果
+*
+禁止一个事务以该方式去执行对数据的‘写’操作，以避免与其它并发事务的‘写’冲突现象</p>
 <ul>
-<li>含义:一组预先编译好的SQL语句的集合,可理解为批处理语句</li>
-<li>语法<ul>
-<li>创建<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">create Procedure 存储过程名(参数列表)</span><br><span class="line">Begin</span><br><span class="line">	存储过程体(一组合法的SQL语句)</span><br><span class="line"></span><br><span class="line">	End</span><br><span class="line">call 存储过程名(实参列表)</span><br></pre></td></tr></table></figure></li>
-<li>参数列表:参数模式+参数名+参数类型<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">IN:该参数可作为输入</span><br><span class="line">OUT:该参数可作为输出</span><br><span class="line">INOUT:该参数可作为输入,也可以作为输出</span><br></pre></td></tr></table></figure>
-例子:输入课程名字,查询对应的教师信息<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">create PROCEDURE myp2(in c_name VARCHAR(20))</span><br><span class="line">BEGIN</span><br><span class="line">	select t,*</span><br><span class="line">	from teacher t</span><br><span class="line">	right join course c on t.t_id=c.t_id</span><br><span class="line">	where c.c_name=c_name</span><br><span class="line">END $</span><br><span class="line">call myp2(&#x27;这里输入对应的值&#x27;)$</span><br></pre></td></tr></table></figure>
-<h4 id="mysql存储函数"><a href="#mysql存储函数" class="headerlink" title="mysql存储函数"></a>mysql存储函数</h4>与存储过程的输入输出不同格式也不一样，放个代码<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">drop function if exists f2</span><br><span class="line">delimiter $</span><br><span class="line">create function f2(p_number char(9))</span><br><span class="line">returns int</span><br><span class="line">deterministic</span><br><span class="line">begin</span><br><span class="line">	declare total int;</span><br><span class="line">    select sum(quantity)</span><br><span class="line">    into total</span><br><span class="line">    from product as p,orderdetail as o</span><br><span class="line">    where p.productNo=p_number and p.productNo=o.productNo</span><br><span class="line">    group by p.productNo;</span><br><span class="line">    return total;</span><br><span class="line">end$  </span><br><span class="line"></span><br><span class="line">select productNo as 商品编号,productname as 商品名称,f2(productNo) as 销售数量</span><br><span class="line">from product</span><br><span class="line">where f2(productNo)&gt;4;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="check约束"><a href="#check约束" class="headerlink" title="check约束"></a>check约束</h4><p>check约束用于限制列中的值的范围<br><br>下面的 SQL 在 “Persons” 表创建时为 “Id_P” 列创建 CHECK 约束。CHECK 约束规定 “Id_P” 列必须只包含大于 0 的整数。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE Persons</span><br><span class="line">(</span><br><span class="line">Id_P int NOT NULL,</span><br><span class="line">LastName varchar(255) NOT NULL,</span><br><span class="line">FirstName varchar(255),</span><br><span class="line">Address varchar(255),</span><br><span class="line">City varchar(255),</span><br><span class="line">CHECK (Id_P&gt;0)</span><br><span class="line">)</span><br></pre></td></tr></table></figure><br><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/sql/sql_check.asp">多个check约束即更多详细信息</a></p>
-<h4 id="触发器"><a href="#触发器" class="headerlink" title="触发器"></a>触发器</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/M1234uy/article/details/107457787">上链接</a></p>
-<ul>
-<li>触发器是一种特殊的存储过程，不能被显示调用</li>
-<li>触发器可以很方便地引用其他表的列，去逻辑上的检查</li>
-<li>触发器是在check之后执行的</li>
-<li>触发器可以插入，删除，更新多行</li>
-</ul>
-<p>例子:修改student表数据,修改之后查询修改后的数据<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TRIGGER trig_student_After</span><br><span class="line">ON student</span><br><span class="line">FOR  UPDATE </span><br><span class="line">AS </span><br><span class="line">	PRINT &#x27;THE TRIGGER IS AFTER&#x27;</span><br><span class="line">	SELECT * FROM student</span><br></pre></td></tr></table></figure></p>
-<h4 id="高级语言操纵mysql"><a href="#高级语言操纵mysql" class="headerlink" title="高级语言操纵mysql"></a>高级语言操纵mysql</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/laozhu_Python/article/details/107560672">熟悉的链接环节</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhuan_long/article/details/107561420">传参</a></p>
-<h3 id="24-5-5-事务"><a href="#24-5-5-事务" class="headerlink" title="24/5/5 事务"></a>24/5/5 事务</h3><p>由某个用户所执行的一个不能被打断的对数据库的操作序列被称为‘事务’<br><br>事务活动详见第五章PPT第14张<br></p>
-<ul>
-<li>提交当前事务，事务在执行过程中对于数据库的所有修改操作都将永久地反应到数据库中，并且不可被取消</li>
-</ul>
-<p>常见的并发执行错误:</p>
-<ul>
-<li>丢失修改<br>航班票的例子P31，<br>读到了同一个变量,导致有一个的修改被吞掉</li>
-<li>脏读<br>P32,读到了未提交的修改结果,但是对方取消了</li>
-<li>不可重复读<br>P33，一个事务的执行过程中，前后两次读同一个数据对象获得的值不一致</li>
-</ul>
-<p>事务的级别:</p>
-<ul>
-<li><p>READUNCOMMITTED：未提交读</p>
-<ul>
-<li>在该方式下，当前事务不需要申请任何类型的封锁，可能会读到未提交的修改结果</li>
-<li>禁止一个事务以该方式去执行对数据的‘写’操作，以避免与其它并发事务的‘写’冲突现象</li>
-</ul>
-</li>
-<li><p>READCOMMITTED：提交读</p>
+<li>READCOMMITTED：提交读
 <ul>
 <li>在‘读’数据对象A之前需要先申请对数据对象A的‘共享性’封锁，在‘读’操作执行结束之后立即释放该封锁</li>
 <li>以避免读取到其它并发事务未提交的修改结果</li>
-</ul>
-</li>
-<li><p>READREPEATABLE：可重复读</p>
+</ul></li>
+<li>READREPEATABLE：可重复读
 <ul>
 <li>在‘读’数据对象A之前需要先申请对数据对象A的‘共享性’封锁，并将该封锁维持到当前事务的结束</li>
 <li>可以避免其它的并发事务对当前事务正在使用的数据对象的修改</li>
-</ul>
-</li>
-<li><p>SERIALIZABLE：可序列化(可串行化)</p>
+</ul></li>
+<li>SERIALIZABLE：可序列化(可串行化)
 <ul>
 <li>并发事务以一种可串行化的调度策略实现其并发执行，以避免它们相互之间的干扰现象</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<p>什么是隔离，什么是封锁?<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/117476959">人话链接</a><br><img src="https://pic.imgdb.cn/item/6637768d0ea9cb14033f679d.png" alt=""></p>
-<p>数据对象的地址空间:</p>
-<ul>
-<li>磁盘空间</li>
-<li>内存缓冲区</li>
-<li>局部地址空间(内存变量)<br>同一个数据对象在不同的地方可能具有不同的值<br></li>
-</ul>
-<p>事务控制操作<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">事务的开始: start t</span><br><span class="line">提交: commit t</span><br><span class="line">回退:abort t</span><br></pre></td></tr></table></figure><br>数据访问操作:<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">input(A):将数据对象A从磁盘读入内存缓冲区</span><br><span class="line">output(A):A从内存缓冲区写入磁盘</span><br><span class="line">read(A,t):将A的值读入内存变量t</span><br><span class="line">write(A,t):将内存变量t的值写入内存缓冲区中数据对象A</span><br></pre></td></tr></table></figure></p>
+<p>什么是隔离，什么是封锁? <a
+target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/117476959">人话链接</a><br />
+<img src="https://pic.imgdb.cn/item/6637768d0ea9cb14033f679d.png" /></p>
+<p>数据对象的地址空间: * 磁盘空间 * 内存缓冲区 * 局部地址空间(内存变量)
+同一个数据对象在不同的地方可能具有不同的值<br></p>
+<p>事务控制操作 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">事务的开始: start t</span><br><span class="line">提交: commit t</span><br><span class="line">回退:abort t</span><br></pre></td></tr></table></figure> 数据访问操作: <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">input(A):将数据对象A从磁盘读入内存缓冲区</span><br><span class="line">output(A):A从内存缓冲区写入磁盘</span><br><span class="line">read(A,t):将A的值读入内存变量t</span><br><span class="line">write(A,t):将内存变量t的值写入内存缓冲区中数据对象A</span><br></pre></td></tr></table></figure></p>
 <p>串行调度:单线程<br></p>
-<p>冲突可串行化:</p>
+<p>冲突可串行化: * 指调度中的一对连续操作(op1,op2),它们满足如下的条件: *
+交换两者的执行顺序,那么涉及的事务中至少有一个的行为会改变
+判断见PPT68,总结是应该有顺序的都可以是冲入<br></p>
+<p>怎么感觉像拓扑排序（大雾<br> 顺序: * 同一对象的r,w是有序的</p>
+<h3 id="再次感慨学习的间隔拉的好长qwq">24/5/26
+再次感慨学习的间隔拉的好长qwq</h3>
+<h4 id="数据库的物理组织">数据库的物理组织</h4>
+<p>记录文件记录的具体是什么，为什么要索引？记录的是同类型的还是不同类型的？
+索引应该是类似指针的存在
+文件记录组织的综述特别抽象，但是大概可以看作维护一个序列，之类的？</p>
 <ul>
-<li>指调度中的一对连续操作(op1,op2),它们满足如下的条件:<ul>
-<li>交换两者的执行顺序,那么涉及的事务中至少有一个的行为会改变<br>判断见PPT68,总结是应该有顺序的都可以是冲入<br></li>
-</ul>
-</li>
-</ul>
-<p>怎么感觉像拓扑排序（大雾<br><br>顺序:</p>
-<ul>
-<li>同一对象的r,w是有序的</li>
-</ul>
-<h3 id="24-5-26-再次感慨学习的间隔拉的好长qwq"><a href="#24-5-26-再次感慨学习的间隔拉的好长qwq" class="headerlink" title="24/5/26 再次感慨学习的间隔拉的好长qwq"></a>24/5/26 再次感慨学习的间隔拉的好长qwq</h3><h4 id="数据库的物理组织"><a href="#数据库的物理组织" class="headerlink" title="数据库的物理组织"></a>数据库的物理组织</h4><p>记录文件记录的具体是什么，为什么要索引？记录的是同类型的还是不同类型的？<br>索引应该是类似指针的存在<br>文件记录组织的综述特别抽象，但是大概可以看作维护一个序列，之类的？</p>
-<ul>
-<li><p>文件记录组织</p>
+<li>文件记录组织
 <ul>
 <li>堆文件组织:记录可以放在文件的任何位置上，一般以时间先后为序</li>
 <li>顺序文件组织:按照升序或者降序存储</li>
 <li>散列文件组织:记录中的某个项值通过散列函数求得的值作为记录的存储地址</li>
 <li>聚集文件组织</li>
-</ul>
-</li>
-<li><p>索引技术与散列技术</p>
+</ul></li>
+<li>索引技术与散列技术
 <ul>
-<li>顺序文件<ul>
+<li>顺序文件
+<ul>
 <li>按照某个属性(项)的取值进行排序而构成的数据文件被称为顺序文件</li>
-</ul>
-</li>
-<li>索引文件<ul>
+</ul></li>
+<li>索引文件
+<ul>
 <li>建立索引文件的目的：以记录的特征值（通常是一个或多个字段的值）为输入，能够快速地找出具有该特征的记录</li>
 <li>稠密索引:PPT39,44,47</li>
 <li>稀疏索引:有一种分段分治的美感（块状数组？？？）PPT 50,51</li>
 <li>多级索引:索引套索引:从第二级索引开始建立的都是稀疏索引,有一种线段树建树的美感PPT57，58，59（二级索引可以放内存里都不用磁盘IO所以多级的最终次数是2）</li>
-<li>重复键值索引<ul>
+<li>重复键值索引
+<ul>
 <li>稠密索引的重复键值索引唯一</li>
-<li>由于相同键值的记录可能占用若干个磁盘块，稀疏索引的重复键值索引不唯一 PPT65，66</li>
-</ul>
-</li>
+<li>由于相同键值的记录可能占用若干个磁盘块，稀疏索引的重复键值索引不唯一
+PPT65，66</li>
+</ul></li>
 <li>非顺序文件中的索引技术 PPT69，70，有一种散列哈希表的美感</li>
-<li>多维索引<h4 id="关系数据库的规范化理论"><a href="#关系数据库的规范化理论" class="headerlink" title="关系数据库的规范化理论"></a>关系数据库的规范化理论</h4></li>
-</ul>
-</li>
-</ul>
-</li>
+<li>多维索引 #### 关系数据库的规范化理论</li>
+</ul></li>
+</ul></li>
 <li>概述 PPT9，10，13，16</li>
-<li>函数依赖（FD:functional dependencies）:PPT18,判断不是的方法:取相等的决定因素，其对应的依赖因素不同则不是，进阶可以看后面的例子</li>
-<li>Armstrong公理系统<ul>
-<li>基本推理规则<ul>
+<li>函数依赖（FD:functional
+dependencies）:PPT18,判断不是的方法:取相等的决定因素，其对应的依赖因素不同则不是，进阶可以看后面的例子</li>
+<li>Armstrong公理系统
+<ul>
+<li>基本推理规则
+<ul>
 <li>自反规则:如果Y是X的子集，则:X-&gt;Y</li>
 <li>增广规则:如果X-&gt;Y,则XZ-&gt;YZ,PPT40</li>
 <li>传递规则:如果X-&gt;Y,Y-&gt;Z,则:X-&gt;Z</li>
-</ul>
-</li>
-<li>扩充推理规则<ul>
+</ul></li>
+<li>扩充推理规则
+<ul>
 <li>分解规则:如果X-&gt;YZ,则X-&gt;Y</li>
 <li>合并规则:如果X-&gt;Y且X-&gt;Z,则X-&gt;YZ</li>
-<li>伪传递规则:如果X-&gt;Y且WY-&gt;Z,则:WX-&gt;Z<br>这几个的证明特别有意思<br>PPT53,54,55</li>
-</ul>
-</li>
-</ul>
-</li>
+<li>伪传递规则:如果X-&gt;Y且WY-&gt;Z,则:WX-&gt;Z 这几个的证明特别有意思
+PPT53,54,55</li>
+</ul></li>
+</ul></li>
 </ul>
 <p>关键字定义PPT 50,但是50的补全，PPT 63补全</p>
-<p>最小函数依赖集定义:</p>
-<ul>
-<li>如果函数依赖集F满足下列条件，则称F为一个极小函数依赖集，亦称为最小依赖集或最小覆盖<ul>
-<li>F中任一函数依赖右部仅含有一个属性</li>
-<li>F中不存在这样的函数依赖X-&gt;A,使得F与F-{X-&gt;A}等价</li>
-<li>F中不存在这样的函数依赖X-&gt;A,X有真子集Z使得F-{X-&gt;A}U{Z-&gt;A}与F等价<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/mgsky1/article/details/89061365">传送门</a></li>
-</ul>
-</li>
-</ul>
-<p>范式:PPT70</p>
-<ul>
-<li>第一范式:关系模式R(U)中的每个属性值都是一个不可分割的数据量</li>
-<li>第二范式:设有关系模式R(U)是第一范式，且每个非主属性都完全函数依赖于关键字，则称关系模式R(U)满足第二范式，记作R属于2NF</li>
-<li>第三范式:如果关系模式是2NF，而且它的任意一个非键属性都不传递地依赖于任何候选键，则R属于3NF</li>
-<li>BCNF:设关系模式R(U)满足1NF，且若X-&gt;Y时X必包含有该关系模式的关键字，则称关系模式R(U)满足BCNF范式,并记作R属于BCNF</li>
-<li>第四范式PPT124<ul>
-<li>多值依赖:PPT104,111,114</li>
-<li>非平凡的多值依赖:PPT110<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/Xiaokm/article/details/79670631">传送门</a></li>
-</ul>
-</li>
-</ul>
-<p>函数依赖理论</p>
-<ul>
-<li>函数依赖集的等价:PPT128</li>
-<li>最小依赖集PPT133,135</li>
-<li>无损联接性，依赖保持性:PPT136,144,146<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_50233720/article/details/118863768">传送门</a></li>
-</ul>
+<p>最小函数依赖集定义: *
+如果函数依赖集F满足下列条件，则称F为一个极小函数依赖集，亦称为最小依赖集或最小覆盖
+* F中任一函数依赖右部仅含有一个属性 *
+F中不存在这样的函数依赖X-&gt;A,使得F与F-{X-&gt;A}等价 *
+F中不存在这样的函数依赖X-&gt;A,X有真子集Z使得F-{X-&gt;A}U{Z-&gt;A}与F等价
+<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/mgsky1/article/details/89061365">传送门</a></p>
+<p>范式:PPT70 *
+第一范式:关系模式R(U)中的每个属性值都是一个不可分割的数据量 *
+第二范式:设有关系模式R(U)是第一范式，且每个非主属性都完全函数依赖于关键字，则称关系模式R(U)满足第二范式，记作R属于2NF
+*
+第三范式:如果关系模式是2NF，而且它的任意一个非键属性都不传递地依赖于任何候选键，则R属于3NF
+*
+BCNF:设关系模式R(U)满足1NF，且若X-&gt;Y时X必包含有该关系模式的关键字，则称关系模式R(U)满足BCNF范式,并记作R属于BCNF
+* 第四范式PPT124 * 多值依赖:PPT104,111,114 * 非平凡的多值依赖:PPT110 <a
+target="_blank" rel="noopener" href="https://blog.csdn.net/Xiaokm/article/details/79670631">传送门</a></p>
+<p>函数依赖理论 * 函数依赖集的等价:PPT128 * 最小依赖集PPT133,135 *
+无损联接性，依赖保持性:PPT136,144,146 <a
+target="_blank" rel="noopener" href="https://blog.csdn.net/m0_50233720/article/details/118863768">传送门</a></p>
 <p>如果关系模式R(U)属于BCNF，则R(U)属于3NF</p>
 <p>模式分解:PPT77，91</p>
-<h3 id="24-6-2-限时感慨时间线收缩"><a href="#24-6-2-限时感慨时间线收缩" class="headerlink" title="24/6/2 限时感慨时间线收缩"></a>24/6/2 限时感慨时间线收缩</h3><h4 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h4><ul>
-<li>数据库概念设计过程-视图集成<br>PPT 50</li>
-<li>数据库的逻辑设计<ul>
+<h3 id="限时感慨时间线收缩">24/6/2 限时感慨时间线收缩</h3>
+<h4 id="数据库设计">数据库设计</h4>
+<ul>
+<li>数据库概念设计过程-视图集成 PPT 50</li>
+<li>数据库的逻辑设计
+<ul>
 <li>任务:将EE-R模型转换成相等价的关系数据库模式</li>
 <li>PPT53,54,57,58,59</li>
 <li>命名与属性域的处理:唯一性</li>
 <li>非原子属性的处理:模式不变，元组展开P59体现</li>
 <li>元组属性的处理:横向展开</li>
-<li>联系的转换:联系转换成关系<ul>
+<li>联系的转换:联系转换成关系
+<ul>
 <li>全参与P65，三种P69，P70</li>
-</ul>
-</li>
-</ul>
-</li>
+</ul></li>
+</ul></li>
 </ul>
 
       
@@ -761,27 +761,29 @@ contain在这里应该是集合的包含关系,但是暂且不清楚是否要求
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="LSTM"><a href="#LSTM" class="headerlink" title="LSTM"></a>LSTM</h2><p><a target="_blank" rel="noopener" href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">一篇著名的博客</a></p>
-<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>LSTM有三个门，用于调节神经元信息，选择性的让信息通过<br><br>门由sigmoid和神经网络层构成<br></p>
+          <h2 id="lstm">LSTM</h2>
+<p><a
+target="_blank" rel="noopener" href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">一篇著名的博客</a>
+### 原理 LSTM有三个门，用于调节神经元信息，选择性的让信息通过<br>
+门由sigmoid和神经网络层构成<br> * 第一步：决定忘记哪些信息 *
+第二步：更新 * 最后：输出</p>
+<h3 id="官方api"><a
+target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/nn.html#torch.nn.LSTM">官方API</a></h3>
+<h4 id="参数">参数</h4>
 <ul>
-<li>第一步：决定忘记哪些信息</li>
-<li>第二步：更新</li>
-<li>最后：输出</li>
-</ul>
-<h3 id="官方API"><a href="#官方API" class="headerlink" title="官方API"></a><a target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/nn.html#torch.nn.LSTM">官方API</a></h3><h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><ul>
 <li>input_size</li>
 <li>hidden_size</li>
 <li>num_layers</li>
 <li>bias</li>
 <li>batch_first</li>
 <li>dropout</li>
-<li><p>bidirectional</p>
-<h4 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h4></li>
-<li>input(seq_len,batch,input_size)</li>
-<li>h_0(num_layers*num_directions,batch,hidden_size)</li>
-<li>c_0(num_layers*num_directions,batch,hidden_size)</li>
+<li>bidirectional</li>
 </ul>
-<h4 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h4><ul>
+<p>#### 输入 - input(seq_len,batch,input_size) -
+h_0(num_layers<em>num_directions,batch,hidden_size) -
+c_0(num_layers</em>num_directions,batch,hidden_size)</p>
+<h4 id="输出">输出</h4>
+<ul>
 <li>output(seq_len,batch,num_directions*hidden_size)</li>
 <li>h_n(num_layers*num_directions,batch,hidden_size)</li>
 <li>c_n(num_layers*num_directions,batch,hidden_size)</li>
@@ -862,15 +864,28 @@ contain在这里应该是集合的包含关系,但是暂且不清楚是否要求
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="我要成为git高手（雾）"><a href="#我要成为git高手（雾）" class="headerlink" title="我要成为git高手（雾）"></a>我要成为git高手（雾）</h1><h3 id="初始化-绑定邮箱和账号"><a href="#初始化-绑定邮箱和账号" class="headerlink" title="初始化:绑定邮箱和账号"></a><strong>初始化:绑定邮箱和账号</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;ishland&quot;</span><br><span class="line">git config --global user.email </span><br></pre></td></tr></table></figure>
-<h3 id="创建本地仓库"><a href="#创建本地仓库" class="headerlink" title="创建本地仓库"></a><strong>创建本地仓库</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin git@github.com:Tree-Summer/Mei_Sai.git</span><br></pre></td></tr></table></figure>
-<h3 id="创建本地，远程分支，推送"><a href="#创建本地，远程分支，推送" class="headerlink" title="创建本地，远程分支，推送"></a><strong>创建本地，远程分支，推送</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git branch//查看本地分支</span><br><span class="line">git branch -r//查看远程分支</span><br><span class="line">git branch -a//查看所有分支</span><br><span class="line">git branch [branch name]//创建本地新分支</span><br><span class="line">git checkout [branch name]//切换到新分支</span><br><span class="line">switched to branch ‘develop2’//也是切换</span><br><span class="line">git checkout -b [branch name]//创建分支同时也切换分支</span><br></pre></td></tr></table></figure>
-<h3 id="拉取"><a href="#拉取" class="headerlink" title="拉取"></a><strong>拉取</strong><br></h3><p>git pull:获取最新代码到本地，自动合并到当前分支<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git remote -v//查询当前远程分支</span><br><span class="line">git pull origin master//拉取远端origin/master分支合并到本地当前分支</span><br><span class="line">git pull origin dev//拉取origin/dev分支</span><br><span class="line">git pull origin master --allow-unrelated-histories//允许不同版本的拉取和合并</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>git fetch+merge:获取最新代码手动合并<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br><span class="line">git fetch orign master:master1//在本地建立master1分支，下载远端origin/master分支到master1分支</span><br><span class="line">git diff master1 //查看本地master1分支与当前分支版本差异</span><br><span class="line">git merge master1//合并本地分支master1到当前分支</span><br><span class="line">git branch -D master1//删除本地分支master1</span><br></pre></td></tr></table></figure><br>不额外建立本地分支<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br><span class="line">git fetch origin master</span><br><span class="line">git log -p master..origin/master//查看本地master与远端origin/master的版本差异</span><br><span class="line">git merge origin/master//合并远端分支origin/master到当前分支</span><br></pre></td></tr></table></figure></p>
-<h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a><strong>上传</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m</span><br><span class="line">git push origin [branch name]:[branch name]//推送本地新分支到远程仓库</span><br><span class="line">git push origin develop2</span><br></pre></td></tr></table></figure>
-<h3 id="合并"><a href="#合并" class="headerlink" title="合并"></a><strong>合并</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git merge [分支名]//本地合并</span><br><span class="line">git fetch+merge//获取最新代码手动合并</span><br></pre></td></tr></table></figure>
-<h3 id="连接问题"><a href="#连接问题" class="headerlink" title="连接问题"></a>连接问题</h3> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com //是否连接上</span><br></pre></td></tr></table></figure>
-<h3 id="references"><a href="#references" class="headerlink" title="references"></a>references</h3><p>(<a target="_blank" rel="noopener" href="https://blog.csdn.net/Thinkingcao/article/details/106059446">https://blog.csdn.net/Thinkingcao/article/details/106059446</a>)</p>
-<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git ls-files //查看缓存区文件</span><br><span class="line">git reset . //已经add .后，用该命令重置</span><br><span class="line">git push origin --force //强制推送更改内容</span><br><span class="line">git branch -D [分支名]//删除分支内容</span><br></pre></td></tr></table></figure>
+          <h1 id="我要成为git高手雾">我要成为git高手（雾）</h1>
+<h3
+id="初始化绑定邮箱和账号"><strong>初始化:绑定邮箱和账号</strong></h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;ishland&quot;</span><br><span class="line">git config --global user.email </span><br></pre></td></tr></table></figure>
+<h3 id="创建本地仓库"><strong>创建本地仓库</strong></h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin git@github.com:Tree-Summer/Mei_Sai.git</span><br></pre></td></tr></table></figure>
+<h3
+id="创建本地远程分支推送"><strong>创建本地，远程分支，推送</strong></h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git branch//查看本地分支</span><br><span class="line">git branch -r//查看远程分支</span><br><span class="line">git branch -a//查看所有分支</span><br><span class="line">git branch [branch name]//创建本地新分支</span><br><span class="line">git checkout [branch name]//切换到新分支</span><br><span class="line">switched to branch ‘develop2’//也是切换</span><br><span class="line">git checkout -b [branch name]//创建分支同时也切换分支</span><br></pre></td></tr></table></figure>
+<h3 id="拉取"><strong>拉取</strong><br></h3>
+<p>git pull:获取最新代码到本地，自动合并到当前分支 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git remote -v//查询当前远程分支</span><br><span class="line">git pull origin master//拉取远端origin/master分支合并到本地当前分支</span><br><span class="line">git pull origin dev//拉取origin/dev分支</span><br><span class="line">git pull origin master --allow-unrelated-histories//允许不同版本的拉取和合并</span><br><span class="line"></span><br></pre></td></tr></table></figure> git
+fetch+merge:获取最新代码手动合并 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br><span class="line">git fetch orign master:master1//在本地建立master1分支，下载远端origin/master分支到master1分支</span><br><span class="line">git diff master1 //查看本地master1分支与当前分支版本差异</span><br><span class="line">git merge master1//合并本地分支master1到当前分支</span><br><span class="line">git branch -D master1//删除本地分支master1</span><br></pre></td></tr></table></figure> 不额外建立本地分支
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br><span class="line">git fetch origin master</span><br><span class="line">git log -p master..origin/master//查看本地master与远端origin/master的版本差异</span><br><span class="line">git merge origin/master//合并远端分支origin/master到当前分支</span><br></pre></td></tr></table></figure> ### <strong>上传</strong> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m</span><br><span class="line">git push origin [branch name]:[branch name]//推送本地新分支到远程仓库</span><br><span class="line">git push origin develop2</span><br></pre></td></tr></table></figure></p>
+<h3 id="合并"><strong>合并</strong></h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git merge [分支名]//本地合并</span><br><span class="line">git fetch+merge//获取最新代码手动合并</span><br></pre></td></tr></table></figure>
+<h3 id="连接问题">连接问题</h3>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com //是否连接上</span><br></pre></td></tr></table></figure></p>
+<h3 id="references">references</h3>
+<p>(https://blog.csdn.net/Thinkingcao/article/details/106059446)</p>
+<h3 id="删除">删除</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git ls-files //查看缓存区文件</span><br><span class="line">git reset . //已经add .后，用该命令重置</span><br><span class="line">git push origin --force //强制推送更改内容</span><br><span class="line">git branch -D [分支名]//删除分支内容</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -945,53 +960,62 @@ contain在这里应该是集合的包含关系,但是暂且不清楚是否要求
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="线性优化："><a href="#线性优化：" class="headerlink" title="线性优化："></a>线性优化：</h2><p><img src="https://www.freeimg.cn/i/2024/01/19/65aa8775e6348.png" alt="qaq"></p>
-<ul>
-<li>重点是写出矩阵，列好约束，所有变量都是一次方</li>
-<li>特例:整数优化：任务分配问题，其中有01规划<br><img src="https://www.freeimg.cn/i/2024/01/19/65aa8775e6348.png" alt="qwq"></li>
-</ul>
-<h2 id="非线性规划"><a href="#非线性规划" class="headerlink" title="非线性规划"></a>非线性规划</h2><p>与线性的区别：至少一个变量不是一次方\<br>求解运用matlab函数fmincon</p>
-<ul>
-<li>“怎样安排/分配”“尽量多/少”“最多（少）”“利润最大”“最合理”</li>
-<li>投资规划</li>
-<li>角度调整：含有三角函数</li>
-<li>生产安排</li>
-</ul>
-<h2 id="多目标规划"><a href="#多目标规划" class="headerlink" title="多目标规划"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45745854/article/details/107433168">多目标规划</a></h2><p>插一嘴：我现在觉得凸优化是神作了，鲁棒优化那一章讲全了，为什么我没有带回来那本书呜呜<br></p>
+          <h2 id="线性优化">线性优化：</h2>
+<p><img src="https://www.freeimg.cn/i/2024/01/19/65aa8775e6348.png"
+alt="qaq" /> - 重点是写出矩阵，列好约束，所有变量都是一次方 -
+特例:整数优化：任务分配问题，其中有01规划 <img
+src="https://www.freeimg.cn/i/2024/01/19/65aa8775e6348.png"
+alt="qwq" /></p>
+<h2 id="非线性规划">非线性规划</h2>
+<p>与线性的区别：至少一个变量不是一次方<br />
+求解运用matlab函数fmincon *
+“怎样安排/分配”“尽量多/少”“最多（少）”“利润最大”“最合理” * 投资规划 *
+角度调整：含有三角函数 * 生产安排</p>
+<h2 id="多目标规划"><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45745854/article/details/107433168">多目标规划</a></h2>
+<p>插一嘴：我现在觉得凸优化是神作了，鲁棒优化那一章讲全了，为什么我没有带回来那本书呜呜<br></p>
 <p>线性，非线性都是固定目标,多目标规划的目标之间是相互冲突的</p>
-<p>目前求解多目标优化问题方法主要有基于数学的规划方法和基于遗传算法的两类方法</p>
+<p>目前求解多目标优化问题方法主要有基于数学的规划方法和基于遗传算法的两类方法
+* <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/616882532">传统规划方法</a>
+三个概念：正负偏差变量，绝对约束和目标约束，优先因子 *
+<strong>目标约束</strong>的不等式允许有偏差，通过正负偏差变量实现，如
+8x<sub>1</sub> +10x<sub>2</sub> +d<sub>i</sub><sup>-</sup>
+-d<sub>i</sub><sup>+</sup> =56 *
+主观上先确定优先因子<strong>P<sub>k</sub></strong>
+建立模型很重要，求解使用matlab的fgoalattain函数</p>
 <ul>
-<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/616882532">传统规划方法</a><br>  三个概念：正负偏差变量，绝对约束和目标约束，优先因子</p>
-<ul>
-<li><strong>目标约束</strong>的不等式允许有偏差，通过正负偏差变量实现，如 8x~1~ +10x~2~ +d~i~^-^ -d~i~^+^ =56<ul>
-<li>主观上先确定优先因子<strong>P~k~</strong><br>建立模型很重要，求解使用matlab的fgoalattain函数</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>NSGA-II</p>
+<li>NSGA-II
 <ul>
 <li>提供了快速非支配的排序算法，降低了计算非支配序的复杂度</li>
 <li>引入了精英策略，扩大了采样空间。将父代种群与其产生的子代种群组合在一起，共同通过竞争来产生下一代种群，这有利于是父代中的优良个体得以保持，保证那些优良的个体在进化过程中不被丢弃，从而提高优化结果的准确度。并且通过对种群所有个体分层存放，使得最佳个体不会丢失，能够迅速提高种群水平。</li>
 <li>引入拥挤度和拥挤度比较算子，这不但克服了NSGA算法中需要人为指定共享参数的缺陷，而且将拥挤度作为种群中个体之间的比较准则，使得准Pareto域中的种群个体能均匀扩展到整个Pareto域，从而保证了种群的多样性。</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h2 id="灰色预测模型"><a href="#灰色预测模型" class="headerlink" title="灰色预测模型"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_25601345/article/details/107745041">灰色预测模型</a></h2><p>少量的，不完全的信息建立模型并预测<br><br>需要检验是否符合标准<br><br>常微分方程求解那里有机会需要搞懂<br><img src="https://www.freeimg.cn/i/2024/01/22/65ae715f0c70b.png" alt="图片找不到了qwq"></p>
-<h2 id="Topsis层次分析法"><a href="#Topsis层次分析法" class="headerlink" title="Topsis层次分析法"></a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/266689519">Topsis层次分析法</a></h2><p>评价类，充分利用原始数据，无需数据检验</p>
-<h2 id="beta分布破防记录"><a href="#beta分布破防记录" class="headerlink" title="beta分布破防记录"></a>beta分布破防记录</h2><p>一直画不出对的图，因为输入错了，错将频数当y了，事实上频数应该是很多个x啊啊啊，频数对应的值才是y啊喂，附上宝贵的代码<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">data1 = betarnd(4,3,100,1);%生成符合beta分布的数值</span><br><span class="line">data1=sort(data1);%排序方便下面看数值长啥样</span><br><span class="line">plot(data1)</span><br><span class="line">hold on;</span><br><span class="line">[p,ci] = betafit(data1,0.01);%拟合</span><br><span class="line">x=0:0.01:1;</span><br><span class="line">y=betapdf(x,p(1,1),p(1,2));%求概率密度</span><br><span class="line">plot(x,y);</span><br><span class="line">xlabel(&#x27;x&#x27;);</span><br><span class="line">ylabel(&#x27;y&#x27;);</span><br></pre></td></tr></table></figure></p>
-<h2 id="概率论相关知识点"><a href="#概率论相关知识点" class="headerlink" title="概率论相关知识点"></a>概率论相关知识点</h2><p>贝叶斯的 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/401258319">看着还不错的一个系列</a><br><br>先验分布：已知原因结果的概率<br><br>后验分布：已知结果原因的概率<br><br>后验预测分布：已知结果预测新数据分布<br></p>
-<p><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/stats/fitdist.html">对数据进行概率分布对象拟合</a><br><br><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/stats/histfit.html">正态分布拟合直方图画图及修改</a><br></p>
-<h2 id="灰色关联度分析"><a href="#灰色关联度分析" class="headerlink" title="灰色关联度分析"></a>灰色关联度分析</h2><p>在一个灰色系统中，我们想要了解其中某个我们所关注的项目受其他因素影响的相对强弱</p>
-<ul>
-<li>确立母序列</li>
-<li>归一化<ul>
-<li>初值化：把一个序列的数据统一除以最开始的值</li>
-<li>均值化：把序列的数据除以均值</li>
-<li>计算灰色关联系数</li>
-</ul>
-</li>
-</ul>
+<h2 id="灰色预测模型"><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/qq_25601345/article/details/107745041">灰色预测模型</a></h2>
+<p>少量的，不完全的信息建立模型并预测<br> 需要检验是否符合标准<br>
+常微分方程求解那里有机会需要搞懂 <img
+src="https://www.freeimg.cn/i/2024/01/22/65ae715f0c70b.png"
+alt="图片找不到了qwq" /></p>
+<h2 id="topsis层次分析法"><a
+target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/266689519">Topsis层次分析法</a></h2>
+<p>评价类，充分利用原始数据，无需数据检验</p>
+<h2 id="beta分布破防记录">beta分布破防记录</h2>
+<p>一直画不出对的图，因为输入错了，错将频数当y了，事实上频数应该是很多个x啊啊啊，频数对应的值才是y啊喂，附上宝贵的代码
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">data1 = betarnd(4,3,100,1);%生成符合beta分布的数值</span><br><span class="line">data1=sort(data1);%排序方便下面看数值长啥样</span><br><span class="line">plot(data1)</span><br><span class="line">hold on;</span><br><span class="line">[p,ci] = betafit(data1,0.01);%拟合</span><br><span class="line">x=0:0.01:1;</span><br><span class="line">y=betapdf(x,p(1,1),p(1,2));%求概率密度</span><br><span class="line">plot(x,y);</span><br><span class="line">xlabel(&#x27;x&#x27;);</span><br><span class="line">ylabel(&#x27;y&#x27;);</span><br></pre></td></tr></table></figure></p>
+<h2 id="概率论相关知识点">概率论相关知识点</h2>
+<p>贝叶斯的 <a
+target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/401258319">看着还不错的一个系列</a><br>
+先验分布：已知原因结果的概率<br> 后验分布：已知结果原因的概率<br>
+后验预测分布：已知结果预测新数据分布<br></p>
+<p><a
+target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/stats/fitdist.html">对数据进行概率分布对象拟合</a><br>
+<a
+target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/stats/histfit.html">正态分布拟合直方图画图及修改</a><br></p>
+<h2 id="灰色关联度分析">灰色关联度分析</h2>
+<p>在一个灰色系统中，我们想要了解其中某个我们所关注的项目受其他因素影响的相对强弱
+- 确立母序列 - 归一化 - 初值化：把一个序列的数据统一除以最开始的值 -
+均值化：把序列的数据除以均值 - 计算灰色关联系数</p>
 
       
     </div>
@@ -1067,66 +1091,71 @@ contain在这里应该是集合的包含关系,但是暂且不清楚是否要求
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><ul>
-<li>t=”qaq”定义字符串变量，加法直接在后面加,但是在数组里占一格</li>
-<li>t=‘DNA’是字符，存三个字符，s=t(3) //s的值为A，char类型不能加，添加用[t,’www’]</li>
+          <h2 id="语法">语法</h2>
+<ul>
+<li>t="qaq"定义字符串变量，加法直接在后面加,但是在数组里占一格</li>
+<li>t=‘DNA’是字符，存三个字符，s=t(3)
+//s的值为A，char类型不能加，添加用[t,'www']</li>
 <li>如果一个操作数是标量，另一个操作数不是标量，matlab会将该标量隐式扩展为与另一个操作数具有相同的大小</li>
 </ul>
-<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><ul>
-<li>[D,V]=eig(A) 求特征向量</li>
-<li>B=A’ 求转置</li>
-<li>E=inv(A) 求逆矩阵</li>
-<li>C=A*B 矩阵乘法</li>
-<li>E=A.*B 矩阵点乘，对应元素相乘</li>
-<li>x=A\b等效于inv(A)*b</li>
-<li><strong>linprog函数</strong>：求解线性规划问题<br><br>[x,fval,exitflag]=linprog(f,A,b,Aeq,beq,lb,ub)<br><br>Linprog输入：<br><br>f是目标函数的系数矩阵<br><br>A是线性规划不等式约束的变量系数矩阵<br><br>b是不等式约束的资源数<br><br>Aeq和beq是相应等式约束的变量系数矩阵和资源数<br><br>lb和ub为保变量的上下区间<br><br>linprog返回值：<br>x为求得的各变量的值，fval为最优化的值，exitflag是函数的退出标志</li>
-</ul>
+<h2 id="函数">函数</h2>
 <ul>
-<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/f_h_h/article/details/100537394"> intlinprog:整数约束变量</a>：<br><br>intcon ：整数所在位置<br></p>
+<li><p>[D,V]=eig(A) 求特征向量</p></li>
+<li><p>B=A' 求转置</p></li>
+<li><p>E=inv(A) 求逆矩阵</p></li>
+<li><p>C=A*B 矩阵乘法</p></li>
+<li><p>E=A.*B 矩阵点乘，对应元素相乘</p></li>
+<li><p>x=A(A)*b</p></li>
+<li><p><strong>linprog函数</strong>：求解线性规划问题<br>
+[x,fval,exitflag]=linprog(f,A,b,Aeq,beq,lb,ub)<br> Linprog输入：<br>
+f是目标函数的系数矩阵<br> A是线性规划不等式约束的变量系数矩阵<br>
+b是不等式约束的资源数<br>
+Aeq和beq是相应等式约束的变量系数矩阵和资源数<br>
+lb和ub为保变量的上下区间<br> linprog返回值：
+x为求得的各变量的值，fval为最优化的值，exitflag是函数的退出标志</p></li>
+<li><p><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/f_h_h/article/details/100537394">intlinprog:整数约束变量</a>：<br>
+intcon ：整数所在位置<br></p></li>
+<li><p>输出：disp（a）</p></li>
+<li><p>输入：a=input("请输入a的值")</p></li>
+<li><p>plot（b）画图</p></li>
+<li><p>grid on 添加网格线</p></li>
+<li><p><strong><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/qq_25018077/article/details/88998126">function</a></strong>：<br>
+function [y1,...,yn]=myfun(x1,...,xm)
+<br>前面是输出，后面是输入</p></li>
+<li><p><strong>fmincon</strong>：<br>
+[x,val]=fmincon(fun,x0,A,b,Aeq,beq,lb,ub,nonlcon)
+fun:单独脚本文件里定义的目标函数<br> x0:决策变量的初始值<br>
+nonclcon:非线性约束，包括不等式和等式 <img
+src="https://www.freeimg.cn/i/2024/01/21/65ad229922aa0.png"
+alt="加载不出来了qwq" /> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function f=fun1(x);</span><br><span class="line">f=sum(x.^2)+8;  %编写目标函数</span><br><span class="line">end</span><br><span class="line">%记得写在函数文件里</span><br></pre></td></tr></table></figure> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function [g,h]=fun2(x);</span><br><span class="line">g=[-x(1).^2+x(2)-x(3).^2;x(1)+x(2).^2+x(3)^2-20];</span><br><span class="line">h=[-x(1)-x(2).^2+2;x(2)+2*x(3).^2-3];</span><br><span class="line">end%约束函数，g是不等式约束，h是等式约束</span><br></pre></td></tr></table></figure>
+最后求解用[x,y]=fmincon('fun1',rand(3,1),[],[],[],[],zeros(3,1),[],'fun2')即可</p></li>
+<li><p>读入excel文件处理 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[tx,str]=xlsread(&#x27;Problem_C_Data_Wordle.xlsx&#x27;);</span><br><span class="line">time=tx(:,1);</span><br><span class="line">Altitude=tx(:,3);</span><br></pre></td></tr></table></figure></p></li>
+<li><p>sort函数原数组是不改动的，需要将sort后的返回值记录下来</p></li>
+<li><p><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/dsydsylove/article/details/116225942">fit,fittype曲线拟合</a></p></li>
+<li><p>beta分布 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">data1 = betarnd(4,3,100,1);%生成符合beta分布的数值</span><br><span class="line">data1=sort(data1);%排序方便下面看数值长啥样</span><br><span class="line">plot(data1)</span><br><span class="line">hold on;</span><br><span class="line">[p,ci] = betafit(data1,0.01);%拟合</span><br><span class="line">x=0:0.01:1;</span><br><span class="line">y=betapdf(x,p(1,1),p(1,2));%求概率密度</span><br><span class="line">plot(x,y);</span><br><span class="line">xlabel(&#x27;x&#x27;);</span><br><span class="line">ylabel(&#x27;y&#x27;);</span><br></pre></td></tr></table></figure></p></li>
+<li><p>用已有的拟合模板（见下面官方文档链接）拟合曲线
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[fit_result,gof]=fit(x,y,&#x27;poly7&#x27;);%x是自变量，y是因变量，poly7是可替换的</span><br><span class="line">disp(fit_result);</span><br><span class="line">plot(fit_result,x,y);</span><br></pre></td></tr></table></figure></p></li>
+</ul>
+<p>## 文件 * 编程文件：写了运行命令行弹出结果 *
+实时文件：左边代码右边结果，点击文本后可以插入图片，使用markdown语法 *
+函数文件：无法直接使用，在脚本文件中调用</p>
+<h2 id="符号">符号</h2>
 <ul>
-<li>输出：disp（a）</li>
-<li>输入：a=input(“请输入a的值”)</li>
-<li>plot（b）画图</li>
-<li>grid on 添加网格线</li>
-</ul>
-</li>
-<li><p><strong><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_25018077/article/details/88998126">function</a></strong>：<br><br>function [y1,…,yn]=myfun(x1,…,xm)<br><br>前面是输出，后面是输入</p>
-</li>
-<li><p><strong>fmincon</strong>：<br><br>  [x,val]=fmincon(fun,x0,A,b,Aeq,beq,lb,ub,nonlcon)<br>  fun:单独脚本文件里定义的目标函数<br><br>  x0:决策变量的初始值<br><br>  nonclcon:非线性约束，包括不等式和等式<br>  <img src="https://www.freeimg.cn/i/2024/01/21/65ad229922aa0.png" alt="加载不出来了qwq"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function f=fun1(x);</span><br><span class="line">f=sum(x.^2)+8;  %编写目标函数</span><br><span class="line">end</span><br><span class="line">%记得写在函数文件里</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function [g,h]=fun2(x);</span><br><span class="line">g=[-x(1).^2+x(2)-x(3).^2;x(1)+x(2).^2+x(3)^2-20];</span><br><span class="line">h=[-x(1)-x(2).^2+2;x(2)+2*x(3).^2-3];</span><br><span class="line">end%约束函数，g是不等式约束，h是等式约束</span><br></pre></td></tr></table></figure>
-<p>最后求解用[x,y]=fmincon(‘fun1’,rand(3,1),[],[],[],[],zeros(3,1),[],’fun2’)即可</p>
-<ul>
-<li>读入excel文件处理<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[tx,str]=xlsread(&#x27;Problem_C_Data_Wordle.xlsx&#x27;);</span><br><span class="line">time=tx(:,1);</span><br><span class="line">Altitude=tx(:,3);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>sort函数原数组是不改动的，需要将sort后的返回值记录下来</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/dsydsylove/article/details/116225942">fit,fittype曲线拟合</a></p>
-</li>
-<li>beta分布<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">data1 = betarnd(4,3,100,1);%生成符合beta分布的数值</span><br><span class="line">data1=sort(data1);%排序方便下面看数值长啥样</span><br><span class="line">plot(data1)</span><br><span class="line">hold on;</span><br><span class="line">[p,ci] = betafit(data1,0.01);%拟合</span><br><span class="line">x=0:0.01:1;</span><br><span class="line">y=betapdf(x,p(1,1),p(1,2));%求概率密度</span><br><span class="line">plot(x,y);</span><br><span class="line">xlabel(&#x27;x&#x27;);</span><br><span class="line">ylabel(&#x27;y&#x27;);</span><br></pre></td></tr></table></figure></li>
-<li><p>用已有的拟合模板（见下面官方文档链接）拟合曲线</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[fit_result,gof]=fit(x,y,&#x27;poly7&#x27;);%x是自变量，y是因变量，poly7是可替换的</span><br><span class="line">disp(fit_result);</span><br><span class="line">plot(fit_result,x,y);</span><br></pre></td></tr></table></figure>
-<h2 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h2></li>
-<li>编程文件：写了运行命令行弹出结果</li>
-<li>实时文件：左边代码右边结果，点击文本后可以插入图片，使用markdown语法</li>
-<li>函数文件：无法直接使用，在脚本文件中调用</li>
-</ul>
-<h2 id="符号"><a href="#符号" class="headerlink" title="符号"></a>符号</h2><ul>
 <li>%后面是注释</li>
 <li>写完一行代码末尾加分号会执行运算但是不在命令行窗口输出（不写就输出了是吧qaq）</li>
-</ul>
+<li>命令行：
 <ul>
-<li>命令行：<ul>
 <li>clc（清空命令行）</li>
 <li>clear（清空工作区）</li>
 <li>按向上方向键调用历史命令</li>
-</ul>
-</li>
-<li>快捷键：<ul>
+</ul></li>
+<li>快捷键：
+<ul>
 <li>ctrl+N新建脚本</li>
-<li>ctrl+Z撤销，ctrl+Y撤销过头时回溯<ul>
+<li>ctrl+Z撤销，ctrl+Y撤销过头时回溯</li>
 <li>ctrl+F 查找或替换变量名</li>
 <li>F5保存并运行</li>
 <li>F10单步执行</li>
@@ -1135,12 +1164,11 @@ contain在这里应该是集合的包含关系,但是暂且不清楚是否要求
 <li>ctrl+e实时脚本文字，代码转换</li>
 <li>ctrl+j:自动整理注释</li>
 <li>ctrl+i：智能缩进代码</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><p><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/curvefit/list-of-library-models-for-curve-and-surface-fitting.html#btbcxna-1">一些模型的中英对照</a></p>
+<h2 id="官方文档">官方文档</h2>
+<p><a
+target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/curvefit/list-of-library-models-for-curve-and-surface-fitting.html#btbcxna-1">一些模型的中英对照</a></p>
 
       
     </div>
@@ -1216,15 +1244,20 @@ contain在这里应该是集合的包含关系,但是暂且不清楚是否要求
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><ul>
-<li><em>hexo clean</em> 清除一些东东（更改后必用，我也不知道清除啥）</li>
+          <h2 id="命令行">命令行</h2>
+<ul>
+<li><em>hexo clean</em>
+清除一些东东（更改后必用，我也不知道清除啥）</li>
 <li><em>hexo g</em> 生成一些东东（更改后必用）</li>
 <li><em>hexo d</em> 部署网页</li>
 <li><em>hexo s</em> 本地查看</li>
 </ul>
-<h2 id="基础修改"><a href="#基础修改" class="headerlink" title="基础修改"></a>基础修改</h2><p><strong>作者，图片，链接什么的在博客主题的config文件里更改，主题在config文件里更改，这俩在一个文件夹下。</strong></p>
-<h2 id="侧边栏"><a href="#侧边栏" class="headerlink" title="侧边栏"></a>侧边栏</h2><p>未完待续</p>
-<h2 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h2><p>未完待续</p>
+<h2 id="基础修改">基础修改</h2>
+<p><strong>作者，图片，链接什么的在博客主题的config文件里更改，主题在config文件里更改，这俩在一个文件夹下。</strong></p>
+<h2 id="侧边栏">侧边栏</h2>
+<p>未完待续</p>
+<h2 id="首页">首页</h2>
+<p>未完待续</p>
 
       
     </div>
@@ -1300,112 +1333,169 @@ contain在这里应该是集合的包含关系,但是暂且不清楚是否要求
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h1><h3 id="24-1-18"><a href="#24-1-18" class="headerlink" title="24.1.18"></a>24.1.18</h3><ul>
+          <h1 id="读书笔记">读书笔记</h1>
+<h3 id="section">24.1.18</h3>
+<ul>
 <li><em>饥饿，困苦和失望本就是生命中始终如一的主旋律。——《动物农场》</em></li>
 </ul>
-<h3 id="24-1-25"><a href="#24-1-25" class="headerlink" title="24.1.25"></a>24.1.25</h3><ul>
-<li><em>“你的鬼心思看起来挺多的，是不是？”，这听起来就让人心生愧疚，眼角含泪。然而，在每个人内心深处，似乎始终存在一个不被侵蚀的自我，<br>他知道，不管自己做了什么——无论是哈哈大笑，还是放声大哭，或者是为了些小恩惠而感激涕零——他内心唯一的真实情感就是憎恨。  ——《这，就是快乐》</em></li>
-</ul>
-<h3 id="24-2-16"><a href="#24-2-16" class="headerlink" title="24.2.16"></a>24.2.16</h3><ul>
-<li><em>美德在于获得胜利，在于比别人更强大、更强壮、更漂亮、更富有、更受欢迎、更优雅、更肆无忌怛——通过支配弱者、欺压弱者、让哪些弱者受苦、<br>让那些弱者变得越发愚蠢、在各个方面都胜过他们。<br><br>然而在我的内心深处，那个·真正的自我总是清楚地告诉我真正的美德与现实向我灌输的道理是迥然不同的。万事万物皆是同理，无论是凡俗的还是神圣的。<br>——《这，就是快乐》</em></li>
-</ul>
-<h3 id="24-2-16-1"><a href="#24-2-16-1" class="headerlink" title="24.2.16"></a>24.2.16</h3><ul>
-<li><em>“再见，”临别前，老滑头嘴角含笑说道，“现在没必要再费时费力地管教你了。你在圣.赛浦鲁斯这段时间并没有取得多大的成功，对吧？而且我认为，你在学校里也不会取得多好的成绩。<br>我们其实不应该在你的身上浪费时间和金钱。你的世界观，还有你这样的家庭背景，进行这类教育其实没什么用处。哦，别以为我们不了解你！你的脑子里在想什么，我们都一清二楚。<br>我们知道你不相信我们教给你的一切，也清楚你一点都不感激我们为你所做的一切。不过，现在再说这些也没什么意义了。我们不必再对你负责，也不会在见到你。<br>最后再客观地评价一句吧，我们终究得承认，你确实是我们的失败作品之一，所以，再见吧。”</em><br><br></li>
-<li><em>说到这儿，我想起镇上的一家商店里，只要花两便士就能买到香甜的奶油圆面包。要是我的旅费不小心多了一先令，也足够我在路上额外来杯香浓的咖啡，再吃上一两块蛋糕<br>——即使只是这些细枝末节，也足以让我感到幸福快乐。幸好，在悲惨的未来向我逼近之前，我还有时间来享受一点微不足道的幸福。但我知道自己的未来注定黑暗。<br>失败、失败，还是失败——失败讲永远伴随着我，这是迄今为止我最深刻的执念。</em><br><br></li>
-<li><em>问题并不在于男孩们是否会在周日还被要求系上伊顿公学的硬领结，也不在于孩子们是否会被告知他们其实是被人从醋栗丛下挖出来的。无可否认，类似上述的这类事情已经不会再发生了。<br>真正的问题在于，让一个学生一直生活在荒谬的恐惧和愚蠢的误解之中，这是否是正常的。</em><br><br><em>——《这，就是快乐》</em></li>
-</ul>
-<h3 id="24-3-6"><a href="#24-3-6" class="headerlink" title="24.3.6"></a>24.3.6</h3><ul>
-<li><em>我对自己的行为并不怎么痛悔。但是如此激烈的指控却令我骇怪。我很想好言好语给他解释，几乎怀着些许友爱，说是任何事情，我都从来做不到真正后悔过。我的心思总是牵挂着即将发生的事情，牵挂着今天或明天。只是它们把我置于这种境地，我当然不能以这种口吻跟任何人说话了。我没有权力表现出友爱，没有权利表现出善意。因此，我还是尽量听听，因为检察官开始讨论我的灵魂了。</em> <br></li>
-<li><em>为求尽善尽美，为求我不再感到那么孤独，我只期望行刑那天围观观众，都向我发出憎恨的吼声</em> <br><br><em>—— 《局外人》</em></li>
-</ul>
-<h3 id="24-3-11"><a href="#24-3-11" class="headerlink" title="24.3.11"></a>24.3.11</h3><h4 id="《春泥棒》"><a href="#《春泥棒》" class="headerlink" title="《春泥棒》"></a><strong>《春泥棒》</strong></h4><p>高架橋を抜けたら雲の隙間に青が覗いた<br><br>穿过高架桥，从云隙间窥见一抹蔚蓝<br><br>ko kakyo wo nuketa rakumo no suki ma ni ao ga nozo i ta<br><br>こかきょをぬけたらくものすきまにあおがのぞいた</p>
-<p><br>最近どうも暑いからただ風が吹くのを待ってた<br><br>近来实在是燥热难耐，只是静候着一缕清风<br><br>sai kin dou mo atsu i kara tada kaze ga fuku nowo ma tte ta</p>
-<p><br>木陰に座る<br><br>坐在树荫下<br><br>kogae ni suwaru</p>
-<p><br>何か頬に付く<br><br>有什么东西粘上了脸颊<br><br>nani ka ho ni tsuku</p>
-<p><br>見上げれば頭上に咲いて散る<br><br>向上望去，头顶一片花开花落<br><br>mi agere ba tsu jyo ni sai te chiru</p>
-<p><br>はらり、僕らもう息も忘れて<br><br>飞花飘零，我们连呼吸也忘却<br><br>harari boku ramou iki mo wasure</p>
-<p><br>瞬きさえ億劫<br><br>甚至不愿眨眼<br><br>mada daki sae oku u </p>
-<p><br>さぁ、今日さえ明日過去に変わる<br><br>看吧，就连今天到了明日也将变成过去<br><br>saa kyo sae ashi ta kako ni kawaru</p>
-<p><br>ただ風を待つ<br><br>只是静候春风<br><br>tada kaze womatsu</p>
-<p><br>だから僕らもう声も忘れて<br><br>所以我们连声音也忘却<br><br>dakara boku tamou koe mo wasurete</p>
-<p><br>さよならさえ億劫<br><br>甚至不愿说出再见<br><br>sayo nara sae o kku u</p>
-<p><br>ただ花が降るだけ晴れり<br><br>只是落花纷纷<br><br>tada hana gafuru dake hareri</p>
-<p><br>今、春吹雪<br><br>此刻，阳光明媚，樱飞漫天<br><br>ima haru fu yuki</p>
-<p><br>次の日も待ち合わせ<br><br>第二天也是碰头的日子<br><br>tsuki no himo machi awase</p>
-<p><br>花見の客も少なくなった<br><br>来赏花的游客也变少了<br><br>hanami no kyaku mo su na ku natta</p>
-<p><br>春の匂いはもう止む<br><br>春日的气息已然画上句点<br><br>haru noni o i ha mou yamu</p>
-<p><br>今年も夏が来るのか<br><br>今年也要迎来夏天了吗？<br><br>kotoshi mo natsu ga kuru noka</p>
-<p><br>高架橋を抜けたら道の先に君が覗いた<br><br>穿过高架桥，在道路的前方瞥见了你的身影<br><br>ko kakyo wo nuke ta ramichi no saki ni kimi ga naso ita</p>
-<p><br>残りはどれだけかな<br><br>究竟还剩下多少次呢？<br><br>nokori ha dore dake kana</p>
-<p><br>どれだけ春に会えるだろう<br><br>究竟还能遇见多少次春天呢？<br><br>dore dake haru ni ae ru darou</p>
-<p><br>川沿いの丘、木陰に座る<br><br>沿着河川的小丘上，坐在树荫下<br><br>kawa zo i no oka ko ga eni suwaru</p>
-<p><br>また昨日と変わらず今日も咲く花に<br><br>还是一如昨日，望着盛放的樱花<br><br>mada ki no to kawarazu kyo mo saku hanani</p>
-<p><br>僕らもう息も忘れて<br><br>我们连呼吸也忘却<br><br>bokura mo u iki mo wasurete</p>
-<p><br>瞬きさえ億劫<br><br>甚至不愿眨眼<br><br>mada daki sae oku u </p>
-<p><br>花散らせ今吹くこの嵐は<br><br>此刻吹落花海的这阵大风<br><br>hana chirase ima fuku kono arashi ha</p>
-<p><br>まさに春泥棒<br><br>正是窃走春日的盗贼<br><br>masani haru doro bo o</p>
-<p><br>風に今日ももう時が 流れて<br><br>今天的时间就这样于风中流逝<br><br>kaze ni kyo mo mou toki ga nagarete</p>
-<p><br>立つことさえ億劫<br><br>连站着也觉得麻烦<br><br>da tsu koto sae okuu</p>
-<p><br>花の隙間に空、散れり<br><br>花间的天空<br><br>hana nosu ki mani sora chireri</p>
-<p><br>まだ、春吹雪<br><br>春吹雪，仍是落花纷纷，樱飞漫天<br><br>mada haru fu yuki</p>
-<p><br>今日も会いに行く<br><br>今天也要去见你<br><br>kyo omo ai ni iku</p>
-<p><br>木陰に座る<br><br>坐在树荫下<br><br>koga eni suwaru</p>
-<p><br>溜息を吐く<br><br>轻声叹气<br><br>dame iku wo tsuku</p>
-<p><br>花ももう終わる<br><br>花季也要结束了<br><br>hana mo mou owaru</p>
-<p><br>明日も会いに行く<br><br>明天也要去见你<br><br>asumo ai ni iku</p>
-<p><br>春がもう終わる<br><br>春天也要结束了<br><br>haru ga mou owaru</p>
-<p><br>名残るように時間が散っていく<br><br>又好像有些恋恋不舍，时间就这样悄然而逝<br><br>na oko ru youni jikan ga chi tte iku</p>
-<p><br>愛を歌えば言葉足らず<br>言语远不足以用来歌唱我的爱意<br><br>ai wo uta e ba kotoba tarazu</p>
-<p><br>踏む韻さえ億劫<br><br>连押韵也只觉得麻烦<br><br>fu mu ni sae okuu</p>
-<p><br>花開いた今を言葉如きが語れるものか<br><br>此刻樱花满开的盛景岂能用三言两语述说？<br><br>hana hirai ta ima wo koto ba koto ki ga katareru mono ka</p>
-<p><br>はらり、僕らもう息も忘れて<br><br>飞花飘零，我们连呼吸也忘却<br><br>harari boku ramou koe mowasure te</p>
-<p><br>瞬きさえ億劫<br><br>甚至不愿眨眼<br><br>mada da ki sae okuu</p>
-<p><br>花見は僕らだけ<br><br>仅有你和我两人的赏花<br><br>hana mi ha bokura dake</p>
-<p><br>散るなまだ、春吹雪<br><br>春意尚在，樱飞漫天<br><br>chiru namada haru fu yuki</p>
-<p><br>あともう少しだけ<br><br>还剩下一点点<br><br>ato mou su koshi dake</p>
-<p><br>もう数えられるだけ<br><br>还能继续数下去<br><br>mou kazoe rareru dake</p>
-<p><br>あと花二つだけ<br><br>还余下春花两瓣<br><br>ato hana futatsu dake</p>
-<p><br>もう花一つだけ<br><br>还剩一簇春花孤绽<br><br>mou hana hitotsu dake</p>
-<p><br>ただ葉が残るだけ、はらり<br><br>最后只留绿叶独展<br><br>tada haga nokoru dake harari</p>
-<p><br>今、春仕舞い<br><br>此刻，飞花飘零，春日了完<br><br>ima haru chimai</p>
-<h3 id="24-4-8"><a href="#24-4-8" class="headerlink" title="24.4.8"></a>24.4.8</h3><ul>
-<li><em>孩子们有时候挺伤人的。他们以为只要你恰好是个大人，你就刀枪不入，怎么也不会受伤。</em><br></li>
-<li><em>是的。直到刚才，我才认识到人类是可以选择孤独的。认识到有些力量有时会比逃避孤独的愿望更强大。</em><br></li>
-<li><p><em>卡帕尔迪先生相信桥西的内心中没有什么特别的东西是无法延续的。他对母亲说，他找啊找，可就是找不到那样特别的东西。但如今我相信，他是找错了地方。那里真有一样非常特别的东西，但不是在桥西的心里面，而是在那些爱她的人的心里面。这就是为什么我如今认为，卡帕尔迪先生错了，我是不可能成功的。所以我很高兴我当初做出了那样的决定。</em><br><br><br><em>——《克拉拉与太阳》</em></p>
-</li>
-<li><p><em>我们又做了令外十次比塞。阿尔吉侬每次都营。因为我找不到对的路。走不到写着终点的地方。我没有感到南过。因为我看阿尔吉侬跑让我学到怎么跑完迷工可是我要花很常的时间。<br><br>我都不知到老鼠是这么匆名。</em><br></p>
-</li>
-<li><em>我很害怕对别人说错话所以就开时转头要回家去。但我不知到为什么又转回来并在一次走近去。</em><br><br><em>——《献给阿尔吉侬的花束》</em></li>
-</ul>
-<h3 id="24-4-9"><a href="#24-4-9" class="headerlink" title="24.4.9"></a>24.4.9</h3><ul>
-<li><em>这听起来可能有些忘恩负义，但我痛恨这里的原因之一，就是他们把我当作天竺鼠的态度。尼姆经常提及是他让我变成现在的样子，或是有一天会有其他和我一样的人想要变成真正的人类。<br><br>我要怎么让他了解我并不是他创造的？<br><br>他和其他人犯下同样的错误，他们嘲笑弱智者，因为他们不了解对方也是人类。他不能体会，我来这里之前就已经是个人。<br><br>我正在学习控制自己的憎厌，不要凡事不耐烦，要懂得等待。我猜我正在成长，每一天我都多了解自己一点，原先只是小涟漪的记忆，现在却像滔天巨浪对我冲刷而来……<br></em></li>
-</ul>
+<h3 id="section-1">24.1.25</h3>
 <ul>
-<li><p><em>他如何看待自己并不重要，他无疑是很自我本位，但又如何？一个人要敢于尝试做这种事，就需要那样的自负。他这种人我看多了，很了解在他们的傲慢与专断之中，其实混合了很大成分的恐惧与不安</em><br></p>
-</li>
-<li><p><em>不过不久前，我才知道别人都在嘲笑我。现在我知道自己已在不知不觉间加入他们，嘲笑起自己。这点才最让我难过</em><br></p>
-</li>
-<li><p><em>低智能者比较能自由行动，在外面游荡个一周左右，当他们发现没有留在外面的理由后，多数便会自己回来。这世界并不要他们，他们很快就会知道。</em><br></p>
-</li>
-<li><p><em>有很多人愿意捐献金钱或物资，但很少人愿意奉献他们的时间与感情，我指的就是这个。</em><br></p>
-</li>
-<li><p><em>如果我能找出结果，只要能对已知的心智障碍增添一丝丝了解，能对和我一样的人带来帮助，我就会感到无比满足。无论我的下场如何，我对那些尚未出世生命的帮助，已等于让我活过千百次正常的人生。<br>这样就足够了。</em><br></p>
-</li>
-<li><p><em>过去几个月我学到很多东西，”我说，“不只是关于查理·高登，也关于人和生命， 而且我发现没有人真的关心查理·高登，不管他是个白痴或天才。所以，这有什么区别呢</em><br></p>
-</li>
-<li><p><em>智慧是人类最伟大的恩赐之一，只是在追寻知识的过程中，对爱的追寻往往就被搁在一旁。这是我自己最近发现的结论。我可以把这个假设提供你参考：没有能力给予和接受爱情的智慧，会促成心智与道德上的崩溃，形成神经官能症，甚至精神病。而且我还要说，只知专注在心智本身，以致排除人际关系并因此形成封闭的自我中心，只会导致暴力与痛苦。<br><br>当我还是弱智的时候，我有许多朋友，现在却半个也没有。当然，我认识一些人，很多很多人，但没有任何朋友，这和我在面包店时的情况不同。世上没有一个朋友对我有任何意义，我也不对世上的任何人有意义。<br></em></p>
-</li>
-<li><p><em>“但我要告诉你一些别的事，查理。”我站直身子，倒退着离开镜子，“我不是你的朋友，我是你的敌人，我不会不经抗争就放弃我的智慧。我不能回到那个洞穴，现在我已经没有地方可去，查理。所以你必须离开，留在潜意识里，那里才是你该去的地方，别再到处跟着我。我不会放弃的……不管他们怎么想。不管这有多寂寞，我都会留住他们给我的一切，为这个世界，还有像你一样的许多人做些伟大的事”</em><br></p>
-</li>
-<li><p><em>我把阿尔吉侬的尸体放在一个小金属容器里带回家，我不会让他们把它丢进焚化炉。这样做有些愚蠢和伤感，但昨天深夜我把它埋在后院。把一束野花放在坟上时，我哭了起来</em><br></p>
-</li>
-<li><p><em>我一点都不记得了。噢，查理，我对你真的那么坏吗</em><br></p>
-</li>
-<li><p><em>今天我做了一件很笨的事我忘了我已经不在纪尼安小姐的成人中心班级上课。我走进去坐在教室后面的老位子上她看到我时表情很怪然后问说查理你都到那里去了。所以我说哈罗纪尼安小姐我今天已准备好要上课只是我弄丢了我们在用的书本</em><br></p>
-</li>
+<li><em>“你的鬼心思看起来挺多的，是不是？”，这听起来就让人心生愧疚，眼角含泪。然而，在每个人内心深处，似乎始终存在一个不被侵蚀的自我，
+他知道，不管自己做了什么——无论是哈哈大笑，还是放声大哭，或者是为了些小恩惠而感激涕零——他内心唯一的真实情感就是憎恨。
+——《这，就是快乐》</em></li>
+</ul>
+<h3 id="section-2">24.2.16</h3>
+<ul>
+<li><em>美德在于获得胜利，在于比别人更强大、更强壮、更漂亮、更富有、更受欢迎、更优雅、更肆无忌怛——通过支配弱者、欺压弱者、让哪些弱者受苦、
+让那些弱者变得越发愚蠢、在各个方面都胜过他们。<br>
+然而在我的内心深处，那个·真正的自我总是清楚地告诉我真正的美德与现实向我灌输的道理是迥然不同的。万事万物皆是同理，无论是凡俗的还是神圣的。
+——《这，就是快乐》</em></li>
+</ul>
+<h3 id="section-3">24.2.16</h3>
+<ul>
+<li><em>“再见，”临别前，老滑头嘴角含笑说道，“现在没必要再费时费力地管教你了。你在圣.赛浦鲁斯这段时间并没有取得多大的成功，对吧？而且我认为，你在学校里也不会取得多好的成绩。
+我们其实不应该在你的身上浪费时间和金钱。你的世界观，还有你这样的家庭背景，进行这类教育其实没什么用处。哦，别以为我们不了解你！你的脑子里在想什么，我们都一清二楚。
+我们知道你不相信我们教给你的一切，也清楚你一点都不感激我们为你所做的一切。不过，现在再说这些也没什么意义了。我们不必再对你负责，也不会在见到你。
+最后再客观地评价一句吧，我们终究得承认，你确实是我们的失败作品之一，所以，再见吧。”</em><br />
+<br></li>
+<li><em>说到这儿，我想起镇上的一家商店里，只要花两便士就能买到香甜的奶油圆面包。要是我的旅费不小心多了一先令，也足够我在路上额外来杯香浓的咖啡，再吃上一两块蛋糕
+——即使只是这些细枝末节，也足以让我感到幸福快乐。幸好，在悲惨的未来向我逼近之前，我还有时间来享受一点微不足道的幸福。但我知道自己的未来注定黑暗。
+失败、失败，还是失败——失败讲永远伴随着我，这是迄今为止我最深刻的执念。</em>
+<br></li>
+<li><em>问题并不在于男孩们是否会在周日还被要求系上伊顿公学的硬领结，也不在于孩子们是否会被告知他们其实是被人从醋栗丛下挖出来的。无可否认，类似上述的这类事情已经不会再发生了。
+真正的问题在于，让一个学生一直生活在荒谬的恐惧和愚蠢的误解之中，这是否是正常的。</em>
+<br><em>——《这，就是快乐》</em></li>
+</ul>
+<h3 id="section-4">24.3.6</h3>
+<ul>
+<li><em>我对自己的行为并不怎么痛悔。但是如此激烈的指控却令我骇怪。我很想好言好语给他解释，几乎怀着些许友爱，说是任何事情，我都从来做不到真正后悔过。我的心思总是牵挂着即将发生的事情，牵挂着今天或明天。只是它们把我置于这种境地，我当然不能以这种口吻跟任何人说话了。我没有权力表现出友爱，没有权利表现出善意。因此，我还是尽量听听，因为检察官开始讨论我的灵魂了。</em>
+<br></li>
+<li><em>为求尽善尽美，为求我不再感到那么孤独，我只期望行刑那天围观观众，都向我发出憎恨的吼声</em>
+<br> <em>—— 《局外人》</em></li>
+</ul>
+<h3 id="section-5">24.3.11</h3>
+<h4 id="春泥棒"><strong>《春泥棒》</strong></h4>
+<p>高架橋を抜けたら雲の隙間に青が覗いた<br>
+穿过高架桥，从云隙间窥见一抹蔚蓝<br> ko kakyo wo nuketa rakumo no suki
+ma ni ao ga nozo i ta
+<br>こかきょをぬけたらくものすきまにあおがのぞいた</p>
+<p><br>最近どうも暑いからただ風が吹くのを待ってた
+<br>近来实在是燥热难耐，只是静候着一缕清风 <br>sai kin dou mo atsu i
+kara tada kaze ga fuku nowo ma tte ta</p>
+<p><br>木陰に座る <br>坐在树荫下 <br>kogae ni suwaru</p>
+<p><br>何か頬に付く <br>有什么东西粘上了脸颊 <br>nani ka ho ni tsuku</p>
+<p><br>見上げれば頭上に咲いて散る <br>向上望去，头顶一片花开花落 <br>mi
+agere ba tsu jyo ni sai te chiru</p>
+<p><br>はらり、僕らもう息も忘れて <br>飞花飘零，我们连呼吸也忘却
+<br>harari boku ramou iki mo wasure</p>
+<p><br>瞬きさえ億劫 <br>甚至不愿眨眼 <br>mada daki sae oku u</p>
+<p><br>さぁ、今日さえ明日過去に変わる
+<br>看吧，就连今天到了明日也将变成过去 <br>saa kyo sae ashi ta kako ni
+kawaru</p>
+<p><br>ただ風を待つ <br>只是静候春风 <br>tada kaze womatsu</p>
+<p><br>だから僕らもう声も忘れて <br>所以我们连声音也忘却 <br>dakara boku
+tamou koe mo wasurete</p>
+<p><br>さよならさえ億劫 <br>甚至不愿说出再见 <br>sayo nara sae o kku
+u</p>
+<p><br>ただ花が降るだけ晴れり <br>只是落花纷纷 <br>tada hana gafuru dake
+hareri</p>
+<p><br>今、春吹雪 <br>此刻，阳光明媚，樱飞漫天 <br>ima haru fu yuki</p>
+<p><br>次の日も待ち合わせ <br>第二天也是碰头的日子 <br>tsuki no himo
+machi awase</p>
+<p><br>花見の客も少なくなった <br>来赏花的游客也变少了 <br>hanami no
+kyaku mo su na ku natta</p>
+<p><br>春の匂いはもう止む <br>春日的气息已然画上句点 <br>haru noni o i
+ha mou yamu</p>
+<p><br>今年も夏が来るのか <br>今年也要迎来夏天了吗？ <br>kotoshi mo
+natsu ga kuru noka</p>
+<p><br>高架橋を抜けたら道の先に君が覗いた
+<br>穿过高架桥，在道路的前方瞥见了你的身影 <br>ko kakyo wo nuke ta
+ramichi no saki ni kimi ga naso ita</p>
+<p><br>残りはどれだけかな <br>究竟还剩下多少次呢？ <br>nokori ha dore
+dake kana</p>
+<p><br>どれだけ春に会えるだろう <br>究竟还能遇见多少次春天呢？ <br>dore
+dake haru ni ae ru darou</p>
+<p><br>川沿いの丘、木陰に座る <br>沿着河川的小丘上，坐在树荫下 <br>kawa
+zo i no oka ko ga eni suwaru</p>
+<p><br>また昨日と変わらず今日も咲く花に <br>还是一如昨日，望着盛放的樱花
+<br>mada ki no to kawarazu kyo mo saku hanani</p>
+<p><br>僕らもう息も忘れて <br>我们连呼吸也忘却 <br>bokura mo u iki mo
+wasurete</p>
+<p><br>瞬きさえ億劫 <br>甚至不愿眨眼 <br>mada daki sae oku u</p>
+<p><br>花散らせ今吹くこの嵐は <br>此刻吹落花海的这阵大风 <br>hana
+chirase ima fuku kono arashi ha</p>
+<p><br>まさに春泥棒 <br>正是窃走春日的盗贼 <br>masani haru doro bo o</p>
+<p><br>風に今日ももう時が 流れて <br>今天的时间就这样于风中流逝 <br>kaze
+ni kyo mo mou toki ga nagarete</p>
+<p><br>立つことさえ億劫 <br>连站着也觉得麻烦 <br>da tsu koto sae
+okuu</p>
+<p><br>花の隙間に空、散れり <br>花间的天空 <br>hana nosu ki mani sora
+chireri</p>
+<p><br>まだ、春吹雪 <br>春吹雪，仍是落花纷纷，樱飞漫天 <br>mada haru fu
+yuki</p>
+<p><br>今日も会いに行く <br>今天也要去见你 <br>kyo omo ai ni iku</p>
+<p><br>木陰に座る <br>坐在树荫下 <br>koga eni suwaru</p>
+<p><br>溜息を吐く <br>轻声叹气 <br>dame iku wo tsuku</p>
+<p><br>花ももう終わる <br>花季也要结束了 <br>hana mo mou owaru</p>
+<p><br>明日も会いに行く <br>明天也要去见你 <br>asumo ai ni iku</p>
+<p><br>春がもう終わる <br>春天也要结束了 <br>haru ga mou owaru</p>
+<p><br>名残るように時間が散っていく
+<br>又好像有些恋恋不舍，时间就这样悄然而逝 <br>na oko ru youni jikan ga
+chi tte iku</p>
+<p><br>愛を歌えば言葉足らず 言语远不足以用来歌唱我的爱意 <br>ai wo uta e
+ba kotoba tarazu</p>
+<p><br>踏む韻さえ億劫 <br>连押韵也只觉得麻烦 <br>fu mu ni sae okuu</p>
+<p><br>花開いた今を言葉如きが語れるものか
+<br>此刻樱花满开的盛景岂能用三言两语述说？ <br>hana hirai ta ima wo koto
+ba koto ki ga katareru mono ka</p>
+<p><br>はらり、僕らもう息も忘れて <br>飞花飘零，我们连呼吸也忘却
+<br>harari boku ramou koe mowasure te</p>
+<p><br>瞬きさえ億劫 <br>甚至不愿眨眼 <br>mada da ki sae okuu</p>
+<p><br>花見は僕らだけ <br>仅有你和我两人的赏花 <br>hana mi ha bokura
+dake</p>
+<p><br>散るなまだ、春吹雪 <br>春意尚在，樱飞漫天 <br>chiru namada haru
+fu yuki</p>
+<p><br>あともう少しだけ <br>还剩下一点点 <br>ato mou su koshi dake</p>
+<p><br>もう数えられるだけ <br>还能继续数下去 <br>mou kazoe rareru
+dake</p>
+<p><br>あと花二つだけ <br>还余下春花两瓣 <br>ato hana futatsu dake</p>
+<p><br>もう花一つだけ <br>还剩一簇春花孤绽 <br>mou hana hitotsu dake</p>
+<p><br>ただ葉が残るだけ、はらり <br>最后只留绿叶独展 <br>tada haga
+nokoru dake harari</p>
+<p><br>今、春仕舞い <br>此刻，飞花飘零，春日了完 <br>ima haru chimai</p>
+<h3 id="section-6">24.4.8</h3>
+<ul>
+<li><p><em>孩子们有时候挺伤人的。他们以为只要你恰好是个大人，你就刀枪不入，怎么也不会受伤。</em><br></p></li>
+<li><p><em>是的。直到刚才，我才认识到人类是可以选择孤独的。认识到有些力量有时会比逃避孤独的愿望更强大。</em><br></p></li>
+<li><p><em>卡帕尔迪先生相信桥西的内心中没有什么特别的东西是无法延续的。他对母亲说，他找啊找，可就是找不到那样特别的东西。但如今我相信，他是找错了地方。那里真有一样非常特别的东西，但不是在桥西的心里面，而是在那些爱她的人的心里面。这就是为什么我如今认为，卡帕尔迪先生错了，我是不可能成功的。所以我很高兴我当初做出了那样的决定。</em><br>
+<br><em>——《克拉拉与太阳》</em></p></li>
+<li><p><em>我们又做了令外十次比塞。阿尔吉侬每次都营。因为我找不到对的路。走不到写着终点的地方。我没有感到南过。因为我看阿尔吉侬跑让我学到怎么跑完迷工可是我要花很常的时间。<br>
+我都不知到老鼠是这么匆名。</em><br></p></li>
+<li><p><em>我很害怕对别人说错话所以就开时转头要回家去。但我不知到为什么又转回来并在一次走近去。</em><br>
+<em>——《献给阿尔吉侬的花束》</em></p></li>
+</ul>
+<h3 id="section-7">24.4.9</h3>
+<ul>
+<li><p><em>这听起来可能有些忘恩负义，但我痛恨这里的原因之一，就是他们把我当作天竺鼠的态度。尼姆经常提及是他让我变成现在的样子，或是有一天会有其他和我一样的人想要变成真正的人类。<br>
+我要怎么让他了解我并不是他创造的？<br>
+他和其他人犯下同样的错误，他们嘲笑弱智者，因为他们不了解对方也是人类。他不能体会，我来这里之前就已经是个人。<br>
+我正在学习控制自己的憎厌，不要凡事不耐烦，要懂得等待。我猜我正在成长，每一天我都多了解自己一点，原先只是小涟漪的记忆，现在却像滔天巨浪对我冲刷而来……<br></em></p></li>
+<li><p><em>他如何看待自己并不重要，他无疑是很自我本位，但又如何？一个人要敢于尝试做这种事，就需要那样的自负。他这种人我看多了，很了解在他们的傲慢与专断之中，其实混合了很大成分的恐惧与不安</em><br></p></li>
+<li><p><em>不过不久前，我才知道别人都在嘲笑我。现在我知道自己已在不知不觉间加入他们，嘲笑起自己。这点才最让我难过</em><br></p></li>
+<li><p><em>低智能者比较能自由行动，在外面游荡个一周左右，当他们发现没有留在外面的理由后，多数便会自己回来。这世界并不要他们，他们很快就会知道。</em><br></p></li>
+<li><p><em>有很多人愿意捐献金钱或物资，但很少人愿意奉献他们的时间与感情，我指的就是这个。</em><br></p></li>
+<li><p><em>如果我能找出结果，只要能对已知的心智障碍增添一丝丝了解，能对和我一样的人带来帮助，我就会感到无比满足。无论我的下场如何，我对那些尚未出世生命的帮助，已等于让我活过千百次正常的人生。
+这样就足够了。</em><br></p></li>
+<li><p><em>过去几个月我学到很多东西，”我说，“不只是关于查理·高登，也关于人和生命，
+而且我发现没有人真的关心查理·高登，不管他是个白痴或天才。所以，这有什么区别呢</em><br></p></li>
+<li><p><em>智慧是人类最伟大的恩赐之一，只是在追寻知识的过程中，对爱的追寻往往就被搁在一旁。这是我自己最近发现的结论。我可以把这个假设提供你参考：没有能力给予和接受爱情的智慧，会促成心智与道德上的崩溃，形成神经官能症，甚至精神病。而且我还要说，只知专注在心智本身，以致排除人际关系并因此形成封闭的自我中心，只会导致暴力与痛苦。<br>
+当我还是弱智的时候，我有许多朋友，现在却半个也没有。当然，我认识一些人，很多很多人，但没有任何朋友，这和我在面包店时的情况不同。世上没有一个朋友对我有任何意义，我也不对世上的任何人有意义。<br></em></p></li>
+<li><p><em>“但我要告诉你一些别的事，查理。”我站直身子，倒退着离开镜子，“我不是你的朋友，我是你的敌人，我不会不经抗争就放弃我的智慧。我不能回到那个洞穴，现在我已经没有地方可去，查理。所以你必须离开，留在潜意识里，那里才是你该去的地方，别再到处跟着我。我不会放弃的……不管他们怎么想。不管这有多寂寞，我都会留住他们给我的一切，为这个世界，还有像你一样的许多人做些伟大的事”</em><br></p></li>
+<li><p><em>我把阿尔吉侬的尸体放在一个小金属容器里带回家，我不会让他们把它丢进焚化炉。这样做有些愚蠢和伤感，但昨天深夜我把它埋在后院。把一束野花放在坟上时，我哭了起来</em><br></p></li>
+<li><p><em>我一点都不记得了。噢，查理，我对你真的那么坏吗</em><br></p></li>
+<li><p><em>今天我做了一件很笨的事我忘了我已经不在纪尼安小姐的成人中心班级上课。我走进去坐在教室后面的老位子上她看到我时表情很怪然后问说查理你都到那里去了。所以我说哈罗纪尼安小姐我今天已准备好要上课只是我弄丢了我们在用的书本</em><br></p></li>
 <li><p><em>好像在我想起他们并且看过他们之前我并没有家人似的但现在我知到我有家人而且我和大家一样也是一个人。</em><br></p>
-<p><em>——《献给阿尔吉侬的花束》</em></p>
-</li>
+<p><em>——《献给阿尔吉侬的花束》</em></p></li>
 </ul>
 
       
@@ -1482,14 +1572,36 @@ contain在这里应该是集合的包含关系,但是暂且不清楚是否要求
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="24-3-18-16：02"><a href="#24-3-18-16：02" class="headerlink" title="24/3/18 16：02"></a>24/3/18 16：02</h3><p>快！要！疯！啦！<br><br>做人怎么这么难，想要当一个精神稳定的人怎么这么难！<br><br>啊啊啊啊啊，救救孩子吧.I am useless to them.</p>
-<h3 id="24-3-25-17：06"><a href="#24-3-25-17：06" class="headerlink" title="24/3/25 17：06"></a>24/3/25 17：06</h3><p>又到了每周发疯的时候了，我再次感受到了人类的悲伤。It’s so easy to be rejected。<br>期望这种东西就不应该对任何人怀有，除了那几个已经认识很多年的，认识的不能再清楚的人。也不是，只要没有期望，就不会有失望了，除了最坏的情况外剩下的都是惊喜，这不是一件好事吗呵呵</p>
-<h3 id="24-3-26-10-00"><a href="#24-3-26-10-00" class="headerlink" title="24/3/26 10:00"></a>24/3/26 10:00</h3><p>这周崩溃的时间有一次延续了，想起了魔圆里面学姐的一句话:<br>你想要称为帮助他人的人还是想要帮助他人(大概是这个意思)<br>真的很贴近最近的一些感想，继续崩溃吧，乐</p>
-<h3 id="24-3-27"><a href="#24-3-27" class="headerlink" title="24/3/27"></a>24/3/27</h3><p>啊啊啊啊啊，乐<br>总结:时机把握还是不太会,减少探寻他人的时间，直接丰富自己才是正事(今天对自己有点无语)<br>我那无处安放的认可欲怪兽233</p>
-<h3 id="24-4-1"><a href="#24-4-1" class="headerlink" title="24/4/1"></a>24/4/1</h3><p>今天是愚人节，乐<br><br>最近摆的有点太过了，还是太过于依赖他人了，戒掉，戒掉。</p>
-<h3 id="24-4-11"><a href="#24-4-11" class="headerlink" title="24/4/11"></a>24/4/11</h3><p>最近过于因为作业和学习焦虑而变的神经质和敏感脆弱<br><br>并且因为一些习惯原因没有意识到自己的问题，一昧想要他人迁就自己，失去了对自己的行为的客观评价，以及玻璃心现象返厂严重。<br><br>于4/11日在zj同学分享回忆后得到快乐并且大有感慨(感慨:之前就是无病呻吟)，自我反省之前太过于神经兮兮了，以及告诫自己要努力。<br><br>fighting!!!</p>
-<h3 id="24-4-14"><a href="#24-4-14" class="headerlink" title="24/4/14"></a>24/4/14</h3><p>好离谱啊~~~<br>又因为一句话破防了，笑死</p>
-<h3 id="24-5-20"><a href="#24-5-20" class="headerlink" title="24/5/20"></a>24/5/20</h3><p>更新负能墙<br>今天早上梦回高中了，稀疏的塑料声，开门声，键盘声真的很让人抓狂<br>起床气无处发泄就在这里吐槽吧</p>
+          <h3 id="section">24/3/18 16：02</h3>
+<p>快！要！疯！啦！<br>
+做人怎么这么难，想要当一个精神稳定的人怎么这么难！<br>
+啊啊啊啊啊，救救孩子吧.I am useless to them.</p>
+<h3 id="section-1">24/3/25 17：06</h3>
+<p>又到了每周发疯的时候了，我再次感受到了人类的悲伤。It's so easy to be
+rejected。
+期望这种东西就不应该对任何人怀有，除了那几个已经认识很多年的，认识的不能再清楚的人。也不是，只要没有期望，就不会有失望了，除了最坏的情况外剩下的都是惊喜，这不是一件好事吗呵呵</p>
+<h3 id="section-2">24/3/26 10:00</h3>
+<p>这周崩溃的时间有一次延续了，想起了魔圆里面学姐的一句话:
+你想要称为帮助他人的人还是想要帮助他人(大概是这个意思)
+真的很贴近最近的一些感想，继续崩溃吧，乐</p>
+<h3 id="section-3">24/3/27</h3>
+<p>啊啊啊啊啊，乐
+总结:时机把握还是不太会,减少探寻他人的时间，直接丰富自己才是正事(今天对自己有点无语)
+我那无处安放的认可欲怪兽233</p>
+<h3 id="section-4">24/4/1</h3>
+<p>今天是愚人节，乐<br>
+最近摆的有点太过了，还是太过于依赖他人了，戒掉，戒掉。</p>
+<h3 id="section-5">24/4/11</h3>
+<p>最近过于因为作业和学习焦虑而变的神经质和敏感脆弱<br>
+并且因为一些习惯原因没有意识到自己的问题，一昧想要他人迁就自己，失去了对自己的行为的客观评价，以及玻璃心现象返厂严重。<br>
+于4/11日在zj同学分享回忆后得到快乐并且大有感慨(感慨:之前就是无病呻吟)，自我反省之前太过于神经兮兮了，以及告诫自己要努力。<br>
+fighting!!!</p>
+<h3 id="section-6">24/4/14</h3>
+<p>好离谱啊~~~ 又因为一句话破防了，笑死</p>
+<h3 id="section-7">24/5/20</h3>
+<p>更新负能墙
+今天早上梦回高中了，稀疏的塑料声，开门声，键盘声真的很让人抓狂
+起床气无处发泄就在这里吐槽吧</p>
 
       
     </div>
