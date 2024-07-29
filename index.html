@@ -416,7 +416,7 @@ debug的时候很急，根本没有了解原理就在使用，这也导致我对
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-07-19 11:02:07" itemprop="dateModified" datetime="2024-07-19T11:02:07+08:00">2024-07-19</time>
+      <time title="修改时间：2024-07-23 14:28:08" itemprop="dateModified" datetime="2024-07-23T14:28:08+08:00">2024-07-23</time>
     </span>
 
   
@@ -499,6 +499,36 @@ MessagesPlaceholder<br> PipelinePrompt<br></p>
 <h3 id="记忆conversational-memory">记忆:conversational memory</h3>
 <h4
 id="conversationbuffermemory过去人类和ai之间的原始对话输入以原始形式传递给history参数">ConversationBufferMemory:过去人类和AI之间的原始对话输入以原始形式传递给{history}参数</h4>
+<h3 id="tool">Tool</h3>
+<p>工具设计成能被模型调用的函数：它们的输入是被模型生成的，它们的输出会传送回去给模型<br></p>
+<ul>
+<li>一个工具由以下部分组成：
+<ul>
+<li>名字</li>
+<li>这个工具是干什么的描述</li>
+<li>一个JSON参数定义工具的输入</li>
+<li>一个函数</li>
+<li>有两种方式触发工具调用：
+<ul>
+<li>用正确的语句触发</li>
+</ul></li>
+</ul></li>
+</ul>
+<p><a
+target="_blank" rel="noopener" href="https://python.langchain.com/v0.2/docs/how_to/custom_tools/">创建工具的各种方法</a></p>
+<p>对上面的一些特性总结： -
+不止可以对工具有描述，工具里面用到的变量也可以有描述 -
+返回的内容可以分为给模型的和其他用处的，用一个tuple整合（详见artifact）
+-
+可以简单的直接定义函数，也可以通过改写subclass的方式定义工具，后者虽然麻烦但是实现的功能最多也最灵活，还有一个用Runnables定义的方式我跳过了（因为还不怎么了解Runnable）</p>
+<p><a
+target="_blank" rel="noopener" href="https://python.langchain.com/v0.2/docs/how_to/tool_calling/">怎么用聊天模型调用工具</a></p>
+<ul>
+<li>虽然这个名字看起来是聊天模型在调用工具，但是事实上不是这样的，模型生成了调用工具的语句，是否调用它取决于用户。如果说，你想要从一个没有结构的文本中<a
+target="_blank" rel="noopener" href="https://python.langchain.com/v0.2/docs/how_to/structured_output/">extract
+output matching some schema</a>，你可以给模型一个extraction
+tool进行提取，并用生成的结果作为最终的结果</li>
+</ul>
 
       
     </div>
@@ -561,7 +591,7 @@ id="conversationbuffermemory过去人类和ai之间的原始对话输入以原�
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-07-22 09:57:13" itemprop="dateModified" datetime="2024-07-22T09:57:13+08:00">2024-07-22</time>
+      <time title="修改时间：2024-07-29 17:49:05" itemprop="dateModified" datetime="2024-07-29T17:49:05+08:00">2024-07-29</time>
     </span>
 
   
@@ -646,6 +676,32 @@ target="_blank" rel="noopener" href="https://python.langchain.com.cn/docs/module
 已调整文档的问法，发现模型会把需要用户回答的问题看作需要工具回答的问题从而产生疑问<br>
 然后之前的知识库会死循环还有问题是从……中会触发模型调用工具<br>
 现在的问题在于它就算找到了还不错的答案，会因为答案里面的问句继续调用工具，所以我觉得有必要学习中止条件<br></p>
+<h4 id="section-10">7.23</h4>
+<p>关于提问：我想要实现更加规范化的提问，也就是想要把每个节点表现出来，状态用数字表现出来，这种方法是可行的吗？<br>
+学习structured tools写法<br>
+更改思路为一个执行的工具人+一个润化语言的LLM<br>
+下午从导师那里了解到一个叫扣子的平台<br>
+顺利了解了个节点的功能，好消息就是终于终于不用啃英文文档了！！！（超开心）<br></p>
+<h4 id="section-11">7.24</h4>
+<p>因为连不上网所以写任务的热情不是很高，打算下午再写了qwq<br>
+上午在学习了字符串算法，贴一段我觉得是KMP精髓的代码： <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">  for (int i=2;i&lt;=lb;i++)</span><br><span class="line">     &#123;     </span><br><span class="line">     	while(j&amp;&amp;b[i]!=b[j+1])</span><br><span class="line">      	j=next[j];    </span><br><span class="line">     	if(b[j+1]==b[i])j++; </span><br><span class="line">next[i]=j;  </span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
+顺便一提，学长的PPT讲的真好，比网上的要好懂不少。<br>
+因为退的钱到账了所以后面就摆了qwq，扩展KMP后面再看吧（<br>
+晚上AC了之前考试没打出来的模板，居然是因为AC自动机打错了大悲<br>
+但AC自动机真是好东西<br></p>
+<h4 id="section-12">7.25</h4>
+<p>完成了扣子的初步部署<br></p>
+<h4 id="section-13">7.26</h4>
+<p>今天要交总结了，悲<br>
+总结一下扣子的好处吧：它的衔接很分明，然后它是用很多结构组成的，这一点比起我只想用一个解决问题优很多。事实上我觉得这是我之前方向错误的关键所在，如果我向它一样每个节点分工鲜明而不是让一个节点打一套组合拳的话，会好写不少。没错我现在是进化2.0版本<br>
+又是摸鱼被看到的一天qwq，让我浅浅崩溃一下啊啊啊啊啊啊<br>
+比赛的时候手搓线段树的这一天终于还是来了，让我浅浅崩溃一下aaa<br></p>
+<h4 id="section-14">7.29</h4>
+<p>今天上午做了线段树那道题＋摸鱼玩炽焰天穹<br> 差分真是好东西<br>
+下午只有我一个人打比赛qwq<br> 只做出了签到题，真是抱歉捏<br>
+所以为什么超时了啊呜呜呜<br>
+悄悄立下flag每天上班时间不摸鱼打游戏，要么写算法要么写langchain<br>
+就这么愉快的决定了<br> 明天的任务是做oj+优化变量识别<br></p>
 
       
     </div>
