@@ -21,28 +21,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="命令行  hexo clean 清除一些东东（更改后必用，我也不知道清除啥） hexo g 生成一些东东（更改后必用） hexo d 部署网页 hexo s 本地查看  基础修改 作者，图片，链接什么的在博客主题的config文件里更改，主题在config文件里更改，这俩在一个文件夹下。 侧边栏 未完待续 首页 未完待续">
+    <meta name="description" content="整体结构  卷积层  和全连接层的对比和优点：  假设是图片的话，全连接层是一维展开的，不能提取到图片的局部特征，而卷积层可以提取到局部特征。同时RGB通道的信息全连接层无法提取 卷积层可以保持形状不变，当输入数据是图像时，卷积层会以3维数据的形式接收输入数据，并同样以3维数据的形式输出至下一层  输入和输出的变化： 需要注意的概念：通道，滤波器数量  这张图前面少的字是“通">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo_method">
-<meta property="og:url" content="http://example.com/2024/01/18/hexo-method/index.html">
+<meta property="og:title" content="卷积神经网络">
+<meta property="og:url" content="http://example.com/2024/08/19/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/index.html">
 <meta property="og:site_name" content="灰原">
-<meta property="og:description" content="命令行  hexo clean 清除一些东东（更改后必用，我也不知道清除啥） hexo g 生成一些东东（更改后必用） hexo d 部署网页 hexo s 本地查看  基础修改 作者，图片，链接什么的在博客主题的config文件里更改，主题在config文件里更改，这俩在一个文件夹下。 侧边栏 未完待续 首页 未完待续">
+<meta property="og:description" content="整体结构  卷积层  和全连接层的对比和优点：  假设是图片的话，全连接层是一维展开的，不能提取到图片的局部特征，而卷积层可以提取到局部特征。同时RGB通道的信息全连接层无法提取 卷积层可以保持形状不变，当输入数据是图像时，卷积层会以3维数据的形式接收输入数据，并同样以3维数据的形式输出至下一层  输入和输出的变化： 需要注意的概念：通道，滤波器数量  这张图前面少的字是“通">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-01-18T15:54:13.000Z">
-<meta property="article:modified_time" content="2024-01-18T16:03:43.611Z">
+<meta property="article:published_time" content="2024-08-19T07:16:12.000Z">
+<meta property="article:modified_time" content="2024-08-19T08:57:06.897Z">
 <meta property="article:author" content="floyd">
-<meta property="article:tag" content="method">
+<meta property="article:tag" content="机器学习">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/2024/01/18/hexo-method/">
+<link rel="canonical" href="http://example.com/2024/08/19/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2024/01/18/hexo-method/","path":"2024/01/18/hexo-method/","title":"hexo_method"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2024/08/19/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/","path":"2024/08/19/卷积神经网络/","title":"卷积神经网络"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>hexo_method | 灰原</title>
+<title>卷积神经网络 | 灰原</title>
   
 
 
@@ -142,7 +142,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C"><span class="nav-number">1.</span> <span class="nav-text">命令行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E4%BF%AE%E6%94%B9"><span class="nav-number">2.</span> <span class="nav-text">基础修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%A7%E8%BE%B9%E6%A0%8F"><span class="nav-number">3.</span> <span class="nav-text">侧边栏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A6%96%E9%A1%B5"><span class="nav-number">4.</span> <span class="nav-text">首页</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B4%E4%BD%93%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">整体结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%B7%E7%A7%AF%E5%B1%82"><span class="nav-number">2.</span> <span class="nav-text">卷积层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B1%A0%E5%8C%96%E5%B1%82"><span class="nav-number">3.</span> <span class="nav-text">池化层</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -195,7 +195,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/18/hexo-method/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/19/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://www.freeimg.cn/i/2024/01/18/65a937967aba2.jpg">
@@ -208,12 +208,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="hexo_method | 灰原">
+      <meta itemprop="name" content="卷积神经网络 | 灰原">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          hexo_method
+          卷积神经网络
         </h1>
 
         <div class="post-meta-container">
@@ -223,15 +223,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2024-01-18 23:54:13" itemprop="dateCreated datePublished" datetime="2024-01-18T23:54:13+08:00">2024-01-18</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-01-19 00:03:43" itemprop="dateModified" datetime="2024-01-19T00:03:43+08:00">2024-01-19</time>
+      <time title="创建时间：2024-08-19 15:16:12 / 修改时间：16:57:06" itemprop="dateCreated datePublished" datetime="2024-08-19T15:16:12+08:00">2024-08-19</time>
     </span>
 
   
@@ -243,20 +237,34 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="命令行">命令行</h2>
+    <div class="post-body" itemprop="articleBody"><h4 id="整体结构">整体结构</h4>
+<p><img
+src="https://pic.imgdb.cn/item/66c2f223d9c307b7e9bbffc5.png" /></p>
+<h4 id="卷积层">卷积层</h4>
 <ul>
-<li><em>hexo clean</em>
-清除一些东东（更改后必用，我也不知道清除啥）</li>
-<li><em>hexo g</em> 生成一些东东（更改后必用）</li>
-<li><em>hexo d</em> 部署网页</li>
-<li><em>hexo s</em> 本地查看</li>
+<li>和全连接层的对比和优点：
+<ul>
+<li>假设是图片的话，全连接层是一维展开的，不能提取到图片的局部特征，而卷积层可以提取到局部特征。同时RGB通道的信息全连接层无法提取</li>
+<li>卷积层可以保持形状不变，当输入数据是图像时，卷积层会以3维数据的形式接收输入数据，并同样以3维数据的形式输出至下一层</li>
+</ul></li>
+<li>输入和输出的变化：</li>
+<li>需要注意的概念：通道，滤波器数量 <img
+src="https://pic.imgdb.cn/item/66c30196d9c307b7e9d22a9f.png" />
+这张图前面少的字是“通道” <img
+src="https://pic.imgdb.cn/item/66c301b4d9c307b7e9d25263.png" /> <img
+src="https://pic.imgdb.cn/item/66c301e3d9c307b7e9d29b6b.png" /> <img
+src="https://pic.imgdb.cn/item/66c301efd9c307b7e9d2b36e.png" /> <img
+src="https://pic.imgdb.cn/item/66c3021dd9c307b7e9d306d2.png" /></li>
 </ul>
-<h2 id="基础修改">基础修改</h2>
-<p><strong>作者，图片，链接什么的在博客主题的config文件里更改，主题在config文件里更改，这俩在一个文件夹下。</strong></p>
-<h2 id="侧边栏">侧边栏</h2>
-<p>未完待续</p>
-<h2 id="首页">首页</h2>
-<p>未完待续</p>
+<h4 id="池化层">池化层</h4>
+<ul>
+<li>池化层的特征：
+<ul>
+<li>没有要学习的参数</li>
+<li>通道数不发生变化</li>
+<li>对微笑的位置变化具有鲁棒性</li>
+</ul></li>
+</ul>
 
     </div>
 
@@ -266,20 +274,20 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/method/" rel="tag"># method</a>
+              <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag"># 机器学习</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/01/18/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="prev" title="读书笔记">
-                  <i class="fa fa-angle-left"></i> 读书笔记
+                <a href="/2024/07/22/%E6%9A%91%E6%9C%9F%E5%A4%9A%E6%A0%A1%E8%81%94%E8%B5%9B%E8%AE%B0%E5%BD%95/" rel="prev" title="暑期多校联赛记录">
+                  <i class="fa fa-angle-left"></i> 暑期多校联赛记录
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/01/19/matlab/" rel="next" title="matlab">
-                  matlab <i class="fa fa-angle-right"></i>
+                <a href="/2024/08/19/text-CNN/" rel="next" title="text-CNN">
+                  text-CNN <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
